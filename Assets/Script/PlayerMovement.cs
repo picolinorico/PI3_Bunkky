@@ -42,9 +42,15 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && rb.linearVelocity.y <= 0.1f)
             jumpCounter = extraJumpsValue;
 
-        // Inverte o sprite baseado na direção
-        if (moveInput.x > 0) transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        else if (moveInput.x < 0) transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
+        // Inverte o sprite baseado na direção preservando o tamanho original
+        if (moveInput.x != 0)
+        {
+            Vector3 currentScale = transform.localScale;
+            // O Mathf.Abs garante que pegamos o valor positivo da escala, 
+            // e multiplicamos pelo sinal da direção (1 ou -1)
+            currentScale.x = Mathf.Abs(currentScale.x) * Mathf.Sign(moveInput.x);
+            transform.localScale = currentScale;
+        }
     }
 
     void FixedUpdate()
