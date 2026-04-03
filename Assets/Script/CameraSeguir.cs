@@ -18,7 +18,7 @@ public class CameraSeguir : MonoBehaviour
     public float tempoSuavizacaoSeguir = 0.1f;
 
     // Variáveis internas
-    private bool modoSeguir = false;
+    public bool modoSeguir = false;
     private Vector3 posicaoAlvo;
     private float tamanhoAlvo;
     private Vector3 velocidadePosicao;

@@ -2,28 +2,23 @@ using UnityEngine;
 
 public class TrocarModoCamera : MonoBehaviour
 {
-    public CameraSeguir gerenciador; // Arraste a Main Camera aqui
-
-    // Arraste aqui o BoxCollider do quadrinho que fica ANTES da rampa
+    public CameraSeguir gerenciador;
     public BoxCollider2D quadrinhoAntesDaRampa;
-
-    private bool entrouNaRampa = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            if (!entrouNaRampa)
+            // A sua ideia na prática: checamos o estado real da câmera!
+            if (gerenciador.modoSeguir == false)
             {
-                // Entrou na rampa: avisa a câmera para seguir
+                // Se NÃO está seguindo, significa que veio do corredor e vai entrar na rampa
                 gerenciador.AtivarModoSeguir();
-                entrouNaRampa = true;
             }
             else
             {
-                // Voltou da rampa: avisa a câmera para focar de volta no painel
+                // Se JÁ ESTÁ seguindo, significa que está voltando da rampa pro corredor
                 gerenciador.FocarNoQuadrinho(quadrinhoAntesDaRampa);
-                entrouNaRampa = false;
             }
         }
     }

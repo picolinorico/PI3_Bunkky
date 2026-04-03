@@ -1,6 +1,6 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,12 +11,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fallMultiplier = 4f;
     [SerializeField] private float lowJumpMultiplier = 3f;
 
+    [Header("Vida e Dano")]
+    [SerializeField] private int vidaMaxima = 3;
+    private int vidaAtual;
+    [SerializeField] private float forcaKnockbackX = 7f; // Força para trás
+    [SerializeField] private float forcaKnockbackY = 5f; // Força para cima
+    [SerializeField] private float knockbackDuration = 0.3f;
+
     [Header("Ataque e Feedback")]
     [SerializeField] private Transform attackPoint;
-    //[SerializeField] private float attackRange = 0.5f;
     [SerializeField] private LayerMask enemyLayer;
-    //[SerializeField] private float knockbackForce = 7f; // Aumentei um pouco para sentir o impacto
-    //[SerializeField] private float knockbackDuration = 0.15f;
 
     [Header("Detecção de Chão")]
     [SerializeField] private Transform groundCheck;
@@ -29,11 +33,25 @@ public class PlayerMovement : MonoBehaviour
     private bool isHoldingJump;
     private int jumpCounter;
     private bool isKnockback;
+    private Vector2 pontoDeCheckpoint;
+    private BoxCollider2D areaDoCheckpoint;
 
-    void Awake() => rb = GetComponent<Rigidbody2D>();
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        // Inicia o jogo com a vida cheia
+        vidaAtual = vidaMaxima;
+        // O primeiro checkpoint é onde o jogador começa a fase
+        pontoDeCheckpoint = transform.position;
+    }
 
     void Update()
     {
+        // Se estiver sofrendo knockback, o jogador não pode andar
         if (isKnockback) return;
 
         rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
@@ -42,12 +60,10 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && rb.linearVelocity.y <= 0.1f)
             jumpCounter = extraJumpsValue;
 
-        // Inverte o sprite baseado na direção preservando o tamanho original
+        // Inverte o sprite preservando a escala original
         if (moveInput.x != 0)
         {
             Vector3 currentScale = transform.localScale;
-            // O Mathf.Abs garante que pegamos o valor positivo da escala, 
-            // e multiplicamos pelo sinal da direção (1 ou -1)
             currentScale.x = Mathf.Abs(currentScale.x) * Mathf.Sign(moveInput.x);
             transform.localScale = currentScale;
         }
@@ -66,6 +82,77 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = lowJumpMultiplier;
         else
             rb.gravityScale = 1f;
+    }
+
+    // --- SISTEMA DE VIDA E KNOCKBACK ---
+
+    public void ReceberDano(int dano, Vector2 posicaoDoPerigo)
+    {
+        // Evita tomar 10 danos de uma vez só se ficar encostado no espinho
+        if (isKnockback) return;
+
+        vidaAtual -= dano;
+        Debug.Log("Tomei dano! Vida restante: " + vidaAtual);
+
+        if (vidaAtual <= 0)
+        {
+            Morrer();
+        }
+        else
+        {
+            StartCoroutine(AplicarKnockback(posicaoDoPerigo));
+        }
+    }
+
+    private IEnumerator AplicarKnockback(Vector2 posicaoDoPerigo)
+    {
+        isKnockback = true;
+
+        // Zera a velocidade atual para o pulo não bugar
+        rb.linearVelocity = Vector2.zero;
+
+        // Descobre se o perigo está na direita ou esquerda para pular pro lado oposto
+        float direcaoX = transform.position.x < posicaoDoPerigo.x ? -1 : 1;
+
+        // Aplica o empurrão
+        rb.AddForce(new Vector2(direcaoX * forcaKnockbackX, forcaKnockbackY), ForceMode2D.Impulse);
+
+        // Espera o tempo do knockback passar
+        yield return new WaitForSeconds(knockbackDuration);
+
+        // Devolve o controle ao jogador
+        isKnockback = false;
+    }
+
+    private void Morrer()
+    {
+        Debug.Log("O Player morreu! Voltando para o checkpoint...");
+
+        // 1. Restaura a vida
+        vidaAtual = vidaMaxima;
+
+        // 2. Teleporta o personagem para o checkpoint
+        transform.position = pontoDeCheckpoint;
+
+        // 3. Zera a velocidade para ele não "nascer" caindo ou correndo
+        rb.linearVelocity = Vector2.zero;
+
+        // 4. Garante que o controle seja devolvido (caso tenha morrido no knockback)
+        isKnockback = false;
+
+        if (areaDoCheckpoint != null)
+        {
+            // Procura o Gerenciador e manda ele focar na área que salvamos
+            FindAnyObjectByType<CameraSeguir>().FocarNoQuadrinho(areaDoCheckpoint);
+        }
+}
+
+    // --- Função para atualizar o checkpoint quando você chegar em novas áreas ---
+    public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
+    {
+        pontoDeCheckpoint = novaPosicao;
+        areaDoCheckpoint = novaAreaDeCamera; // Salva o quadrinho
+        Debug.Log("Checkpoint salvo com câmera!");
     }
 
     // --- INPUTS ---
