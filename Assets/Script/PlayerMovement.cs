@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Ataque e Feedback")]
     [SerializeField] private Transform attackPoint;
+    [SerializeField] private float attackRange = 0.5f;
+    [SerializeField] private int attackDamage = 1; // Quanto de dano o ataque dá
     [SerializeField] private LayerMask enemyLayer;
 
     [Header("Detecção de Chão")]
@@ -175,6 +177,30 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed)
         {
             Debug.Log("POW!");
+            Atacar();
         }
+    }
+
+    private void Atacar()
+    {
+        // 1. Cria um círculo invisível no "attackPoint" e pega tudo que encostar nele que seja da camada "enemyLayer"
+        Collider2D[] inimigosAtingidos = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+
+        // 2. Para cada inimigo ou glitch que o círculo acertou, aplica o dano
+        foreach (Collider2D inimigo in inimigosAtingidos)
+        {
+            VidaGlitch scriptVida = inimigo.GetComponent<VidaGlitch>();
+            if (scriptVida != null)
+            {
+                scriptVida.ReceberDano(attackDamage);
+            }
+        }
+    }
+    // Essa função serve SÓ para o editor da Unity. Ela desenha uma bolinha vermelha para você ver onde o ataque está batendo.
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
