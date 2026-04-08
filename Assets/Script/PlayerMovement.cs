@@ -11,6 +11,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fallMultiplier = 4f;
     [SerializeField] private float lowJumpMultiplier = 3f;
 
+    [Header("Parede: Deslizar e Pular")]
+    [SerializeField] private Transform wallCheck; // Onde fica o sensor da parede
+    [SerializeField] private LayerMask wallLayer; // O que é considerado parede
+    [SerializeField] private float wallSlidingSpeed = 2f; // Velocidade que ele escorrega
+    [SerializeField] private Vector2 wallJumpPower = new Vector2(10f, 12f); // Força do pulo na parede (X, Y)
+    [SerializeField] private float tempoBloqueioMovimento = 0.2f; // Tempo que o jogador perde o controle do X após pular da parede
+    [Tooltip("Quanto tempo a personagem fica grudada na parede sem escorregar ao bater nela")]
+    [SerializeField] private float tempoPresoNaParede = 0.15f;
+
     [Header("Vida e Dano")]
     [SerializeField] private int vidaMaxima = 3;
     private int vidaAtual;
@@ -35,8 +44,13 @@ public class PlayerMovement : MonoBehaviour
     private bool isHoldingJump;
     private int jumpCounter;
     private bool isKnockback;
+    // Variáveis de Controle da Parede
+    private bool isTouchingWall;
+    private bool isWallSliding;
+    private float bloqueioMovimentoTimer; // Trava o movimento horizontal logo após o wall jump
     private Vector2 pontoDeCheckpoint;
     private BoxCollider2D areaDoCheckpoint;
+    private float agarrarTimer; // O cronômetro interno para segurar na parede
 
     void Awake()
     {
@@ -56,8 +70,50 @@ public class PlayerMovement : MonoBehaviour
         // Se estiver sofrendo knockback, o jogador não pode andar
         if (isKnockback) return;
 
-        rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
+        // 1. Sensores
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, wallLayer);
+
+        // 2. Lógica do Wall Slide
+        // Se estiver tocando na parede, não estiver no chão, e o jogador estiver empurrando para o lado da parede
+        if (isTouchingWall && !isGrounded && moveInput.x != 0)
+        {
+            // Se ela acabou de bater na parede neste frame exato
+            if (!isWallSliding)
+            {
+                agarrarTimer = tempoPresoNaParede; // Enche o cronômetro
+            }
+            isWallSliding = true;
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+        // Diminui o timer de agarrar enquanto estiver grudada
+        if (isWallSliding && agarrarTimer > 0)
+        {
+            agarrarTimer -= Time.deltaTime;
+        }
+
+        // 3. Controle de Movimento Horizontal
+        if (bloqueioMovimentoTimer > 0)
+        {
+            // Se acabou de fazer um wall jump, diminui o timer e não deixa o jogador parar o personagem no ar instantaneamente
+            bloqueioMovimentoTimer -= Time.deltaTime;
+        }
+        else
+        {
+            // Movimento normal
+            rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
+
+            // Inverte o sprite
+            if (moveInput.x != 0)
+            {
+                Vector3 currentScale = transform.localScale;
+                currentScale.x = Mathf.Abs(currentScale.x) * Mathf.Sign(moveInput.x);
+                transform.localScale = currentScale;
+            }
+        }
 
         if (isGrounded && rb.linearVelocity.y <= 0.1f)
             jumpCounter = extraJumpsValue;
@@ -73,7 +129,25 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isKnockback) ApplyBetterJumpPhysics();
+        if (isKnockback) return;
+
+        if (isWallSliding)
+        {
+            if (agarrarTimer > 0)
+            {
+                // FASE 1: ACABOU DE GRUDAR. Zera a velocidade Y para não subir nem descer.
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+            }
+            else
+            {
+                // FASE 2: COMEÇA A ESCORREGAR. O limite máximo agora é 0f (ela nunca sobe enquanto escorrega).
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, 0f));
+            }
+        }
+        else
+        {
+            ApplyBetterJumpPhysics();
+        }
     }
 
     private void ApplyBetterJumpPhysics()
@@ -160,15 +234,38 @@ public class PlayerMovement : MonoBehaviour
     // --- INPUTS ---
     public void OnMove(InputAction.CallbackContext context) => moveInput = context.ReadValue<Vector2>();
 
+    // --- SISTEMA DE PULO (ATUALIZADO PARA WALL JUMP) ---
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.performed && (isGrounded || jumpCounter > 0))
+        if (context.performed)
         {
-            if (!isGrounded) jumpCounter--;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isHoldingJump = true;
+            if (isWallSliding)
+            {
+                // WALL JUMP!
+                isWallSliding = false;
+                bloqueioMovimentoTimer = tempoBloqueioMovimento; // Impede o player de voltar pra parede no mesmo milissegundo
+
+                // Descobre para qual lado pular (o oposto de onde o personagem está olhando)
+                float direcaoPulo = -Mathf.Sign(transform.localScale.x);
+
+                rb.linearVelocity = Vector2.zero; // Zera a velocidade atual para o pulo ser limpo
+                rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
+
+                // Vira o personagem para o lado do pulo
+                Vector3 currentScale = transform.localScale;
+                currentScale.x = Mathf.Abs(currentScale.x) * direcaoPulo;
+                transform.localScale = currentScale;
+            }
+            else if (isGrounded || jumpCounter > 0)
+            {
+                // PULO NORMAL
+                if (!isGrounded) jumpCounter--;
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                isHoldingJump = true;
+            }
         }
+
         if (context.canceled) isHoldingJump = false;
     }
 
