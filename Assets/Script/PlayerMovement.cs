@@ -6,10 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movimento")]
     [SerializeField] private float speed = 8f;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+    private float bloqueioMovimentoTimer; // Trava o movimento horizontal logo após o wall jump
+
+    [Header("Pulo")]
     [SerializeField] private float jumpForce = 12f;
     [SerializeField] private int extraJumpsValue = 1;
+    [SerializeField] private int jumpCounter;
     [SerializeField] private float fallMultiplier = 4f;
     [SerializeField] private float lowJumpMultiplier = 3f;
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isHoldingJump;
 
     [Header("Parede: Deslizar e Pular")]
     [SerializeField] private Transform wallCheck; // Onde fica o sensor da parede
@@ -19,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float tempoBloqueioMovimento = 0.2f; // Tempo que o jogador perde o controle do X após pular da parede
     [Tooltip("Quanto tempo a personagem fica grudada na parede sem escorregar ao bater nela")]
     [SerializeField] private float tempoPresoNaParede = 0.15f;
+    private bool isTouchingWall;
+    private bool isWallSliding;
+    private float agarrarTimer; // O cronômetro interno para segurar na parede
 
     [Header("Vida e Dano")]
     [SerializeField] private int vidaMaxima = 3;
@@ -32,25 +43,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float attackRange = 0.5f;
     [SerializeField] private int attackDamage = 1; // Quanto de dano o ataque dá
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private bool isKnockback;
+
 
     [Header("Detecção de Chão")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float checkRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
 
-    private Rigidbody2D rb;
-    private Vector2 moveInput;
-    private bool isGrounded;
-    private bool isHoldingJump;
-    private int jumpCounter;
-    private bool isKnockback;
-    // Variáveis de Controle da Parede
-    private bool isTouchingWall;
-    private bool isWallSliding;
-    private float bloqueioMovimentoTimer; // Trava o movimento horizontal logo após o wall jump
+   
     private Vector2 pontoDeCheckpoint;
     private BoxCollider2D areaDoCheckpoint;
-    private float agarrarTimer; // O cronômetro interno para segurar na parede
+
 
     void Awake()
     {
