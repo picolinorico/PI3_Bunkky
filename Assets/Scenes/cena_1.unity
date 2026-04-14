@@ -2990,7 +2990,7 @@ Animator:
   m_GameObject: {fileID: 925460114}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cba76578a1f6dd846b47ac7c1c4a80ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3900f3464bd8de248a3f228236b3ade7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3051,7 +3051,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5111763290514371741, guid: aa82a6b64485fbb48bfadee08a0e8049, type: 3}
+  m_Sprite: {fileID: -6611979253238762445, guid: 2abe5abab74204a4e9964340af72952e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3070,8 +3070,8 @@ Transform:
   m_GameObject: {fileID: 925460114}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71.4, y: 22.1, z: 1.7724}
-  m_LocalScale: {x: 4.0196023, y: 8.920748, z: 1.4828982}
+  m_LocalPosition: {x: 71.53, y: 21.85, z: 1.7724}
+  m_LocalScale: {x: 0.62134874, y: 0.82063615, z: 1.4828982}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3089,8 +3089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaGlitch
   vidaMaxima: 0
---- !u!61 &925460119
-BoxCollider2D:
+--- !u!70 &925460119
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3124,17 +3124,8 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.23, y: 0.8}
-    newSize: {x: 1.23, y: 0.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.23, y: 0.8}
-  m_EdgeRadius: 0
+  m_Size: {x: 11.09, y: 10.789999}
+  m_Direction: 0
 --- !u!1 &977861223
 GameObject:
   m_ObjectHideFlags: 0
