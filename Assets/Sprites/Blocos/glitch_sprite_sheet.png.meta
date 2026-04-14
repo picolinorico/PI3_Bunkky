@@ -1,0 +1,593 @@
+fileFormatVersion: 2
+guid: f8ef1b66451f43c49bba05e61fc1c864
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6041506499439890257
+    second: glitch_sprite_sheet_0
+  - first:
+      213: -4602317641044194963
+    second: glitch_sprite_sheet_1
+  - first:
+      213: -5738535851217610792
+    second: glitch_sprite_sheet_2
+  - first:
+      213: -4564710671008877426
+    second: glitch_sprite_sheet_3
+  - first:
+      213: -8246055062314895140
+    second: glitch_sprite_sheet_4
+  - first:
+      213: 3844561616272222756
+    second: glitch_sprite_sheet_5
+  - first:
+      213: 519880792855798642
+    second: glitch_sprite_sheet_6
+  - first:
+      213: -826856488960396322
+    second: glitch_sprite_sheet_7
+  - first:
+      213: 4785394476949272244
+    second: glitch_sprite_sheet_8
+  - first:
+      213: 4533065045381068114
+    second: glitch_sprite_sheet_9
+  - first:
+      213: 8378860327147924354
+    second: glitch_sprite_sheet_10
+  - first:
+      213: -8785723079282634145
+    second: glitch_sprite_sheet_11
+  - first:
+      213: -676081123050037018
+    second: glitch_sprite_sheet_12
+  - first:
+      213: -2231515552629136237
+    second: glitch_sprite_sheet_13
+  - first:
+      213: -5409894480355511239
+    second: glitch_sprite_sheet_14
+  - first:
+      213: 3199378820569610144
+    second: glitch_sprite_sheet_15
+  - first:
+      213: 7718213136892747478
+    second: glitch_sprite_sheet_16
+  - first:
+      213: 7273691544659348388
+    second: glitch_sprite_sheet_17
+  - first:
+      213: 651067203589493989
+    second: glitch_sprite_sheet_18
+  - first:
+      213: 3780317290423569086
+    second: glitch_sprite_sheet_19
+  - first:
+      213: -6506418707057694313
+    second: glitch_sprite_sheet_20
+  - first:
+      213: 6108072724590365382
+    second: glitch_sprite_sheet_21
+  - first:
+      213: -8396157046402933402
+    second: glitch_sprite_sheet_22
+  - first:
+      213: -972427691395323951
+    second: glitch_sprite_sheet_23
+  - first:
+      213: -5703714982413122050
+    second: glitch_sprite_sheet_24
+  - first:
+      213: 2971064141280005413
+    second: glitch_sprite_sheet_25
+  - first:
+      213: -5970631022345897107
+    second: glitch_sprite_sheet_26
+  - first:
+      213: -5184531917947328730
+    second: glitch_sprite_sheet_27
+  - first:
+      213: -883767010394262779
+    second: glitch_sprite_sheet_28
+  - first:
+      213: -4556462983414574486
+    second: glitch_sprite_sheet_29
+  - first:
+      213: 4440037295345772241
+    second: glitch_sprite_sheet_30
+  - first:
+      213: 1870074261497564056
+    second: glitch_sprite_sheet_31
+  - first:
+      213: -2676027821976681098
+    second: glitch_sprite_sheet_32
+  - first:
+      213: -7544350166792017390
+    second: glitch_sprite_sheet_33
+  - first:
+      213: 9158467624766409805
+    second: glitch_sprite_sheet_34
+  - first:
+      213: 6676341521100946110
+    second: glitch_sprite_sheet_35
+  - first:
+      213: 7930719635680472660
+    second: glitch_sprite_sheet_36
+  - first:
+      213: 5020816052743765559
+    second: glitch_sprite_sheet_37
+  - first:
+      213: 7825988244628291595
+    second: glitch_sprite_sheet_38
+  - first:
+      213: 2944293509696300637
+    second: glitch_sprite_sheet_39
+  - first:
+      213: -4573167305156155161
+    second: glitch_sprite_sheet_40
+  - first:
+      213: -8761485494050503146
+    second: glitch_sprite_sheet_41
+  - first:
+      213: -5765116623491617537
+    second: glitch_sprite_sheet_42
+  - first:
+      213: 1531482078171100424
+    second: glitch_sprite_sheet_43
+  - first:
+      213: -9000605422949794757
+    second: glitch_sprite_sheet_44
+  - first:
+      213: -8181609472304246165
+    second: glitch_sprite_sheet_45
+  - first:
+      213: 1102844334253850975
+    second: glitch_sprite_sheet_46
+  - first:
+      213: 5396049404869758583
+    second: glitch_sprite_sheet_47
+  - first:
+      213: -5503431343069135866
+    second: glitch_sprite_sheet_48
+  - first:
+      213: -681894916274546563
+    second: glitch_sprite_sheet_49
+  - first:
+      213: -3829284197435868566
+    second: glitch_sprite_sheet_50
+  - first:
+      213: 4190774324701649257
+    second: glitch_sprite_sheet_51
+  - first:
+      213: -2568578341219538417
+    second: glitch_sprite_sheet_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 4471
+        width: 1109
+        height: 1079
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f0457e62eb7d350800000000000000
+      internalID: 6041506499439890257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 4434
+        width: 1241
+        height: 1186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d690c065d784120c0800000000000000
+      internalID: -4602317641044194963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 4792
+        y: 4684
+        width: 635
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d794512c00ac50b0800000000000000
+      internalID: -5738535851217610792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 6772
+        y: 4659
+        width: 641
+        height: 628
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8b86c3c90209d80800000000000000
+      internalID: -8246055062314895140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2638
+        width: 757
+        height: 831
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52586c7867d21680800000000000000
+      internalID: -8785723079282634145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4434
+        y: 2472
+        width: 1273
+        height: 920
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394e7ce8d601801e0800000000000000
+      internalID: -2231515552629136237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2469
+        y: 2260
+        width: 1095
+        height: 1051
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7b5f5161a766c20800000000000000
+      internalID: 3199378820569610144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 6581
+        y: 2666
+        width: 941
+        height: 530
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abce251ce751f460800000000000000
+      internalID: 7273691544659348388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 484
+        width: 1166
+        height: 1092
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627231080b7dc08b0800000000000000
+      internalID: -5184531917947328730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2377
+        y: 352
+        width: 1312
+        height: 1342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bc92cf1a6d3f910800000000000000
+      internalID: 1870074261497564056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 6431
+        y: 456
+        width: 1108
+        height: 1103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6758406cfd6dcdad0800000000000000
+      internalID: -2676027821976681098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitch_sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 4420
+        y: 554
+        width: 1041
+        height: 808
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e23f96d739f0e60800000000000000
+      internalID: 7930719635680472660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 502df6ab2204bd6468bc9fc606f66e20
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      glitch_sprite_sheet_0: 6041506499439890257
+      glitch_sprite_sheet_1: -4602317641044194963
+      glitch_sprite_sheet_10: 8378860327147924354
+      glitch_sprite_sheet_11: -8785723079282634145
+      glitch_sprite_sheet_12: -676081123050037018
+      glitch_sprite_sheet_13: -2231515552629136237
+      glitch_sprite_sheet_14: -5409894480355511239
+      glitch_sprite_sheet_15: 3199378820569610144
+      glitch_sprite_sheet_16: 7718213136892747478
+      glitch_sprite_sheet_17: 7273691544659348388
+      glitch_sprite_sheet_18: 651067203589493989
+      glitch_sprite_sheet_19: 3780317290423569086
+      glitch_sprite_sheet_2: -5738535851217610792
+      glitch_sprite_sheet_20: -6506418707057694313
+      glitch_sprite_sheet_21: 6108072724590365382
+      glitch_sprite_sheet_22: -8396157046402933402
+      glitch_sprite_sheet_23: -972427691395323951
+      glitch_sprite_sheet_24: -5703714982413122050
+      glitch_sprite_sheet_25: 2971064141280005413
+      glitch_sprite_sheet_26: -5970631022345897107
+      glitch_sprite_sheet_27: -5184531917947328730
+      glitch_sprite_sheet_28: -883767010394262779
+      glitch_sprite_sheet_29: -4556462983414574486
+      glitch_sprite_sheet_3: -4564710671008877426
+      glitch_sprite_sheet_30: 4440037295345772241
+      glitch_sprite_sheet_31: 1870074261497564056
+      glitch_sprite_sheet_32: -2676027821976681098
+      glitch_sprite_sheet_33: -7544350166792017390
+      glitch_sprite_sheet_34: 9158467624766409805
+      glitch_sprite_sheet_35: 6676341521100946110
+      glitch_sprite_sheet_36: 7930719635680472660
+      glitch_sprite_sheet_37: 5020816052743765559
+      glitch_sprite_sheet_38: 7825988244628291595
+      glitch_sprite_sheet_39: 2944293509696300637
+      glitch_sprite_sheet_4: -8246055062314895140
+      glitch_sprite_sheet_40: -4573167305156155161
+      glitch_sprite_sheet_41: -8761485494050503146
+      glitch_sprite_sheet_42: -5765116623491617537
+      glitch_sprite_sheet_43: 1531482078171100424
+      glitch_sprite_sheet_44: -9000605422949794757
+      glitch_sprite_sheet_45: -8181609472304246165
+      glitch_sprite_sheet_46: 1102844334253850975
+      glitch_sprite_sheet_47: 5396049404869758583
+      glitch_sprite_sheet_48: -5503431343069135866
+      glitch_sprite_sheet_49: -681894916274546563
+      glitch_sprite_sheet_5: 3844561616272222756
+      glitch_sprite_sheet_50: -3829284197435868566
+      glitch_sprite_sheet_51: 4190774324701649257
+      glitch_sprite_sheet_52: -2568578341219538417
+      glitch_sprite_sheet_6: 519880792855798642
+      glitch_sprite_sheet_7: -826856488960396322
+      glitch_sprite_sheet_8: 4785394476949272244
+      glitch_sprite_sheet_9: 4533065045381068114
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

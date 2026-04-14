@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 61a966ebcab9b9c45b03b82162978198
+guid: 9e9b87ffbb6afe14182486867985d2b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4222970254161578457
-    second: quadros_0
+      213: 3024145176222270773
+    second: "cen\xE1rio! _0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quadros_0
+      name: "cen\xE1rio! _0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 5000
+        height: 5000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d9875862110b9a30800000000000000
-      internalID: 4222970254161578457
+      spriteID: 53580f1e30ce7f920800000000000000
+      internalID: 3024145176222270773
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      quadros_0: 4222970254161578457
+      "cen\xE1rio! _0": 3024145176222270773
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
