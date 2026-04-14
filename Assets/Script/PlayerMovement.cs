@@ -297,6 +297,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
     // Essa função serve SÓ para o editor da Unity. Ela desenha uma bolinha vermelha para você ver onde o ataque está batendo.
     private void OnDrawGizmosSelected()
     {

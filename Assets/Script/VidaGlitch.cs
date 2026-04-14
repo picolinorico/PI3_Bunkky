@@ -3,7 +3,7 @@ using UnityEngine;
 public class VidaGlitch : MonoBehaviour
 {
     [Header("Configurações")]
-    public int vidaMaxima = 3; // Quantos hits ele aguenta
+    public int vidaMaxima = 3;
     private int vidaAtual;
 
     void Start()
@@ -16,7 +16,6 @@ public class VidaGlitch : MonoBehaviour
         vidaAtual -= dano;
         Debug.Log("Glitch tomou dano! Vida restante: " + vidaAtual);
 
-        // Se a vida zerar, ele quebra
         if (vidaAtual <= 0)
         {
             Quebrar();
@@ -26,7 +25,6 @@ public class VidaGlitch : MonoBehaviour
     private void Quebrar()
     {
         Debug.Log("Glitch destruído!");
-        // Destrói o objeto do jogo
         Destroy(gameObject);
     }
 }
