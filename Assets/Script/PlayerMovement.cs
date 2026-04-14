@@ -42,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = 0.5f;
     [SerializeField] private int attackDamage = 1; // Quanto de dano o ataque dá
+    [SerializeField] private float attackColdown = 1;
+    [SerializeField] private bool onAttack = false;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private bool isKnockback;
 
@@ -225,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
             // Procura o Gerenciador e manda ele focar na área que salvamos
             FindAnyObjectByType<CameraSeguir>().FocarNoQuadrinho(areaDoCheckpoint);
         }
-}
+    }
 
     // --- Função para atualizar o checkpoint quando você chegar em novas áreas ---
     public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
@@ -273,12 +275,20 @@ public class PlayerMovement : MonoBehaviour
         if (context.canceled) isHoldingJump = false;
     }
 
-    public void OnAttack(InputAction.CallbackContext context)
+    public async void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        // Só entra se o botão for pressionado E se não estiver em cooldown (onAttack for false)
+        if (context.performed && !onAttack)
         {
+            onAttack = true; // Ativa o cooldown
+
             Debug.Log("POW!");
             Atacar();
+
+            // Espera o tempo definido em attackColdown usando o novo sistema da Unity 6
+            await Awaitable.WaitForSecondsAsync(attackColdown);
+
+            onAttack = false; // Libera o próximo ataque
         }
     }
 

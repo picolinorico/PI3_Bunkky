@@ -5968,6 +5968,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
+      propertyPath: attackColdown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3810250304835834200, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: m_Name
       value: Coelha
