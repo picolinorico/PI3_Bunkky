@@ -137,6 +137,41 @@ public class PlayerMovement : MonoBehaviour
 
         if (isWallSliding && agarrarTimer > 0)
             agarrarTimer -= Time.deltaTime;
+<<<<<<< HEAD
+        }
+
+        // 3. Controle de Movimento Horizontal
+        if (bloqueioMovimentoTimer > 0)
+        {
+            // Se acabou de fazer um wall jump, diminui o timer e não deixa o jogador parar o personagem no ar instantaneamente
+            bloqueioMovimentoTimer -= Time.deltaTime;
+        }
+        else
+        {
+            // Movimento normal
+            rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
+
+            // Inverte o sprite
+            if (moveInput.x != 0)
+            {
+                Vector3 currentScale = transform.localScale;
+                currentScale.x = Mathf.Abs(currentScale.x) * Mathf.Sign(moveInput.x);
+                transform.localScale = currentScale;
+            }
+        }
+
+        if (isGrounded && rb.linearVelocity.y <= 0.1f || isWallSliding)
+            jumpCounter = extraJumpsValue;
+
+        // Inverte o sprite preservando a escala original
+        if (moveInput.x != 0)
+        {
+            Vector3 currentScale = transform.localScale;
+            currentScale.x = Mathf.Abs(currentScale.x) * Mathf.Sign(moveInput.x);
+            transform.localScale = currentScale;
+        }
+=======
+>>>>>>> 021c6a70c5e832655587ffe7021f0f64a6311a01
     }
 
     void FixedUpdate()
@@ -173,12 +208,40 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded || jumpsLeft > 0)
             {
+<<<<<<< HEAD
+                // WALL JUMP!
+                isWallSliding = false;
+                bloqueioMovimentoTimer = tempoBloqueioMovimento; // Impede o player de voltar pra parede no mesmo milissegundo
+
+                // Descobre para qual lado pular (o oposto de onde o personagem está olhando)
+                float direcaoPulo = -Mathf.Sign(transform.localScale.x);
+
+                rb.linearVelocity = Vector2.zero; // Zera a velocidade atual para o pulo ser limpo
+                rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
+
+                // Vira o personagem para o lado do pulo
+                Vector3 currentScale = transform.localScale;
+                currentScale.x = Mathf.Abs(currentScale.x) * direcaoPulo;
+                transform.localScale = currentScale;
+
+                // Avisamos a física que o pulo da parede começou e o botão está pressionado!
+                isHoldingJump = true;
+=======
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpsLeft--;
+>>>>>>> 021c6a70c5e832655587ffe7021f0f64a6311a01
             }
             else if (isWallSliding)
             {
+<<<<<<< HEAD
+                // PULO NORMAL
+                if (!isGrounded) jumpCounter--; // Só gasta o pulo se estiver no ar (Double Jump)
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                isHoldingJump = true;
+=======
                 WallJump();
+>>>>>>> 021c6a70c5e832655587ffe7021f0f64a6311a01
             }
 
         }
