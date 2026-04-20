@@ -12,9 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool facingRight = true;
 
     [Header("Pulo")]
-    [SerializeField] private float jumpForce = 12f;
-    [SerializeField] private int extraJumpsValue = 1;
-    [SerializeField] private int jumpCounter;
+    [SerializeField] private float jumpForce = 23f;
+    [SerializeField] private int maxJumps = 1;
+    [SerializeField] private int jumpsLeft;
     [SerializeField] private bool isGrounded; // Removido SerializeField (lógica interna)
 
     [Header("Parede: Deslizar e Pular")]
@@ -79,12 +79,12 @@ public class PlayerMovement : MonoBehaviour
     private void CheckSurroundings()
     {
         // Sensores de colisão
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
-        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, wallLayer);
+        if (isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer))
+        {
+            jumpsLeft = maxJumps;
+        }
 
-        // Reset do pulo duplo
-        if (isGrounded && rb.linearVelocity.y <= 0.1f)
-            jumpCounter = extraJumpsValue;
+        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, wallLayer);
     }
 
     private void HandleMovement()
@@ -152,16 +152,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            if (isWallSliding)
+            if (isGrounded || jumpsLeft > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                jumpsLeft--;
+            }
+            else if (isWallSliding)
             {
                 WallJump();
             }
-            else if (isGrounded || jumpCounter > 0)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Limpa a velocidade Y
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                if (!isGrounded) jumpCounter--;
-            }
+            
+        }
+        else if (context.canceled)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
     }
 
