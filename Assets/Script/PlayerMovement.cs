@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (isGrounded && rb.linearVelocity.y <= 0.1f)
+        if (isGrounded && rb.linearVelocity.y <= 0.1f || isWallSliding)
             jumpCounter = extraJumpsValue;
 
         // Inverte o sprite preservando a escala original
@@ -261,11 +261,14 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 currentScale = transform.localScale;
                 currentScale.x = Mathf.Abs(currentScale.x) * direcaoPulo;
                 transform.localScale = currentScale;
+
+                // Avisamos a física que o pulo da parede começou e o botão está pressionado!
+                isHoldingJump = true;
             }
             else if (isGrounded || jumpCounter > 0)
             {
                 // PULO NORMAL
-                if (!isGrounded) jumpCounter--;
+                if (!isGrounded) jumpCounter--; // Só gasta o pulo se estiver no ar (Double Jump)
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isHoldingJump = true;
