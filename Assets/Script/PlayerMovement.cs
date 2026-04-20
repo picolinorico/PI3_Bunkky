@@ -12,14 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool facingRight = true;
 
     [Header("Pulo")]
-    [SerializeField] private float jumpForce = 18f;
+    [SerializeField] private float jumpForce = 22f;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpsLeft;
     [SerializeField] private bool isGrounded; // Removido SerializeField (lógica interna)
 
     [Header("Gravidade")]
-    [SerializeField] private int gravityBase = 2;
-    [SerializeField] private float maxFallSpeed = 45;
+    [SerializeField] private int gravityBase = 4;
+    [SerializeField] private float maxFallSpeed = 50;
     [SerializeField] private float fallSpeedMultiplier = 3;
 
     [Header("Parede: Deslizar e Pular")]
