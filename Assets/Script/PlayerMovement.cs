@@ -4,20 +4,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     [Header("Movimento")]
     [SerializeField] private float speed = 8f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private float bloqueioMovimentoTimer; // Trava o movimento horizontal logo após o wall jump
 
+
     [Header("Pulo")]
     [SerializeField] private float jumpForce = 12f;
     [SerializeField] private int extraJumpsValue = 1;
+[SerializeField] private float ascentMultiplier = 1.5f;
     [SerializeField] private int jumpCounter;
-    [SerializeField] private float fallMultiplier = 4f;
-    [SerializeField] private float lowJumpMultiplier = 3f;
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool isHoldingJump;
+
 
     [Header("Parede: Deslizar e Pular")]
     [SerializeField] private Transform wallCheck; // Onde fica o sensor da parede
@@ -31,12 +33,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isWallSliding;
     private float agarrarTimer; // O cronômetro interno para segurar na parede
 
+
     [Header("Vida e Dano")]
     [SerializeField] private int vidaMaxima = 3;
     private int vidaAtual;
     [SerializeField] private float forcaKnockbackX = 7f; // Força para trás
     [SerializeField] private float forcaKnockbackY = 5f; // Força para cima
     [SerializeField] private float knockbackDuration = 0.3f;
+
 
     [Header("Ataque e Feedback")]
     [SerializeField] private Transform attackPoint;
@@ -53,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float checkRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
 
-   
+
+    [Header("Checkpoint")]
     private Vector2 pontoDeCheckpoint;
     private BoxCollider2D areaDoCheckpoint;
 
@@ -150,20 +155,39 @@ public class PlayerMovement : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, 0f));
             }
         }
-        else
-        {
-            ApplyBetterJumpPhysics();
-        }
     }
 
-    private void ApplyBetterJumpPhysics()
+    public void OnMove(InputAction.CallbackContext context) => moveInput = context.ReadValue<Vector2>();
+
+    // --- SISTEMA DE PULO (ATUALIZADO PARA WALL JUMP) ---
+    public void OnJump(InputAction.CallbackContext context)
     {
-        if (rb.linearVelocity.y < 0)
-            rb.gravityScale = fallMultiplier;
-        else if (rb.linearVelocity.y > 0 && (!isHoldingJump || rb.linearVelocity.y < 2f))
-            rb.gravityScale = lowJumpMultiplier;
-        else
-            rb.gravityScale = 1f;
+        if (context.performed)
+        {
+            if (isWallSliding)
+            {
+                // WALL JUMP!
+                isWallSliding = false;
+                bloqueioMovimentoTimer = tempoBloqueioMovimento; // Impede o player de voltar pra parede no mesmo milissegundo
+
+                // Descobre para qual lado pular (o oposto de onde o personagem está olhando)
+                float direcaoPulo = -Mathf.Sign(transform.localScale.x);
+
+                rb.linearVelocity = Vector2.zero; // Zera a velocidade atual para o pulo ser limpo
+                rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
+
+                // Vira o personagem para o lado do pulo
+                Vector3 currentScale = transform.localScale;
+                currentScale.x = Mathf.Abs(currentScale.x) * direcaoPulo;
+                transform.localScale = currentScale;
+            }
+            else if (isGrounded || jumpCounter > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            }
+        }
+
+        if (context.canceled) isHoldingJump = false;
     }
 
     // --- SISTEMA DE VIDA E KNOCKBACK ---
@@ -238,42 +262,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // --- INPUTS ---
-    public void OnMove(InputAction.CallbackContext context) => moveInput = context.ReadValue<Vector2>();
-
-    // --- SISTEMA DE PULO (ATUALIZADO PARA WALL JUMP) ---
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            if (isWallSliding)
-            {
-                // WALL JUMP!
-                isWallSliding = false;
-                bloqueioMovimentoTimer = tempoBloqueioMovimento; // Impede o player de voltar pra parede no mesmo milissegundo
-
-                // Descobre para qual lado pular (o oposto de onde o personagem está olhando)
-                float direcaoPulo = -Mathf.Sign(transform.localScale.x);
-
-                rb.linearVelocity = Vector2.zero; // Zera a velocidade atual para o pulo ser limpo
-                rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
-
-                // Vira o personagem para o lado do pulo
-                Vector3 currentScale = transform.localScale;
-                currentScale.x = Mathf.Abs(currentScale.x) * direcaoPulo;
-                transform.localScale = currentScale;
-            }
-            else if (isGrounded || jumpCounter > 0)
-            {
-                // PULO NORMAL
-                if (!isGrounded) jumpCounter--;
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                isHoldingJump = true;
-            }
-        }
-
-        if (context.canceled) isHoldingJump = false;
-    }
+   
 
     public async void OnAttack(InputAction.CallbackContext context)
     {
