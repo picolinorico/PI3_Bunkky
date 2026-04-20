@@ -12,10 +12,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool facingRight = true;
 
     [Header("Pulo")]
-    [SerializeField] private float jumpForce = 23f;
+    [SerializeField] private float jumpForce = 18f;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpsLeft;
     [SerializeField] private bool isGrounded; // Removido SerializeField (lógica interna)
+
+    [Header("Gravidade")]
+    [SerializeField] private int gravityBase = 2;
+    [SerializeField] private float maxFallSpeed = 45;
+    [SerializeField] private float fallSpeedMultiplier = 3;
 
     [Header("Parede: Deslizar e Pular")]
     [SerializeField] private Transform wallCheck;
@@ -74,6 +79,20 @@ public class PlayerMovement : MonoBehaviour
         CheckSurroundings();
         HandleWallSliding();
         HandleMovement();
+        Gravity();
+    }
+
+    private void Gravity()
+    {
+        if(rb.linearVelocity.y < 0)
+        {
+            rb.gravityScale = gravityBase * fallSpeedMultiplier;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -maxFallSpeed));
+        }
+        else
+        {
+            rb.gravityScale = gravityBase;
+        }
     }
 
     private void CheckSurroundings()
@@ -161,11 +180,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 WallJump();
             }
-            
+
         }
         else if (context.canceled)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            // A MÁGICA ESTÁ AQUI: Só corta a velocidade se ela for positiva (subindo)
+            if (rb.linearVelocity.y > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            }
         }
     }
 
