@@ -4,15 +4,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    [SerializeField] private bool isFacingRight = true;
+
     [Header("Movimento")]
     [SerializeField] private float speed = 8f;
-    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Vector2 moveInput;
     [SerializeField] private float bloqueioMovimentoTimer;
-    [SerializeField] private bool facingRight = true;
 
     [Header("Pulo")]
-    [SerializeField] private float jumpForce = 22f;
+    [SerializeField] private float jumpForce = 25f;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpsLeft;
 
@@ -20,16 +21,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int gravityBase = 4;
     [SerializeField] private float maxFallSpeed = 50;
     [SerializeField] private float fallSpeedMultiplier = 3;
-
-
-    //[SerializeField] private LayerMask wallLayer;
-    //[SerializeField] private float wallSlidingSpeed = 2f;
-    //[SerializeField] private Vector2 wallJumpPower = new Vector2(10f, 12f);
-    //[SerializeField] private float tempoBloqueioMovimento = 0.2f;
-    //[SerializeField] private float tempoPresoNaParede = 0.15f;
-    //private bool isTouchingWall;
-    //private bool isWallSliding;
-    //private float agarrarTimer;
 
     [Header("Vida e Dano")]
     [SerializeField] private int vidaMaxima = 3;
@@ -50,12 +41,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Detecção de Chão")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Vector2 groundCheckSize = new Vector2(1f, 0.1f);
-    [SerializeField] private bool isGrounded;
+    [SerializeField] private Vector2 groundCheckSize = new Vector2(4.63f, 0.2f);
 
     [Header("Detecção de Parede")]
     [SerializeField] private Transform wallCheck;
-
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private Vector2 wallCheckSize = new Vector2(1f, 0.1f);
 
     [Header("Checkpoint e Câmera")]
     private Vector2 pontoDeCheckpoint;
@@ -79,15 +70,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isKnockback) return;
 
-        CheckSurroundings();
+        GroundCheck();
         //HandleWallSliding();
-        HandleMovement();
+        //HandleMovement();
         Gravity();
+    }
+
+    void FixedUpdate()
+    {
+        if (isKnockback) return;
     }
 
     private void Gravity()
     {
-        if(rb.linearVelocity.y < 0)
+        if (rb.linearVelocity.y < 0)
         {
             rb.gravityScale = gravityBase * fallSpeedMultiplier;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -maxFallSpeed));
@@ -98,40 +94,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void CheckSurroundings()
-    {
-        // Sensores de colisão
-        if (isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundLayer))
-        {
-            jumpsLeft = maxJumps;
-        }
-    }
+    //private void HandleMovement()
+    //{
+    //    if (bloqueioMovimentoTimer > 0)
+    //    {
+    //        bloqueioMovimentoTimer -= Time.deltaTime;
+    //    }
+    //    else
+    //    {
+    //        // Movimento Horizontal
+    //        rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
 
-    private void HandleMovement()
-    {
-        if (bloqueioMovimentoTimer > 0)
-        {
-            bloqueioMovimentoTimer -= Time.deltaTime;
-        }
-        else
-        {
-            // Movimento Horizontal
-            rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
-
-            // Lógica de Flip centralizada
-            if (moveInput.x > 0 && !facingRight) Flip();
-            else if (moveInput.x < 0 && facingRight) Flip();
-        }
-    }
-
-    void FixedUpdate()
-    {
-        if (isKnockback) return;
-    }
+    //        // Lógica de Flip centralizada
+    //        if (moveInput.x > 0 && !isfacingRight) Flip();
+    //        else if (moveInput.x < 0 && isfacingRight) Flip();
+    //    }
+    //}
 
     private void Flip()
     {
-        facingRight = !facingRight;
+        isFacingRight = !isFacingRight;
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
@@ -144,20 +126,23 @@ public class PlayerMovement : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
+    private void GroundCheck()
+    {
+        if (Physics2D.OverlapBox(groundCheck.position,groundCheckSize, 0, groundLayer))
+        {
+            jumpsLeft = maxJumps;
+        }
+    }
+
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            if (isGrounded || jumpsLeft > 0)
+            if (jumpsLeft > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpsLeft--;
             }
-            //else if (isWallSliding)
-            //{
-            //    WallJump();
-            //}
-
         }
         else if (context.canceled)
         {
@@ -232,18 +217,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //private void WallJump()
-    //{
-    //    isWallSliding = false;
-    //    bloqueioMovimentoTimer = tempoBloqueioMovimento;
-    //    float direcaoPulo = -Mathf.Sign(transform.localScale.x);
-    //    rb.linearVelocity = Vector2.zero;
-    //    rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
-
-    //    // Garante que o Flip aconteça no pulo da parede
-    //    if ((direcaoPulo > 0 && !facingRight) || (direcaoPulo < 0 && facingRight)) Flip();
-    //}
-
     public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
     {
         pontoDeCheckpoint = novaPosicao;
@@ -254,6 +227,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.white;
         Gizmos.DrawCube(groundCheck.position,groundCheckSize);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawCube(wallCheck.position, wallCheckSize);
         if (attackPoint == null) return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
