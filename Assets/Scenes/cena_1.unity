@@ -11093,6 +11093,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1362165598510752006, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362165598510752006, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
@@ -11106,11 +11110,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: jumpForce
-      value: 30
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
+      propertyPath: gravityBase
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: maxFallSpeed
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: attackColdown
