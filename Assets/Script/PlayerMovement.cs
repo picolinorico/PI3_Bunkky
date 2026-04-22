@@ -238,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Daqui pra baixo cpa eu mudo tudo
 
-    public async void Attack(InputAction.CallbackContext context)
+    public async void OnAttack(InputAction.CallbackContext context)
     {
         if (context.performed && !onAttack)
         {
