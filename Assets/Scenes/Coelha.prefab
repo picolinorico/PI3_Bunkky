@@ -230,22 +230,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba614b9dd2344a4fb11734d132aeaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 20
-  jumpForce: 15
-  extraJumpsValue: 1
-  jumpCounter: 0
-  fallMultiplier: 6
-  lowJumpMultiplier: 3
+  speed: 30
+  horizontalMovement: 0
+  isFacingRight: 1
+  gravityBase: 6
+  maxFallSpeed: 50
+  fallSpeedMultiplier: 2
+  jumpForce: 30
+  maxJumps: 1
+  jumpsLeft: 0
+  groundCheck: {fileID: 7641387798784200283}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckSize: {x: 4.63, y: 0.2}
   isGrounded: 0
-  isHoldingJump: 0
+  wallSlideSpeed: 1
+  isWallSliding: 0
+  wallJumpPower: {x: 25, y: 25}
+  wallJumpTime: 0.5
+  isWallJumping: 0
+  wallJumpDirection: 0
+  wallJumpTimer: 0
   wallCheck: {fileID: 4323865436875216671}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
-  wallSlidingSpeed: 2
-  wallJumpPower: {x: 10, y: 12}
-  tempoBloqueioMovimento: 0.2
-  tempoPresoNaParede: 0.15
+  wallCheckSize: {x: 1, y: 0.1}
   vidaMaxima: 3
   forcaKnockbackX: 7
   forcaKnockbackY: 5
@@ -253,15 +264,10 @@ MonoBehaviour:
   attackPoint: {fileID: 6541895803041029382}
   attackRange: 0.5
   attackDamage: 1
+  attackColdown: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  isKnockback: 0
-  groundCheck: {fileID: 7641387798784200283}
-  checkRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!114 &2739353275618611997
 MonoBehaviour:
   m_ObjectHideFlags: 0
