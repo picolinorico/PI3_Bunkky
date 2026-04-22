@@ -5,22 +5,43 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private bool isFacingRight = true;
 
     [Header("Movimento")]
-    [SerializeField] private float speed = 8f;
-    [SerializeField] private float horizontalMovement; 
-    [SerializeField] private float bloqueioMovimentoTimer;
+    [SerializeField] private float speed = 25f;
+    [SerializeField] private float horizontalMovement;
+    [SerializeField] private bool isFacingRight = true;
+
+    [Header("Gravidade")]
+    [SerializeField] private int gravityBase = 4;
+    [SerializeField] private float maxFallSpeed = 50;
+    [SerializeField] private float fallSpeedMultiplier = 3;
 
     [Header("Pulo")]
     [SerializeField] private float jumpForce = 25f;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpsLeft;
 
-    [Header("Gravidade")]
-    [SerializeField] private int gravityBase = 4;
-    [SerializeField] private float maxFallSpeed = 50;
-    [SerializeField] private float fallSpeedMultiplier = 3;
+    [Header("Detecção de Chão")]
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Vector2 groundCheckSize = new Vector2(4.63f, 0.2f);
+    [SerializeField] private bool isGrounded;
+
+    [Header("Movimento nas Paredes")]
+    [SerializeField] private float wallSlideSpeed = 1;
+    [SerializeField] private bool isWallSliding;
+
+    [Header("Pulo nas Paredes")]
+    [SerializeField] private Vector2 wallJumpPower = new Vector2(25f, 25f);
+    [SerializeField] private float wallJumpTime = 0.5f;
+    [SerializeField] private bool isWallJumping;
+    [SerializeField] private float wallJumpDirection;
+    [SerializeField] private float wallJumpTimer;
+
+    [Header("Detecção de Parede")]
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private Vector2 wallCheckSize = new Vector2(1f, 0.1f);
 
     [Header("Vida e Dano")]
     [SerializeField] private int vidaMaxima = 3;
@@ -38,16 +59,6 @@ public class PlayerMovement : MonoBehaviour
     private bool onAttack = false;
     [SerializeField] private LayerMask enemyLayer;
 
-    [Header("Detecção de Chão")]
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Vector2 groundCheckSize = new Vector2(4.63f, 0.2f);
-
-    [Header("Detecção de Parede")]
-    [SerializeField] private Transform wallCheck;
-    [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private Vector2 wallCheckSize = new Vector2(1f, 0.1f);
-
     [Header("Checkpoint e Câmera")]
     private Vector2 pontoDeCheckpoint;
     private BoxCollider2D areaDoCheckpoint;
@@ -60,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         cameraSeguir = FindAnyObjectByType<CameraSeguir>();
     }
 
-    void Start()
+    void Start() // Primeira coisa que aocntece
     {
         vidaAtual = vidaMaxima;
         pontoDeCheckpoint = transform.position;
@@ -68,18 +79,38 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
+        //Métodos
         GroundCheck();
-        //HandleMovement();
-        ProcessGravity();
+        ProcessGravity(); 
+        ProcessWallSlide();
+        ProcessWallJump();
+
+        if (!isWallJumping)
+        {
+            //Movimento do jogador
+            rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
+            Flip();
+        }
     }
 
-    void FixedUpdate()
+    void FixedUpdate() //Sla
     {
         if (isKnockback) return;
     }
 
-    private void ProcessGravity()
+    private void GroundCheck() //Checa de o jogador está tocando no chão
+    {
+        if (Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer))
+        {
+            jumpsLeft = maxJumps;
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+    }
+    private void ProcessGravity() //Melhora a gravidade bosta da Unity
     {
         if (rb.linearVelocity.y < 0)
         {
@@ -92,48 +123,68 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //private void HandleMovement()
-    //{
-    //    if (bloqueioMovimentoTimer > 0)
-    //    {
-    //        bloqueioMovimentoTimer -= Time.deltaTime;
-    //    }
-    //    else
-    //    {
-    //        // Movimento Horizontal
-    //        
-
-    //        // Lógica de Flip centralizada
-    //        if (moveInput.x > 0 && !isfacingRight) Flip();
-    //        else if (moveInput.x < 0 && isfacingRight) Flip();
-    //    }
-    //}
-
-    private void Flip()
+    private bool WallCheck() //Checa de o jogador está tocando as paredes
     {
-        if (isFacingRight && horizontalMovement < 0)
-        {
 
+        return (Physics2D.OverlapBox(wallCheck.position, wallCheckSize, 0, wallLayer));
+
+    }
+
+    private void ProcessWallSlide()
+    {
+        if (!isGrounded & WallCheck() & horizontalMovement != 0)
+        {
+            isWallSliding = true;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed));
+        }
+        else
+        {
+            isWallSliding = false;
         }
     }
 
-    // --- INPUTS (New Input System) ---
+    private void ProcessWallJump()
+    {
+        if (isWallSliding)
+        {
+            isWallJumping = false;
+            wallJumpDirection = -transform.localScale.x;
+            wallJumpTimer = wallJumpTime;
 
-    public void OnMove(InputAction.CallbackContext context)
+            CancelInvoke(nameof(CancelWallJump));
+        } 
+        else if (wallJumpTimer > 0f)
+        {
+            wallJumpTimer -= Time.deltaTime;
+        }
+    }
+
+    private void CancelWallJump()
+    {
+        isWallJumping = false;
+    }
+
+    private void Flip() //Método responsável por fazer o sprite da personagm virar conforme a direção
+    {
+        if (isFacingRight && horizontalMovement < 0 || !isFacingRight && horizontalMovement > 0)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
+    }
+
+    // --- INPUTS  ---
+
+    public void OnMove(InputAction.CallbackContext context) //Recebe o input de movimento
     {
         horizontalMovement = context.ReadValue<Vector2>().x;
     }
 
-    private void GroundCheck()
-    {
-        if (Physics2D.OverlapBox(groundCheck.position,groundCheckSize, 0, groundLayer))
-        {
-            jumpsLeft = maxJumps;
-        }
-    }
-
-    public void OnJump(InputAction.CallbackContext context)
-    {
+    public void OnJump(InputAction.CallbackContext context) //Pulo
+    {   
+        //Pulo normal segurando espaço
         if (context.performed)
         {
             if (jumpsLeft > 0)
@@ -142,17 +193,52 @@ public class PlayerMovement : MonoBehaviour
                 jumpsLeft--;
             }
         }
-        else if (context.canceled)
+
+        //Pra caso solte antes de atingir a parábola ou queira um little pulo
+        else if (context.canceled && (rb.linearVelocity.y > 0))
         {
-            // A MÁGICA ESTÁ AQUI: Só corta a velocidade se ela for positiva (subindo)
-            if (rb.linearVelocity.y > 0)
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+        }
+
+        //Wall Jump
+        if (context.performed && wallJumpTimer > 0f)
+        {
+            isWallJumping = true;
+            rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
+            wallJumpTimer = 0;
+
+            //Força o flip da personagem no Wall Jump
+            if (transform.localScale.x != wallJumpDirection)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+                isFacingRight = !isFacingRight;
+                Vector3 ls = transform.localScale;
+                ls.x *= -1f;
+                transform.localScale = ls;
             }
+
+            Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f); 
         }
     }
 
-    public async void OnAttack(InputAction.CallbackContext context)
+    private void OnDrawGizmosSelected() //Só estética pros Ground e Wall Cehck's
+    {
+        //Cor pro objeto GroundCheck
+        Gizmos.color = Color.white;
+        Gizmos.DrawCube(groundCheck.position, groundCheckSize);
+
+        //Cor pro objeto WallCheck
+        Gizmos.color = Color.blue;
+        Gizmos.DrawCube(wallCheck.position, wallCheckSize);
+
+        //Sla
+        if (attackPoint == null) return;
+        Gizmos.color = Color.red;       //Sujeito a alterações
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    //Daqui pra baixo cpa eu mudo tudo
+
+    public async void Attack(InputAction.CallbackContext context)
     {
         if (context.performed && !onAttack)
         {
@@ -219,16 +305,5 @@ public class PlayerMovement : MonoBehaviour
     {
         pontoDeCheckpoint = novaPosicao;
         areaDoCheckpoint = novaAreaDeCamera;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.white;
-        Gizmos.DrawCube(groundCheck.position,groundCheckSize);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawCube(wallCheck.position, wallCheckSize);
-        if (attackPoint == null) return;
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

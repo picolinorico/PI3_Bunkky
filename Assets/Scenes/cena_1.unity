@@ -8456,7 +8456,7 @@ Transform:
   m_GameObject: {fileID: 1528371374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.79, y: 0.02, z: 0}
+  m_LocalPosition: {x: 1.79, y: 0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11205,6 +11205,14 @@ PrefabInstance:
     - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: wallCheckSize.y
       value: 5.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
+      propertyPath: wallJumpPower.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
+      propertyPath: wallJumpPower.y
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3618374561178426510, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: ascentMultiplier
