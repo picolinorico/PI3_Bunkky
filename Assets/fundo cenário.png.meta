@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9680634f5a2eed145a235469e27b6a16
+guid: 9313fdafc32c3fb489a701c65c6ff4cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7029991797221573536
-    second: espinhos_0
+      213: -6700122006287843242
+    second: "fundo cen\xE1rio_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: espinhos_0
+      name: "fundo cen\xE1rio_0"
       rect:
         serializedVersion: 2
-        x: 385
-        y: 60
-        width: 909
-        height: 607
+        x: 0
+        y: 0
+        width: 5000
+        height: 5000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06cb2b8f4b3707e90800000000000000
-      internalID: -7029991797221573536
+      spriteID: 6508f67b8826403a0800000000000000
+      internalID: -6700122006287843242
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      espinhos_0: -7029991797221573536
+      "fundo cen\xE1rio_0": -6700122006287843242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,7 +3,7 @@ using UnityEngine;
 public class TrocarModoCamera : MonoBehaviour
 {
     public CameraSeguir gerenciador;
-    public BoxCollider2D quadrinhoAntesDaRampa;
+    public BoxCollider2D quadrinhoAnterior;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +18,7 @@ public class TrocarModoCamera : MonoBehaviour
             else
             {
                 // Se JÁ ESTÁ seguindo, significa que está voltando da rampa pro corredor
-                gerenciador.FocarNoQuadrinho(quadrinhoAntesDaRampa);
+                gerenciador.FocarNoQuadrinho(quadrinhoAnterior);
             }
         }
     }

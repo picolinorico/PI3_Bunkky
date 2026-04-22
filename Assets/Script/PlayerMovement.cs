@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 18f;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpsLeft;
-    [SerializeField] private bool isGrounded; // Removido SerializeField (lógica interna)
+    [SerializeField] private bool isGrounded;
 
     [Header("Gravidade")]
     [SerializeField] private int gravityBase = 2;
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Gravity()
     {
-        if(rb.linearVelocity.y < 0)
+        if (rb.linearVelocity.y < 0)
         {
             rb.gravityScale = gravityBase * fallSpeedMultiplier;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -maxFallSpeed));
@@ -97,13 +97,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckSurroundings()
     {
-        // Sensores de colisão
-        if (isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer))
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, wallLayer);
+
+        // Garante que o pulo recarregue ao tocar no chão OU ao agarrar na parede
+        if (isGrounded || isWallSliding)
         {
             jumpsLeft = maxJumps;
         }
-
-        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, wallLayer);
     }
 
     private void HandleMovement()
@@ -137,41 +138,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (isWallSliding && agarrarTimer > 0)
             agarrarTimer -= Time.deltaTime;
-<<<<<<< HEAD
-        }
-
-        // 3. Controle de Movimento Horizontal
-        if (bloqueioMovimentoTimer > 0)
-        {
-            // Se acabou de fazer um wall jump, diminui o timer e não deixa o jogador parar o personagem no ar instantaneamente
-            bloqueioMovimentoTimer -= Time.deltaTime;
-        }
-        else
-        {
-            // Movimento normal
-            rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
-
-            // Inverte o sprite
-            if (moveInput.x != 0)
-            {
-                Vector3 currentScale = transform.localScale;
-                currentScale.x = Mathf.Abs(currentScale.x) * Mathf.Sign(moveInput.x);
-                transform.localScale = currentScale;
-            }
-        }
-
-        if (isGrounded && rb.linearVelocity.y <= 0.1f || isWallSliding)
-            jumpCounter = extraJumpsValue;
-
-        // Inverte o sprite preservando a escala original
-        if (moveInput.x != 0)
-        {
-            Vector3 currentScale = transform.localScale;
-            currentScale.x = Mathf.Abs(currentScale.x) * Mathf.Sign(moveInput.x);
-            transform.localScale = currentScale;
-        }
-=======
->>>>>>> 021c6a70c5e832655587ffe7021f0f64a6311a01
     }
 
     void FixedUpdate()
@@ -206,48 +172,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            if (isGrounded || jumpsLeft > 0)
+            if (isWallSliding)
             {
-<<<<<<< HEAD
-                // WALL JUMP!
-                isWallSliding = false;
-                bloqueioMovimentoTimer = tempoBloqueioMovimento; // Impede o player de voltar pra parede no mesmo milissegundo
-
-                // Descobre para qual lado pular (o oposto de onde o personagem está olhando)
-                float direcaoPulo = -Mathf.Sign(transform.localScale.x);
-
-                rb.linearVelocity = Vector2.zero; // Zera a velocidade atual para o pulo ser limpo
-                rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
-
-                // Vira o personagem para o lado do pulo
-                Vector3 currentScale = transform.localScale;
-                currentScale.x = Mathf.Abs(currentScale.x) * direcaoPulo;
-                transform.localScale = currentScale;
-
-                // Avisamos a física que o pulo da parede começou e o botão está pressionado!
-                isHoldingJump = true;
-=======
+                WallJump();
+            }
+            else if (isGrounded || jumpsLeft > 0)
+            {
+                // Pulo normal implementado pela sua dupla
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpsLeft--;
->>>>>>> 021c6a70c5e832655587ffe7021f0f64a6311a01
             }
-            else if (isWallSliding)
-            {
-<<<<<<< HEAD
-                // PULO NORMAL
-                if (!isGrounded) jumpCounter--; // Só gasta o pulo se estiver no ar (Double Jump)
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                isHoldingJump = true;
-=======
-                WallJump();
->>>>>>> 021c6a70c5e832655587ffe7021f0f64a6311a01
-            }
-
         }
         else if (context.canceled)
         {
-            // A MÁGICA ESTÁ AQUI: Só corta a velocidade se ela for positiva (subindo)
+            // A lógica limpa da sua dupla para controlar a altura do pulo
             if (rb.linearVelocity.y > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
@@ -276,7 +214,6 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Collider2D inimigo in inimigosAtingidos)
         {
-            // TryGetComponent é mais performático que GetComponent
             if (inimigo.TryGetComponent(out VidaGlitch scriptVida))
             {
                 scriptVida.ReceberDano(attackDamage);
@@ -326,7 +263,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
 
-        // Garante que o Flip aconteça no pulo da parede
+        // Garante que o Flip aconteça no pulo da parede de forma limpa
         if ((direcaoPulo > 0 && !facingRight) || (direcaoPulo < 0 && facingRight)) Flip();
     }
 
