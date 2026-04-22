@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movimento")]
     [SerializeField] private float speed = 8f;
-    [SerializeField] private Vector2 moveInput;
+    [SerializeField] private float horizontalMovement;
     [SerializeField] private float bloqueioMovimentoTimer;
 
     [Header("Pulo")]
@@ -68,12 +68,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (isKnockback) return;
-
+        rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
         GroundCheck();
-        //HandleWallSliding();
         //HandleMovement();
-        Gravity();
+        ProcessGravity();
     }
 
     void FixedUpdate()
@@ -81,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         if (isKnockback) return;
     }
 
-    private void Gravity()
+    private void ProcessGravity()
     {
         if (rb.linearVelocity.y < 0)
         {
@@ -103,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
     //    else
     //    {
     //        // Movimento Horizontal
-    //        rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
+    //        
 
     //        // Lógica de Flip centralizada
     //        if (moveInput.x > 0 && !isfacingRight) Flip();
@@ -113,17 +111,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        if (isFacingRight && horizontalMovement < 0)
+        {
+
+        }
     }
 
     // --- INPUTS (New Input System) ---
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        horizontalMovement = context.ReadValue<Vector2>().x;
     }
 
     private void GroundCheck()
