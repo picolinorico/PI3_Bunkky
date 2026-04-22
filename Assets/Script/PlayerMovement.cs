@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movimento")]
     [SerializeField] private float speed = 8f;
-    [SerializeField] private float horizontalMovement;
+    [SerializeField] private float horizontalMovement; 
     [SerializeField] private float bloqueioMovimentoTimer;
 
     [Header("Pulo")]
@@ -26,14 +26,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int vidaMaxima = 3;
     private int vidaAtual;
     [SerializeField] private float forcaKnockbackX = 7f;
-    [SerializeField] private float forcaKnockbackY = 5f;
+    [SerializeField] private float forcaKnockbackY = 5f;    //Arrumar (IDamagble)
     [SerializeField] private float knockbackDuration = 0.3f;
     private bool isKnockback;
 
     [Header("Ataque e Feedback")]
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = 0.5f;
-    [SerializeField] private int attackDamage = 1;
+    [SerializeField] private int attackDamage = 1;          //Arrumar
     [SerializeField] private float attackColdown = 1f;
     private bool onAttack = false;
     [SerializeField] private LayerMask enemyLayer;
