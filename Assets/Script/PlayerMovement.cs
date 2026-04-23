@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Vida e Dano")]
     [SerializeField] private int vidaMaxima = 3;
     private int vidaAtual;
+    public VidaUI controleDeUI;
     [SerializeField] private float forcaKnockbackX = 7f;
     [SerializeField] private float forcaKnockbackY = 5f;
     [SerializeField] private float knockbackDuration = 0.3f;
@@ -70,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
     {
         vidaAtual = vidaMaxima;
         pontoDeCheckpoint = transform.position;
+
+        if (controleDeUI != null) controleDeUI.AtualizarCoracoes(vidaAtual, vidaMaxima);
     }
 
     void Update()
@@ -228,6 +231,8 @@ public class PlayerMovement : MonoBehaviour
         vidaAtual -= dano;
         Debug.Log("Tomei dano! Vida restante: " + vidaAtual);
 
+        if (controleDeUI != null) controleDeUI.AtualizarCoracoes(vidaAtual, vidaMaxima);
+
         if (vidaAtual <= 0) Morrer();
         else StartCoroutine(AplicarKnockback(posicaoDoPerigo));
     }
@@ -248,6 +253,8 @@ public class PlayerMovement : MonoBehaviour
         transform.position = pontoDeCheckpoint;
         rb.linearVelocity = Vector2.zero;
         isKnockback = false;
+
+        if (controleDeUI != null) controleDeUI.AtualizarCoracoes(vidaAtual, vidaMaxima);
 
         if (areaDoCheckpoint != null && cameraSeguir != null)
         {
