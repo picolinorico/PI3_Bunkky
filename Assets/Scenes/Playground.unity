@@ -2476,8 +2476,10 @@ GameObject:
   - component: {fileID: 1775686161}
   - component: {fileID: 1775686160}
   - component: {fileID: 1775686159}
+  - component: {fileID: 1775686163}
+  - component: {fileID: 1775686164}
   m_Layer: 0
-  m_Name: Inimigo
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2508,8 +2510,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &1775686160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2544,7 +2546,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.004136145, y: -0.0074774027}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2554,7 +2556,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0579075, y: 1.0149547}
   m_EdgeRadius: 0
 --- !u!212 &1775686161
 SpriteRenderer:
@@ -2624,12 +2626,53 @@ Transform:
   m_GameObject: {fileID: 1775686158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.4, y: 7.6, z: 0}
+  m_LocalPosition: {x: -16.37, y: 7.42, z: 0}
   m_LocalScale: {x: 1.3247, y: 4.6973176, z: 1.3247}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775686163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775686158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af489e2e5a2c7dd4dbc328c4f09044d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cachorro
+  rb: {fileID: 0}
+  isGrounded: 1
+  shouldJump: 0
+  player: {fileID: 2051062228}
+  speed: 10
+  jumpForce: 5
+  groundLayer:
+    m_Bits: 8
+--- !u!114 &1775686164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775686158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d4ae523ec31ab4ba78af4bd3cff3d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cachorro
+  rb: {fileID: 0}
+  isGrounded: 0
+  shouldJump: 0
+  player: {fileID: 2051062228}
+  speed: 20
+  jumpForce: 30
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1792988225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,13 +2823,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coelha
       objectReference: {fileID: 0}
+    - target: {fileID: 3810250304835834200, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4712325362365200886, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.8
+      value: -21.2
       objectReference: {fileID: 0}
     - target: {fileID: 4712325362365200886, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.8
+      value: 8.6
       objectReference: {fileID: 0}
     - target: {fileID: 4712325362365200886, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2963,6 +3010,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2051062228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4712325362365200886, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
+  m_PrefabInstance: {fileID: 1872838758}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2099029079
 GameObject:
   m_ObjectHideFlags: 0
