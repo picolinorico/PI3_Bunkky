@@ -7,22 +7,16 @@ public class MenuPausa : MonoBehaviour
     // Variável estática para outros scripts saberem se o jogo tá pausado
     public static bool jogoPausado = false;
 
-    [Header("Arraste o seu PANEL aqui")]
+    [Header("Paineis")]
     public GameObject menuPausaUI;
+    public GameObject painelConfirmar;  // A janelinha de aviso
 
     void Update()
     {
-        // Checa se a tecla ESC foi apertada
+        // Atalho rápido: ESC pausa ou despausa
         if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            if (jogoPausado)
-            {
-                Retomar();
-            }
-            else
-            {
-                Pausar();
-            }
+            if (jogoPausado) Retomar(); else Pausar();
         }
     }
 
@@ -40,13 +34,16 @@ public class MenuPausa : MonoBehaviour
         jogoPausado = true;
     }
 
-    // Função para o botão "Menu Principal"
-    public void CarregarMenuPrincipal()
-    {
-        Time.timeScale = 1f; // MUITO IMPORTANTE: Descongelar o tempo antes de sair, senão o menu inicial fica travado!
-        jogoPausado = false;
+    // Chamada pelo botão "Menu Principal" original
+    public void AbrirAviso() => painelConfirmar.SetActive(true);
 
-        // Carrega a cena zero (que configuramos no Build Profiles como o seu Menu Principal)
-        SceneManager.LoadScene(0);
+    // Chamada pelo botão "Não" do aviso
+    public void FecharAviso() => painelConfirmar.SetActive(false);
+
+    // Chamada pelo botão "Sim" do aviso
+    public void ConfirmarSair()
+    {
+        Time.timeScale = 1f; // NUNCA esqueça de resetar o tempo antes de mudar de cena
+        SceneManager.LoadScene(0); // Carrega o menu principal
     }
 }
