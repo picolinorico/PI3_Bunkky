@@ -20,8 +20,9 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 2f, groundLayer))
+        if (isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 4f, groundLayer))
         {
+            Debug.Log("AHAHAHSDJKHSASDFSDF");
             isGrounded = true;
         }
 
