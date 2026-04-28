@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 0a09756c55692904db13fc9f264105b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6464312224795612941
+    second: level_dimensionado-_0005_glitch_0
+  - first:
+      213: 7275065025142016034
+    second: level_dimensionado-_0005_glitch_1
+  - first:
+      213: -7115555954661340599
+    second: level_dimensionado-_0005_glitch_2
+  - first:
+      213: -5961462322917012820
+    second: level_dimensionado-_0005_glitch_3
+  - first:
+      213: 4224225566141424214
+    second: level_dimensionado-_0005_glitch_4
+  - first:
+      213: -2415943549991516684
+    second: level_dimensionado-_0005_glitch_5
+  - first:
+      213: -8894952046958788217
+    second: level_dimensionado-_0005_glitch_6
+  - first:
+      213: -5854699862711435566
+    second: level_dimensionado-_0005_glitch_7
+  - first:
+      213: 54642424231707613
+    second: level_dimensionado-_0005_glitch_8
+  - first:
+      213: 6771778081852292360
+    second: level_dimensionado-_0005_glitch_9
+  - first:
+      213: 4746934377552239958
+    second: level_dimensionado-_0005_glitch_10
+  - first:
+      213: -4049033609783751432
+    second: level_dimensionado-_0005_glitch_11
+  - first:
+      213: 7608567806422395506
+    second: level_dimensionado-_0005_glitch_12
+  - first:
+      213: 4958050359301078462
+    second: level_dimensionado-_0005_glitch_13
+  - first:
+      213: -5404738964250041727
+    second: level_dimensionado-_0005_glitch_14
+  - first:
+      213: -2762868800833122558
+    second: level_dimensionado-_0005_glitch_15
+  - first:
+      213: 7764212957881834459
+    second: level_dimensionado-_0005_glitch_16
+  - first:
+      213: -5619755468779306373
+    second: level_dimensionado-_0005_glitch_17
+  - first:
+      213: -1895204313784588626
+    second: level_dimensionado-_0005_glitch_18
+  - first:
+      213: -2741288137774615583
+    second: level_dimensionado-_0005_glitch_19
+  - first:
+      213: -7922728838821794313
+    second: level_dimensionado-_0005_glitch_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_0
+      rect:
+        serializedVersion: 2
+        x: 3353
+        y: 16844
+        width: 285
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8a7dbe7462a46a0800000000000000
+      internalID: -6464312224795612941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_1
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 17026
+        width: 286
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228457d681936f460800000000000000
+      internalID: 7275065025142016034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_2
+      rect:
+        serializedVersion: 2
+        x: 8165
+        y: 17026
+        width: 286
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94acefe1f87704d90800000000000000
+      internalID: -7115555954661340599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_3
+      rect:
+        serializedVersion: 2
+        x: 9345
+        y: 16481
+        width: 286
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caa08ac3a91a44da0800000000000000
+      internalID: -5961462322917012820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_4
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 15936
+        width: 286
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 652abf085c67f9a30800000000000000
+      internalID: 4224225566141424214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_5
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 15936
+        width: 286
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f50c593428d87ed0800000000000000
+      internalID: -2415943549991516684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_6
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 15936
+        width: 286
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78143e2ad38ce8480800000000000000
+      internalID: -8894952046958788217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_7
+      rect:
+        serializedVersion: 2
+        x: 9345
+        y: 14121
+        width: 286
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de7e809e7defbea0800000000000000
+      internalID: -5854699862711435566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_8
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 13122
+        width: 286
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd34ffdcef022c000800000000000000
+      internalID: 54642424231707613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_9
+      rect:
+        serializedVersion: 2
+        x: 12251
+        y: 13576
+        width: 98
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80df49a79403afd50800000000000000
+      internalID: 6771778081852292360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_10
+      rect:
+        serializedVersion: 2
+        x: 9345
+        y: 11669
+        width: 286
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d57128aaf70e140800000000000000
+      internalID: 4746934377552239958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_11
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 10761
+        width: 280
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fcc8357261fec7c0800000000000000
+      internalID: -4049033609783751432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_12
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 9399
+        width: 286
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27aa747ab10179960800000000000000
+      internalID: 7608567806422395506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_13
+      rect:
+        serializedVersion: 2
+        x: 9981
+        y: 8400
+        width: 286
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd73ac68888ec440800000000000000
+      internalID: 4958050359301078462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_14
+      rect:
+        serializedVersion: 2
+        x: 12251
+        y: 8310
+        width: 98
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182e92c2c828ef4b0800000000000000
+      internalID: -5404738964250041727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_15
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 6948
+        width: 286
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f0555c67158a9d0800000000000000
+      internalID: -2762868800833122558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_16
+      rect:
+        serializedVersion: 2
+        x: 8256
+        y: 7129
+        width: 285
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb18037c8600cb60800000000000000
+      internalID: 7764212957881834459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_17
+      rect:
+        serializedVersion: 2
+        x: 10980
+        y: 6766
+        width: 285
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72c9d60d2e9202b0800000000000000
+      internalID: -5619755468779306373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_18
+      rect:
+        serializedVersion: 2
+        x: 7711
+        y: 3043
+        width: 467
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6e414c7b1e2b5e0800000000000000
+      internalID: -1895204313784588626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_19
+      rect:
+        serializedVersion: 2
+        x: 10980
+        y: 2589
+        width: 285
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3b3f076fcf4f9d0800000000000000
+      internalID: -2741288137774615583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0005_glitch_20
+      rect:
+        serializedVersion: 2
+        x: 4624
+        y: 1415
+        width: 286
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fda846f810dc0290800000000000000
+      internalID: -7922728838821794313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level_dimensionado-_0005_glitch_0: -6464312224795612941
+      level_dimensionado-_0005_glitch_1: 7275065025142016034
+      level_dimensionado-_0005_glitch_10: 4746934377552239958
+      level_dimensionado-_0005_glitch_11: -4049033609783751432
+      level_dimensionado-_0005_glitch_12: 7608567806422395506
+      level_dimensionado-_0005_glitch_13: 4958050359301078462
+      level_dimensionado-_0005_glitch_14: -5404738964250041727
+      level_dimensionado-_0005_glitch_15: -2762868800833122558
+      level_dimensionado-_0005_glitch_16: 7764212957881834459
+      level_dimensionado-_0005_glitch_17: -5619755468779306373
+      level_dimensionado-_0005_glitch_18: -1895204313784588626
+      level_dimensionado-_0005_glitch_19: -2741288137774615583
+      level_dimensionado-_0005_glitch_2: -7115555954661340599
+      level_dimensionado-_0005_glitch_20: -7922728838821794313
+      level_dimensionado-_0005_glitch_3: -5961462322917012820
+      level_dimensionado-_0005_glitch_4: 4224225566141424214
+      level_dimensionado-_0005_glitch_5: -2415943549991516684
+      level_dimensionado-_0005_glitch_6: -8894952046958788217
+      level_dimensionado-_0005_glitch_7: -5854699862711435566
+      level_dimensionado-_0005_glitch_8: 54642424231707613
+      level_dimensionado-_0005_glitch_9: 6771778081852292360
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

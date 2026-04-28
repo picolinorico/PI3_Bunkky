@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: e33c817ebdee7b846989d7dfaaeb74ae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7073284207233549490
+    second: level_dimensionado-_0004_colliderdano_0
+  - first:
+      213: -8784266167887640683
+    second: level_dimensionado-_0004_colliderdano_1
+  - first:
+      213: -2673035752625716143
+    second: level_dimensionado-_0004_colliderdano_2
+  - first:
+      213: -7527669305366138334
+    second: level_dimensionado-_0004_colliderdano_3
+  - first:
+      213: -6633491215828941768
+    second: level_dimensionado-_0004_colliderdano_4
+  - first:
+      213: -4919114195493936794
+    second: level_dimensionado-_0004_colliderdano_5
+  - first:
+      213: 1397314780521104184
+    second: level_dimensionado-_0004_colliderdano_6
+  - first:
+      213: 2488293369577471038
+    second: level_dimensionado-_0004_colliderdano_7
+  - first:
+      213: 151888466830999644
+    second: level_dimensionado-_0004_colliderdano_8
+  - first:
+      213: -137526649586721480
+    second: level_dimensionado-_0004_colliderdano_9
+  - first:
+      213: 4894829260091175878
+    second: level_dimensionado-_0004_colliderdano_10
+  - first:
+      213: -8959388939970898729
+    second: level_dimensionado-_0004_colliderdano_11
+  - first:
+      213: -679437199676634819
+    second: level_dimensionado-_0004_colliderdano_12
+  - first:
+      213: -4419167997513538941
+    second: level_dimensionado-_0004_colliderdano_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_0
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 15721
+        width: 833
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4bb6784d75a6dd90800000000000000
+      internalID: -7073284207233549490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_1
+      rect:
+        serializedVersion: 2
+        x: 3702
+        y: 15721
+        width: 742
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597439a1674081680800000000000000
+      internalID: -8784266167887640683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_2
+      rect:
+        serializedVersion: 2
+        x: 4977
+        y: 13901
+        width: 1378
+        height: 923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15443d4352877ead0800000000000000
+      internalID: -2673035752625716143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 11625
+        width: 3375
+        height: 2107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2223a0b66a8588790800000000000000
+      internalID: -7527669305366138334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_4
+      rect:
+        serializedVersion: 2
+        x: 6797
+        y: 11534
+        width: 2106
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83487db82ea11f3a0800000000000000
+      internalID: -6633491215828941768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 8167
+        width: 1379
+        height: 1106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 661a008a3bbcbbbb0800000000000000
+      internalID: -4919114195493936794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_6
+      rect:
+        serializedVersion: 2
+        x: 5887
+        y: 8076
+        width: 2015
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8330d5cb362446310800000000000000
+      internalID: 1397314780521104184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_7
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 6529
+        width: 2198
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cff96d2a1388220800000000000000
+      internalID: 2488293369577471038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_8
+      rect:
+        serializedVersion: 2
+        x: 6615
+        y: 5346
+        width: 1651
+        height: 1560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50c0fe71cd9b1200800000000000000
+      internalID: 151888466830999644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_9
+      rect:
+        serializedVersion: 2
+        x: 9618
+        y: 6802
+        width: 104
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ddb38ad38671ef0800000000000000
+      internalID: -137526649586721480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_10
+      rect:
+        serializedVersion: 2
+        x: 11984
+        y: 6529
+        width: 190
+        height: 1288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c33ce3374dede340800000000000000
+      internalID: 4894829260091175878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_11
+      rect:
+        serializedVersion: 2
+        x: 8617
+        y: 3890
+        width: 3016
+        height: 2470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4987c5a3bd9a380800000000000000
+      internalID: -8959388939970898729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_12
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 1257
+        width: 1652
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39861a77772296f0800000000000000
+      internalID: -679437199676634819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0004_colliderdano_13
+      rect:
+        serializedVersion: 2
+        x: 6160
+        y: 1257
+        width: 1560
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3826e69be16fba2c0800000000000000
+      internalID: -4419167997513538941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level_dimensionado-_0004_colliderdano_0: -7073284207233549490
+      level_dimensionado-_0004_colliderdano_1: -8784266167887640683
+      level_dimensionado-_0004_colliderdano_10: 4894829260091175878
+      level_dimensionado-_0004_colliderdano_11: -8959388939970898729
+      level_dimensionado-_0004_colliderdano_12: -679437199676634819
+      level_dimensionado-_0004_colliderdano_13: -4419167997513538941
+      level_dimensionado-_0004_colliderdano_2: -2673035752625716143
+      level_dimensionado-_0004_colliderdano_3: -7527669305366138334
+      level_dimensionado-_0004_colliderdano_4: -6633491215828941768
+      level_dimensionado-_0004_colliderdano_5: -4919114195493936794
+      level_dimensionado-_0004_colliderdano_6: 1397314780521104184
+      level_dimensionado-_0004_colliderdano_7: 2488293369577471038
+      level_dimensionado-_0004_colliderdano_8: 151888466830999644
+      level_dimensionado-_0004_colliderdano_9: -137526649586721480
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
