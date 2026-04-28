@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
 
@@ -51,6 +51,8 @@ public class Movement : MonoBehaviour
     private bool onAttack = false;
     [SerializeField] private LayerMask enemyLayer;
 
+    public Animator animator;
+
     [Header("Checkpoint e Câmera")]
     private Vector2 pontoDeCheckpoint;
     private BoxCollider2D areaDoCheckpoint;
@@ -65,7 +67,6 @@ public class Movement : MonoBehaviour
 
     void Start() // Primeira coisa que aocntece
     {
-        vidaAtual = vidaMaxima;
         pontoDeCheckpoint = transform.position;
     }
 
@@ -76,7 +77,10 @@ public class Movement : MonoBehaviour
         ProcessGravity(); 
         ProcessWallSlide();
         ProcessWallJump();
-
+        if (horizontalMovement == 0)
+        {
+            animator.SetBool("Andando", false);
+        }
         if (!isWallJumping)
         {
             //Movimento do jogador
@@ -87,18 +91,20 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate() //Sla
     {
-        if (isKnockback) return;
+
     }
 
     private void GroundCheck() //Checa de o jogador está tocando no chão
     {
         if (Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer))
         {
+            animator.SetBool("Pulando", false);
             jumpsLeft = maxJumps;
             isGrounded = true;
         }
         else
         {
+            animator.SetBool("Pulando", true);
             isGrounded = false;
         }
     }
@@ -172,15 +178,20 @@ public class Movement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context) //Recebe o input de movimento
     {
         horizontalMovement = context.ReadValue<Vector2>().x;
+        animator.SetBool("Andando", true);
     }
 
     public void OnJump(InputAction.CallbackContext context) //Pulo
-    {   
+    {
+
+        
         //Pulo normal segurando espaço
         if (context.performed)
         {
+            animator.SetBool("Pulando", true);
             if (jumpsLeft > 0)
             {
+                animator.SetBool("Pulando", true);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpsLeft--;
             }
@@ -189,12 +200,14 @@ public class Movement : MonoBehaviour
         //Pra caso solte antes de atingir a parábola ou queira um little pulo
         else if (context.canceled && (rb.linearVelocity.y > 0))
         {
+            
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
 
         //Wall Jump
         if (context.performed && wallJumpTimer > 0f)
         {
+            animator.SetBool("Pulando", true);
             isWallJumping = true;
             rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
             wallJumpTimer = 0;
@@ -259,39 +272,39 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void ReceberDano(int dano, Vector2 posicaoDoPerigo)
-    {
-        if (isKnockback) return;
+    //public void ReceberDano(int dano, Vector2 posicaoDoPerigo)
+    //{
+    //    if (isKnockback) return;
 
-        vidaAtual -= dano;
-        Debug.Log("Tomei dano! Vida restante: " + vidaAtual);
+    //    vidaAtual -= dano;
+    //    Debug.Log("Tomei dano! Vida restante: " + vidaAtual);
 
-        if (vidaAtual <= 0) Morrer();
-        else StartCoroutine(AplicarKnockback(posicaoDoPerigo));
-    }
+    //    if (vidaAtual <= 0) Morrer();
+    //    else StartCoroutine(AplicarKnockback(posicaoDoPerigo));
+    //}
 
-    private IEnumerator AplicarKnockback(Vector2 posicaoDoPerigo)
-    {
-        isKnockback = true;
-        rb.linearVelocity = Vector2.zero;
-        float direcaoX = transform.position.x < posicaoDoPerigo.x ? -1 : 1;
-        rb.AddForce(new Vector2(direcaoX * forcaKnockbackX, forcaKnockbackY), ForceMode2D.Impulse);
-        yield return new WaitForSeconds(knockbackDuration);
-        isKnockback = false;
-    }
+    //private IEnumerator AplicarKnockback(Vector2 posicaoDoPerigo)
+    //{
+    //    isKnockback = true;
+    //    rb.linearVelocity = Vector2.zero;
+    //    float direcaoX = transform.position.x < posicaoDoPerigo.x ? -1 : 1;
+    //    rb.AddForce(new Vector2(direcaoX * forcaKnockbackX, forcaKnockbackY), ForceMode2D.Impulse);
+    //    yield return new WaitForSeconds(knockbackDuration);
+    //    isKnockback = false;
+    //}
 
-    private void Morrer()
-    {
-        vidaAtual = vidaMaxima;
-        transform.position = pontoDeCheckpoint;
-        rb.linearVelocity = Vector2.zero;
-        isKnockback = false;
+    //private void Morrer()
+    //{
+    //    vidaAtual = vidaMaxima;
+    //    transform.position = pontoDeCheckpoint;
+    //    rb.linearVelocity = Vector2.zero;
+    //    isKnockback = false;
 
-        if (areaDoCheckpoint != null && cameraSeguir != null)
-        {
-            cameraSeguir.FocarNoQuadrinho(areaDoCheckpoint);
-        }
-    }
+    //    if (areaDoCheckpoint != null && cameraSeguir != null)
+    //    {
+    //        cameraSeguir.FocarNoQuadrinho(areaDoCheckpoint);
+    //    }
+    //}
 
     public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
     {

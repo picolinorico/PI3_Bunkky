@@ -1,28 +1,37 @@
 fileFormatVersion: 2
-guid: 2f160e5cad67dc946887d551534fd08a
+guid: 61885185819a84f49a4812e0758e6cc6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2536884034278954250
-    second: spritesheet_coelhacaminhando_0
+      213: -55744858517395789
+    second: spritesheet_coelhapulando_0
   - first:
-      213: -5105116622971921896
-    second: spritesheet_coelhacaminhando_1
+      213: -4281379138092672250
+    second: spritesheet_coelhapulando_1
   - first:
-      213: -2161002692149544784
-    second: spritesheet_coelhacaminhando_2
+      213: -7003051320994079613
+    second: spritesheet_coelhapulando_2
   - first:
-      213: -6429665775403585330
-    second: spritesheet_coelhacaminhando_3
+      213: -1496140097068338464
+    second: spritesheet_coelhapulando_3
   - first:
-      213: 2395442397210232234
-    second: spritesheet_coelhacaminhando_4
+      213: -4113092079108367030
+    second: spritesheet_coelhapulando_4
   - first:
-      213: 1192100059021401388
-    second: spritesheet_coelhacaminhando_5
+      213: -4103305398113669561
+    second: spritesheet_coelhapulando_5
   - first:
-      213: 6472900705724350622
-    second: spritesheet_coelhacaminhando_6
+      213: 8774717463396641682
+    second: spritesheet_coelhapulando_6
+  - first:
+      213: 1649775528162775430
+    second: spritesheet_coelhapulando_7
+  - first:
+      213: 7219122298907912258
+    second: spritesheet_coelhapulando_8
+  - first:
+      213: -7336642551429510118
+    second: spritesheet_coelhapulando_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -65,7 +74,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -93,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,7 +128,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_0
+      name: spritesheet_coelhapulando_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1624
-        height: 1629
+        y: 47
+        width: 1306
+        height: 1675
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fa617c696d2bccd0800000000000000
-      internalID: -2536884034278954250
+      spriteID: 3b62406b854f93ff0800000000000000
+      internalID: -55744858517395789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_1
+      name: spritesheet_coelhapulando_1
       rect:
         serializedVersion: 2
-        x: 1619
-        y: 0
-        width: 1697
-        height: 1629
+        x: 1303
+        y: 47
+        width: 1523
+        height: 1675
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81a11deba7bf629b0800000000000000
-      internalID: -5105116622971921896
+      spriteID: 60bd73d8b5c7594c0800000000000000
+      internalID: -4281379138092672250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_2
+      name: spritesheet_coelhapulando_2
       rect:
         serializedVersion: 2
-        x: 3301
-        y: 0
-        width: 1784
-        height: 1629
+        x: 2855
+        y: 47
+        width: 1694
+        height: 1675
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b873cf30839202e0800000000000000
-      internalID: -2161002692149544784
+      spriteID: 38c51546de920de90800000000000000
+      internalID: -7003051320994079613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_3
+      name: spritesheet_coelhapulando_3
       rect:
         serializedVersion: 2
-        x: 5085
-        y: 0
-        width: 1844
-        height: 1617
+        x: 4548
+        y: 47
+        width: 1415
+        height: 1675
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec035980b0d35c6a0800000000000000
-      internalID: -6429665775403585330
+      spriteID: 0e2f5043284ac3be0800000000000000
+      internalID: -1496140097068338464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_4
+      name: spritesheet_coelhapulando_4
       rect:
         serializedVersion: 2
-        x: 6921
-        y: 0
-        width: 1812
-        height: 1629
+        x: 5960
+        y: 47
+        width: 1600
+        height: 1675
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa540ad2b225e3120800000000000000
-      internalID: 2395442397210232234
+      spriteID: a4dd540db8c5be6c0800000000000000
+      internalID: -4113092079108367030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_5
+      name: spritesheet_coelhapulando_5
       rect:
         serializedVersion: 2
-        x: 8728
-        y: 0
-        width: 1665
-        height: 1629
+        x: 7559
+        y: 47
+        width: 1223
+        height: 1674
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2d51ba00b03b8010800000000000000
-      internalID: 1192100059021401388
+      spriteID: 74eed7c0b712e07c0800000000000000
+      internalID: -4103305398113669561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_6
+      name: spritesheet_coelhapulando_6
       rect:
         serializedVersion: 2
-        x: 10393
-        y: 0
-        width: 1486
-        height: 1625
+        x: 8781
+        y: 45
+        width: 1052
+        height: 1675
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,8 +287,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e90431f95ec54d950800000000000000
-      internalID: 6472900705724350622
+      spriteID: 29b6c22ea0f06c970800000000000000
+      internalID: 8774717463396641682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_coelhapulando_7
+      rect:
+        serializedVersion: 2
+        x: 9831
+        y: 80
+        width: 1142
+        height: 1675
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681564b1a1e25e610800000000000000
+      internalID: 1649775528162775430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_coelhapulando_8
+      rect:
+        serializedVersion: 2
+        x: 10962
+        y: 80
+        width: 1469
+        height: 1675
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248e1887b797f2460800000000000000
+      internalID: 7219122298907912258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_coelhapulando_9
+      rect:
+        serializedVersion: 2
+        x: 12429
+        y: 18
+        width: 1636
+        height: 1675
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c470e78720f2a90800000000000000
+      internalID: -7336642551429510118
       vertices: []
       indices: 
       edges: []
@@ -288,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e63d974e01b85c043b4d82b59045646f
+    spriteID: 5a6bd040c3828ff4396fe5a44ebaa98f
     internalID: 0
     vertices: []
     indices: 
@@ -296,17 +371,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":1.0},"gridSpriteSize":{"x":1697.0,"y":1629.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      spritesheet_coelhacaminhando_0: -2536884034278954250
-      spritesheet_coelhacaminhando_1: -5105116622971921896
-      spritesheet_coelhacaminhando_2: -2161002692149544784
-      spritesheet_coelhacaminhando_3: -6429665775403585330
-      spritesheet_coelhacaminhando_4: 2395442397210232234
-      spritesheet_coelhacaminhando_5: 1192100059021401388
-      spritesheet_coelhacaminhando_6: 6472900705724350622
+      spritesheet_coelhapulando_0: -55744858517395789
+      spritesheet_coelhapulando_1: -4281379138092672250
+      spritesheet_coelhapulando_2: -7003051320994079613
+      spritesheet_coelhapulando_3: -1496140097068338464
+      spritesheet_coelhapulando_4: -4113092079108367030
+      spritesheet_coelhapulando_5: -4103305398113669561
+      spritesheet_coelhapulando_6: 8774717463396641682
+      spritesheet_coelhapulando_7: 1649775528162775430
+      spritesheet_coelhapulando_8: 7219122298907912258
+      spritesheet_coelhapulando_9: -7336642551429510118
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

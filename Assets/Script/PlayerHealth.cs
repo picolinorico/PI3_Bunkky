@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void Die()
     {
-        Debug.Log("");
+        Debug.Log("Morreu!");
+        Destroy(gameObject);
     }
 }

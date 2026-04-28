@@ -1,28 +1,43 @@
 fileFormatVersion: 2
-guid: 2f160e5cad67dc946887d551534fd08a
+guid: 966ce10124162f54da96fd7f01cd0ec1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2536884034278954250
-    second: spritesheet_coelhacaminhando_0
+      213: -4362018133042622166
+    second: spritesheet_coelhaatacando_0
   - first:
-      213: -5105116622971921896
-    second: spritesheet_coelhacaminhando_1
+      213: -643764328101973100
+    second: spritesheet_coelhaatacando_1
   - first:
-      213: -2161002692149544784
-    second: spritesheet_coelhacaminhando_2
+      213: 5530325046918417801
+    second: spritesheet_coelhaatacando_2
   - first:
-      213: -6429665775403585330
-    second: spritesheet_coelhacaminhando_3
+      213: 967425413826763954
+    second: spritesheet_coelhaatacando_3
   - first:
-      213: 2395442397210232234
-    second: spritesheet_coelhacaminhando_4
+      213: 2107564658546898639
+    second: spritesheet_coelhaatacando_4
   - first:
-      213: 1192100059021401388
-    second: spritesheet_coelhacaminhando_5
+      213: 5410000561852057577
+    second: spritesheet_coelhaatacando_5
   - first:
-      213: 6472900705724350622
-    second: spritesheet_coelhacaminhando_6
+      213: 1739150890952169231
+    second: spritesheet_coelhaatacando_6
+  - first:
+      213: -7258079767766680976
+    second: spritesheet_coelhaatacando_7
+  - first:
+      213: 5613045656575212069
+    second: spritesheet_coelhaatacando_8
+  - first:
+      213: -3978988145377324309
+    second: spritesheet_coelhaatacando_9
+  - first:
+      213: 1975418096529802043
+    second: spritesheet_coelhaatacando_10
+  - first:
+      213: -8121868984909252085
+    second: spritesheet_coelhaatacando_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,7 +134,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_0
+      name: spritesheet_coelhaatacando_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1624
-        height: 1629
+        y: 12
+        width: 1395
+        height: 1577
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fa617c696d2bccd0800000000000000
-      internalID: -2536884034278954250
+      spriteID: a219e247e9ff673c0800000000000000
+      internalID: -4362018133042622166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_1
+      name: spritesheet_coelhaatacando_2
       rect:
         serializedVersion: 2
-        x: 1619
-        y: 0
-        width: 1697
-        height: 1629
+        x: 1394
+        y: 12
+        width: 1328
+        height: 1577
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81a11deba7bf629b0800000000000000
-      internalID: -5105116622971921896
+      spriteID: 98d840a4459afbc40800000000000000
+      internalID: 5530325046918417801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_2
+      name: spritesheet_coelhaatacando_3
       rect:
         serializedVersion: 2
-        x: 3301
-        y: 0
-        width: 1784
-        height: 1629
+        x: 2724
+        y: 12
+        width: 1231
+        height: 1577
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b873cf30839202e0800000000000000
-      internalID: -2161002692149544784
+      spriteID: 2bc54d9c94cfc6d00800000000000000
+      internalID: 967425413826763954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_3
+      name: spritesheet_coelhaatacando_4
       rect:
         serializedVersion: 2
-        x: 5085
-        y: 0
-        width: 1844
-        height: 1617
+        x: 3955
+        y: 12
+        width: 1302
+        height: 1577
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec035980b0d35c6a0800000000000000
-      internalID: -6429665775403585330
+      spriteID: fc6faddf3e29f3d10800000000000000
+      internalID: 2107564658546898639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_4
+      name: spritesheet_coelhaatacando_5
       rect:
         serializedVersion: 2
-        x: 6921
-        y: 0
-        width: 1812
-        height: 1629
+        x: 5257
+        y: 12
+        width: 1590
+        height: 1577
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa540ad2b225e3120800000000000000
-      internalID: 2395442397210232234
+      spriteID: 9e70bdbf8de241b40800000000000000
+      internalID: 5410000561852057577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_5
+      name: spritesheet_coelhaatacando_6
       rect:
         serializedVersion: 2
-        x: 8728
-        y: 0
-        width: 1665
-        height: 1629
+        x: 6848
+        y: 7
+        width: 1338
+        height: 1582
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2d51ba00b03b8010800000000000000
-      internalID: 1192100059021401388
+      spriteID: f07120a5584b22810800000000000000
+      internalID: 1739150890952169231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spritesheet_coelhacaminhando_6
+      name: spritesheet_coelhaatacando_7
       rect:
         serializedVersion: 2
-        x: 10393
+        x: 8186
         y: 0
-        width: 1486
-        height: 1625
+        width: 1532
+        height: 1589
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,8 +293,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e90431f95ec54d950800000000000000
-      internalID: 6472900705724350622
+      spriteID: 07a31daf7ee164b90800000000000000
+      internalID: -7258079767766680976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_coelhaatacando_8
+      rect:
+        serializedVersion: 2
+        x: 9718
+        y: 3
+        width: 1443
+        height: 1586
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52af634194b85ed40800000000000000
+      internalID: 5613045656575212069
       vertices: []
       indices: 
       edges: []
@@ -288,7 +325,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e63d974e01b85c043b4d82b59045646f
+    spriteID: 84d61c7dcc9881c4d92a7c8cdd989eab
     internalID: 0
     vertices: []
     indices: 
@@ -296,17 +333,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":1.0},"gridSpriteSize":{"x":1697.0,"y":1629.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      spritesheet_coelhacaminhando_0: -2536884034278954250
-      spritesheet_coelhacaminhando_1: -5105116622971921896
-      spritesheet_coelhacaminhando_2: -2161002692149544784
-      spritesheet_coelhacaminhando_3: -6429665775403585330
-      spritesheet_coelhacaminhando_4: 2395442397210232234
-      spritesheet_coelhacaminhando_5: 1192100059021401388
-      spritesheet_coelhacaminhando_6: 6472900705724350622
+      spritesheet_coelhaatacando_0: -4362018133042622166
+      spritesheet_coelhaatacando_1: -643764328101973100
+      spritesheet_coelhaatacando_10: 1975418096529802043
+      spritesheet_coelhaatacando_11: -8121868984909252085
+      spritesheet_coelhaatacando_2: 5530325046918417801
+      spritesheet_coelhaatacando_3: 967425413826763954
+      spritesheet_coelhaatacando_4: 2107564658546898639
+      spritesheet_coelhaatacando_5: 5410000561852057577
+      spritesheet_coelhaatacando_6: 1739150890952169231
+      spritesheet_coelhaatacando_7: -7258079767766680976
+      spritesheet_coelhaatacando_8: 5613045656575212069
+      spritesheet_coelhaatacando_9: -3978988145377324309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
