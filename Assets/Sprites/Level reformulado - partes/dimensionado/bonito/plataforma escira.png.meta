@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 982fc234a426c69428a3e916cc1d12f4
+guid: 1836871c4413dd34fb17768bd18f3257
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8011236014633913311
-    second: level_dimensionado-_0000_spawnurso_0
-  - first:
-      213: 6475050041507632401
-    second: level_dimensionado-_0000_spawnurso_1
-  - first:
-      213: 2943225240638344065
-    second: level_dimensionado-_0000_spawnurso_2
-  - first:
-      213: -2876154413874991898
-    second: level_dimensionado-_0000_spawnurso_3
+      213: 2578470599015286342
+    second: "Ilustra\xE7\xE3o Sem T\xEDtulo - Editado_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level_dimensionado-_0000_spawnurso_0
+      name: "Ilustra\xE7\xE3o Sem T\xEDtulo - Editado_0"
       rect:
         serializedVersion: 2
-        x: 4209
-        y: 13009
-        width: 287
-        height: 555
+        x: 14
+        y: 18
+        width: 896
+        height: 283
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 124fdef3a4f52d090800000000000000
-      internalID: -8011236014633913311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_dimensionado-_0000_spawnurso_1
-      rect:
-        serializedVersion: 2
-        x: 1299
-        y: 7542
-        width: 281
-        height: 560
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 115d0fad4bffbd950800000000000000
-      internalID: 6475050041507632401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_dimensionado-_0000_spawnurso_2
-      rect:
-        serializedVersion: 2
-        x: 11590
-        y: 8089
-        width: 281
-        height: 560
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18b463233cf68d820800000000000000
-      internalID: 2943225240638344065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_dimensionado-_0000_spawnurso_3
-      rect:
-        serializedVersion: 2
-        x: 1749
-        y: 2263
-        width: 287
-        height: 554
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ec2fc19cc8d518d0800000000000000
-      internalID: -2876154413874991898
+      spriteID: 6464816395198c320800000000000000
+      internalID: 2578470599015286342
       vertices: []
       indices: 
       edges: []
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      level_dimensionado-_0000_spawnurso_0: -8011236014633913311
-      level_dimensionado-_0000_spawnurso_1: 6475050041507632401
-      level_dimensionado-_0000_spawnurso_2: 2943225240638344065
-      level_dimensionado-_0000_spawnurso_3: -2876154413874991898
+      "Ilustra\xE7\xE3o Sem T\xEDtulo - Editado_0": 2578470599015286342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
