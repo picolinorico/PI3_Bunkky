@@ -15,7 +15,7 @@ public class DanoEspinho : MonoBehaviour
             if (scriptDoPlayer != null)
             {
                 // Manda o dano e a posição do espinho
-                //scriptDoPlayer.ReceberDano(danoCausado, transform.position);
+                scriptDoPlayer.ReceberDano(danoCausado, transform.position);
             }
         }
     }
