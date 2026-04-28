@@ -3,8 +3,8 @@ guid: 2d5b7b2fd2e0c36488c2fbe265bb17ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2221859049962922410
-    second: "C\xE3o _0"
+      213: -529650090469695286
+    second: iconeCao_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,12 +152,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "C\xE3o _0"
+      name: iconeCao_0
       rect:
         serializedVersion: 2
-        x: 899
-        y: 439
-        width: 1862
+        x: 124
+        y: 145
+        width: 1863
         height: 2036
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa1e606b801a5de10800000000000000
-      internalID: 2221859049962922410
+      spriteID: ac0ec468c0e46a8f0800000000000000
+      internalID: -529650090469695286
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "C\xE3o _0": 2221859049962922410
+      iconeCao_0: -529650090469695286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

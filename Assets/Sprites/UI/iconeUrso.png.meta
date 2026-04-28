@@ -3,8 +3,8 @@ guid: d695508574380f448b27daafc90d92e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -794011605693219891
-    second: Urso_0
+      213: -2645027108333722530
+    second: iconeUrso_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,11 +152,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Urso_0
+      name: iconeUrso_0
       rect:
         serializedVersion: 2
-        x: 1103
-        y: 261
+        x: 173
+        y: 92
         width: 1876
         height: 2068
       alignment: 0
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcb3e17c6aa1bf4f0800000000000000
-      internalID: -794011605693219891
+      spriteID: e546d72ebd9fa4bd0800000000000000
+      internalID: -2645027108333722530
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Urso_0: -794011605693219891
+      iconeUrso_0: -2645027108333722530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
