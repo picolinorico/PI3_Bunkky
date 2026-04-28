@@ -423,6 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28424748}
   - component: {fileID: 28424747}
+  - component: {fileID: 28424749}
   m_Layer: 0
   m_Name: Ponto B Camera (1)
   m_TagString: Untagged
@@ -467,10 +468,10 @@ BoxCollider2D:
   m_Offset: {x: -32.287567, y: -24.844187}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -491,6 +492,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28424749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28424746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &29940847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,6 +1186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150233263}
   - component: {fileID: 150233262}
+  - component: {fileID: 150233264}
   m_Layer: 0
   m_Name: Ponto B Camera (2)
   m_TagString: Untagged
@@ -1215,10 +1231,10 @@ BoxCollider2D:
   m_Offset: {x: -17.144361, y: -20.045282}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -1239,6 +1255,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150233264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150233261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &152676766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156900141}
   - component: {fileID: 156900140}
+  - component: {fileID: 156900142}
   m_Layer: 0
   m_Name: Ponto A Camera (8)
   m_TagString: Untagged
@@ -1463,10 +1494,10 @@ BoxCollider2D:
   m_Offset: {x: 7.398053, y: 8.03916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -1487,6 +1518,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &156900142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156900139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &182399096
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,6 +3293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336350180}
   - component: {fileID: 336350179}
+  - component: {fileID: 336350181}
   m_Layer: 0
   m_Name: Ponto A Camera (3)
   m_TagString: Untagged
@@ -3292,10 +3338,10 @@ BoxCollider2D:
   m_Offset: {x: -2.9129047, y: 17.88639}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -3316,6 +3362,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336350181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336350178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &356866539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,6 +4288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448301299}
   - component: {fileID: 448301298}
+  - component: {fileID: 448301300}
   m_Layer: 0
   m_Name: Ponto B Camera (6)
   m_TagString: Untagged
@@ -4272,10 +4333,10 @@ BoxCollider2D:
   m_Offset: {x: -7.6967697, y: -28.474443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -4296,6 +4357,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &448301300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448301297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!4 &466544407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4712325362365200886, guid: 32c67c52b8b014e4592e7836a92f3a92, type: 3}
@@ -4389,6 +4464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486568549}
   - component: {fileID: 486568550}
+  - component: {fileID: 486568551}
   m_Layer: 0
   m_Name: Ponto B Camera
   m_TagString: Untagged
@@ -4448,15 +4524,29 @@ BoxCollider2D:
   m_Offset: {x: -29.785526, y: -8.489416}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 60.571053, y: 57.211323}
   m_EdgeRadius: 0
+--- !u!114 &486568551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486568548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &491218617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6345,7 +6435,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 67.8879, y: 67.8879}
+  m_SizeDelta: {x: 55.4913, y: 55.4913}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698895461
 MonoBehaviour:
@@ -7968,7 +8058,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 67.8879, y: 67.8879}
+  m_SizeDelta: {x: 55.4913, y: 55.4913}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929234316
 MonoBehaviour:
@@ -8347,7 +8437,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 67.8879, y: 67.8879}
+  m_SizeDelta: {x: 55.4913, y: 55.4913}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938078395
 MonoBehaviour:
@@ -8990,6 +9080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995040070}
   - component: {fileID: 995040069}
+  - component: {fileID: 995040071}
   m_Layer: 0
   m_Name: Ponto A Camera (5)
   m_TagString: Untagged
@@ -9034,10 +9125,10 @@ BoxCollider2D:
   m_Offset: {x: -0.48047447, y: -0.25267792}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -9058,6 +9149,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &995040071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995040068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1009593171
 GameObject:
   m_ObjectHideFlags: 0
@@ -9577,6 +9682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057819782}
   - component: {fileID: 1057819781}
+  - component: {fileID: 1057819783}
   m_Layer: 0
   m_Name: Ponto A Camera (6)
   m_TagString: Untagged
@@ -9621,10 +9727,10 @@ BoxCollider2D:
   m_Offset: {x: -1.9149294, y: -0.25268364}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -9645,6 +9751,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1057819783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057819780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1061681626
 GameObject:
   m_ObjectHideFlags: 0
@@ -13009,6 +13129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1384703459}
   - component: {fileID: 1384703458}
+  - component: {fileID: 1384703460}
   m_Layer: 0
   m_Name: Ponto A Camera (4)
   m_TagString: Untagged
@@ -13053,10 +13174,10 @@ BoxCollider2D:
   m_Offset: {x: -0.75471115, y: 19.912556}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -13077,6 +13198,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384703460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384703457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1390770502
 GameObject:
   m_ObjectHideFlags: 0
@@ -13661,6 +13796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425565246}
   - component: {fileID: 1425565247}
+  - component: {fileID: 1425565248}
   m_Layer: 0
   m_Name: Ponto A Camera
   m_TagString: Untagged
@@ -13720,15 +13856,29 @@ BoxCollider2D:
   m_Offset: {x: -5.622532, y: 1.1670446}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 76.771706, y: 23.010817}
   m_EdgeRadius: 0
+--- !u!114 &1425565248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425565245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1427684087
 GameObject:
   m_ObjectHideFlags: 0
@@ -13817,6 +13967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429804210}
   - component: {fileID: 1429804209}
+  - component: {fileID: 1429804211}
   m_Layer: 0
   m_Name: Ponto A Camera (7)
   m_TagString: Untagged
@@ -13861,10 +14012,10 @@ BoxCollider2D:
   m_Offset: {x: -2.3123703, y: -2.0411873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -13885,6 +14036,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1429804211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429804208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1446302260
 GameObject:
   m_ObjectHideFlags: 0
@@ -14405,6 +14570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488895404}
   - component: {fileID: 1488895403}
+  - component: {fileID: 1488895405}
   m_Layer: 0
   m_Name: Ponto B Camera (7)
   m_TagString: Untagged
@@ -14449,10 +14615,10 @@ BoxCollider2D:
   m_Offset: {x: -22.239513, y: -50.136055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -14473,6 +14639,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1488895405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488895402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1489740402
 GameObject:
   m_ObjectHideFlags: 0
@@ -15399,6 +15579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641781466}
   - component: {fileID: 1641781465}
+  - component: {fileID: 1641781467}
   m_Layer: 0
   m_Name: Ponto B Camera (5)
   m_TagString: Untagged
@@ -15443,10 +15624,10 @@ BoxCollider2D:
   m_Offset: {x: -15.297096, y: -25.180973}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -15467,6 +15648,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641781467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641781464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1660348674
 GameObject:
   m_ObjectHideFlags: 0
@@ -17264,6 +17459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812291718}
   - component: {fileID: 1812291717}
+  - component: {fileID: 1812291719}
   m_Layer: 0
   m_Name: Ponto A Camera (1)
   m_TagString: Untagged
@@ -17308,10 +17504,10 @@ BoxCollider2D:
   m_Offset: {x: -32.86461, y: 6.5311813}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -17332,6 +17528,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1812291719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812291716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1817721064
 GameObject:
   m_ObjectHideFlags: 0
@@ -17838,6 +18048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1894589352}
   - component: {fileID: 1894589351}
+  - component: {fileID: 1894589353}
   m_Layer: 0
   m_Name: Ponto B Camera (4)
   m_TagString: Untagged
@@ -17882,10 +18093,10 @@ BoxCollider2D:
   m_Offset: {x: -9.873085, y: -25.406971}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -17906,6 +18117,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894589353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894589350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &1895343306
 GameObject:
   m_ObjectHideFlags: 0
@@ -18281,8 +18506,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -406.98895, y: 204.49855}
-  m_SizeDelta: {x: 266.035, y: 73.7255}
+  m_AnchoredPosition: {x: -288.87527, y: 131.18335}
+  m_SizeDelta: {x: 188.2845, y: 63.3588}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945205042
 MonoBehaviour:
@@ -19016,6 +19241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059098702}
   - component: {fileID: 2059098701}
+  - component: {fileID: 2059098703}
   m_Layer: 0
   m_Name: Ponto A Camera (2)
   m_TagString: Untagged
@@ -19060,10 +19286,10 @@ BoxCollider2D:
   m_Offset: {x: -25.914976, y: 22.376358}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -19084,6 +19310,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059098703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059098700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &2095327492
 GameObject:
   m_ObjectHideFlags: 0
@@ -19140,6 +19380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097052246}
   - component: {fileID: 2097052245}
+  - component: {fileID: 2097052247}
   m_Layer: 0
   m_Name: Ponto B Camera (3)
   m_TagString: Untagged
@@ -19184,10 +19425,10 @@ BoxCollider2D:
   m_Offset: {x: -14.972324, y: -30.622112}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -19208,6 +19449,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 291441740}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2097052247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097052244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1aaaed19ccd89458f1fa60eb643693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
+  prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
+  tempoDeTransicao: 0.1
 --- !u!1 &2107317928
 GameObject:
   m_ObjectHideFlags: 0
