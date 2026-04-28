@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7588135cc0a0464fa5726c8746fce11
+guid: 3581af6d3e138664a84577c967adc471
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4562683611169054430
-    second: efb77f6b-3d31-4ccd-9b59-1ed9c2ed1a7a_0
+      213: -1706643713802292585
+    second: Balaoespinhosharpia_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: efb77f6b-3d31-4ccd-9b59-1ed9c2ed1a7a_0
+      name: Balaoespinhosharpia_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 65
-        width: 898
-        height: 270
+        x: 59
+        y: 147
+        width: 900
+        height: 691
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ede5a3af198e15f30800000000000000
-      internalID: 4562683611169054430
+      spriteID: 79239a0a598c058e0800000000000000
+      internalID: -1706643713802292585
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      efb77f6b-3d31-4ccd-9b59-1ed9c2ed1a7a_0: 4562683611169054430
+      Balaoespinhosharpia_0: -1706643713802292585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
