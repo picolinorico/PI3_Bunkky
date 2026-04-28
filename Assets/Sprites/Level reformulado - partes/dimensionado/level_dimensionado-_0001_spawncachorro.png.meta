@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: bd436929ac0285d489d30c68fc626b1e
+guid: 670bdff0036ab8a44a3a8c33da518db4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1102947985454834802
-    second: image0-(1)_0000_image6_0
+      213: 132739643422000065
+    second: level_dimensionado-_0001_spawncachorro_0
   - first:
-      213: -3314154704155555073
-    second: image0-(1)_0000_image6_1
+      213: -5433265814625913553
+    second: level_dimensionado-_0001_spawncachorro_1
   - first:
-      213: 3482595720488235536
-    second: image0-(1)_0000_image6_2
+      213: 821217662809890384
+    second: level_dimensionado-_0001_spawncachorro_2
   - first:
-      213: 1169182417035699167
-    second: image0-(1)_0000_image6_3
+      213: 2541802460983012668
+    second: level_dimensionado-_0001_spawncachorro_3
   - first:
-      213: -5735003240904941389
-    second: image0-(1)_0000_image6_4
+      213: -7060351943025221753
+    second: level_dimensionado-_0001_spawncachorro_4
   - first:
-      213: -6834212643190595384
-    second: image0-(1)_0000_image6_5
+      213: 1686174951875092421
+    second: level_dimensionado-_0001_spawncachorro_5
   - first:
-      213: 9152978303781922868
-    second: image0-(1)_0000_image6_6
+      213: 5930548363898387931
+    second: level_dimensionado-_0001_spawncachorro_6
+  - first:
+      213: -7370036324066566786
+    second: level_dimensionado-_0001_spawncachorro_7
+  - first:
+      213: -3207751422874095504
+    second: level_dimensionado-_0001_spawncachorro_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -64,12 +70,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -91,9 +97,9 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,30 +120,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image0-(1)_0000_image6_0
+      name: level_dimensionado-_0001_spawncachorro_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 339
-        width: 1914
-        height: 1267
+        x: 4371
+        y: 16841
+        width: 196
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 274a4ce59557e4f00800000000000000
-      internalID: 1102947985454834802
+      spriteID: 1c3c7cd900697d100800000000000000
+      internalID: 132739643422000065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image0-(1)_0000_image6_1
+      name: level_dimensionado-_0001_spawncachorro_1
       rect:
         serializedVersion: 2
-        x: 355
-        y: 328
-        width: 22
-        height: 138
+        x: 7105
+        y: 16841
+        width: 196
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffa4e101bd1c102d0800000000000000
-      internalID: -3314154704155555073
+      spriteID: f25f2fc37892994b0800000000000000
+      internalID: -5433265814625913553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image0-(1)_0000_image6_2
+      name: level_dimensionado-_0001_spawncachorro_2
       rect:
         serializedVersion: 2
-        x: 565
-        y: 274
-        width: 51
-        height: 66
+        x: 1187
+        y: 15291
+        width: 189
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0123fff2b5aa45030800000000000000
-      internalID: 3482595720488235536
+      spriteID: 05e5f030d1d856b00800000000000000
+      internalID: 821217662809890384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image0-(1)_0000_image6_3
+      name: level_dimensionado-_0001_spawncachorro_3
       rect:
         serializedVersion: 2
-        x: 1309
-        y: 277
-        width: 50
-        height: 67
+        x: 11754
+        y: 13833
+        width: 190
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd3ab05b635c93010800000000000000
-      internalID: 1169182417035699167
+      spriteID: c3d2b180fdb464320800000000000000
+      internalID: 2541802460983012668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image0-(1)_0000_image6_4
+      name: level_dimensionado-_0001_spawncachorro_4
       rect:
         serializedVersion: 2
-        x: 1548
-        y: 334
-        width: 20
-        height: 145
+        x: 1637
+        y: 10643
+        width: 195
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b0a52010fc2960b0800000000000000
-      internalID: -5735003240904941389
+      spriteID: 78f1ebea057940e90800000000000000
+      internalID: -7060351943025221753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image0-(1)_0000_image6_5
+      name: level_dimensionado-_0001_spawncachorro_5
       rect:
         serializedVersion: 2
-        x: 410
-        y: 0
-        width: 194
-        height: 238
+        x: 8746
+        y: 8091
+        width: 196
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c0242b6fcff721a0800000000000000
-      internalID: -6834212643190595384
+      spriteID: 5cf1dab5f2f766710800000000000000
+      internalID: 1686174951875092421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image0-(1)_0000_image6_6
+      name: level_dimensionado-_0001_spawncachorro_6
       rect:
         serializedVersion: 2
-        x: 1323
-        y: 2
-        width: 193
-        height: 242
+        x: 4918
+        y: 5356
+        width: 196
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,8 +271,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43867c1d549e50f70800000000000000
-      internalID: 9152978303781922868
+      spriteID: bddff69c05a8d4250800000000000000
+      internalID: 5930548363898387931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0001_spawncachorro_7
+      rect:
+        serializedVersion: 2
+        x: 2457
+        y: 2263
+        width: 196
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d594ae20f58b990800000000000000
+      internalID: -7370036324066566786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0001_spawncachorro_8
+      rect:
+        serializedVersion: 2
+        x: 9111
+        y: 2440
+        width: 195
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070f5d78317cb73d0800000000000000
+      internalID: -3207751422874095504
       vertices: []
       indices: 
       edges: []
@@ -288,7 +325,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      image0-(1)_0000_image6_0: 1102947985454834802
-      image0-(1)_0000_image6_1: -3314154704155555073
-      image0-(1)_0000_image6_2: 3482595720488235536
-      image0-(1)_0000_image6_3: 1169182417035699167
-      image0-(1)_0000_image6_4: -5735003240904941389
-      image0-(1)_0000_image6_5: -6834212643190595384
-      image0-(1)_0000_image6_6: 9152978303781922868
+      level_dimensionado-_0001_spawncachorro_0: 132739643422000065
+      level_dimensionado-_0001_spawncachorro_1: -5433265814625913553
+      level_dimensionado-_0001_spawncachorro_2: 821217662809890384
+      level_dimensionado-_0001_spawncachorro_3: 2541802460983012668
+      level_dimensionado-_0001_spawncachorro_4: -7060351943025221753
+      level_dimensionado-_0001_spawncachorro_5: 1686174951875092421
+      level_dimensionado-_0001_spawncachorro_6: 5930548363898387931
+      level_dimensionado-_0001_spawncachorro_7: -7370036324066566786
+      level_dimensionado-_0001_spawncachorro_8: -3207751422874095504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

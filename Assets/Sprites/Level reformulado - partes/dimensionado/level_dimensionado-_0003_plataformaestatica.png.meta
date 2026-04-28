@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: a6446a21487f1424db06623784062139
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1731005050007133871
+    second: level_dimensionado-_0003_plataformaestatica_0
+  - first:
+      213: 5130028740110869399
+    second: level_dimensionado-_0003_plataformaestatica_1
+  - first:
+      213: -8668127508690386414
+    second: level_dimensionado-_0003_plataformaestatica_2
+  - first:
+      213: -759566889446594611
+    second: level_dimensionado-_0003_plataformaestatica_3
+  - first:
+      213: -7203211181642231309
+    second: level_dimensionado-_0003_plataformaestatica_4
+  - first:
+      213: 7395259988594207361
+    second: level_dimensionado-_0003_plataformaestatica_5
+  - first:
+      213: 1098289518947917969
+    second: level_dimensionado-_0003_plataformaestatica_6
+  - first:
+      213: -4140707140338856559
+    second: level_dimensionado-_0003_plataformaestatica_7
+  - first:
+      213: 6515746508579734662
+    second: level_dimensionado-_0003_plataformaestatica_8
+  - first:
+      213: 8129600642311809249
+    second: level_dimensionado-_0003_plataformaestatica_9
+  - first:
+      213: 629408657136224404
+    second: level_dimensionado-_0003_plataformaestatica_10
+  - first:
+      213: -2833789811322824063
+    second: level_dimensionado-_0003_plataformaestatica_11
+  - first:
+      213: -1211284795233730116
+    second: level_dimensionado-_0003_plataformaestatica_12
+  - first:
+      213: 2199495988018334364
+    second: level_dimensionado-_0003_plataformaestatica_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_0
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 15736
+        width: 742
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae1516fbe3c50810800000000000000
+      internalID: 1731005050007133871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_1
+      rect:
+        serializedVersion: 2
+        x: 8556
+        y: 16100
+        width: 742
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7936ad585f5813740800000000000000
+      internalID: 5130028740110869399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_2
+      rect:
+        serializedVersion: 2
+        x: 5003
+        y: 15372
+        width: 742
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212c7b0e4ff94b780800000000000000
+      internalID: -8668127508690386414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_3
+      rect:
+        serializedVersion: 2
+        x: 10468
+        y: 15645
+        width: 1289
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7236b30f97575f0800000000000000
+      internalID: -759566889446594611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 13914
+        width: 736
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1d714389d090c90800000000000000
+      internalID: -7203211181642231309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_5
+      rect:
+        serializedVersion: 2
+        x: 7098
+        y: 13914
+        width: 742
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a21d127cd31a660800000000000000
+      internalID: 7395259988594207361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 10089
+        width: 1835
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190ec6d9f78ed3f00800000000000000
+      internalID: 1098289518947917969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_7
+      rect:
+        serializedVersion: 2
+        x: 5823
+        y: 9724
+        width: 742
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19dcd255bc04986c0800000000000000
+      internalID: -4140707140338856559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_8
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 9178
+        width: 924
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684036a7de49c6a50800000000000000
+      internalID: 6515746508579734662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_9
+      rect:
+        serializedVersion: 2
+        x: 8100
+        y: 8905
+        width: 742
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e868c236b422d070800000000000000
+      internalID: 8129600642311809249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_10
+      rect:
+        serializedVersion: 2
+        x: 10833
+        y: 8996
+        width: 1009
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4980923c6db1cb800800000000000000
+      internalID: 629408657136224404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_11
+      rect:
+        serializedVersion: 2
+        x: 4183
+        y: 8722
+        width: 833
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a5bff3e2b5ca8d0800000000000000
+      internalID: -2833789811322824063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_12
+      rect:
+        serializedVersion: 2
+        x: 7645
+        y: 6718
+        width: 560
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1034a75e6a03fe0800000000000000
+      internalID: -1211284795233730116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0003_plataformaestatica_13
+      rect:
+        serializedVersion: 2
+        x: 9102
+        y: 6542
+        width: 1471
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9acaba92fd268e10800000000000000
+      internalID: 2199495988018334364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level_dimensionado-_0003_plataformaestatica_0: 1731005050007133871
+      level_dimensionado-_0003_plataformaestatica_1: 5130028740110869399
+      level_dimensionado-_0003_plataformaestatica_10: 629408657136224404
+      level_dimensionado-_0003_plataformaestatica_11: -2833789811322824063
+      level_dimensionado-_0003_plataformaestatica_12: -1211284795233730116
+      level_dimensionado-_0003_plataformaestatica_13: 2199495988018334364
+      level_dimensionado-_0003_plataformaestatica_2: -8668127508690386414
+      level_dimensionado-_0003_plataformaestatica_3: -759566889446594611
+      level_dimensionado-_0003_plataformaestatica_4: -7203211181642231309
+      level_dimensionado-_0003_plataformaestatica_5: 7395259988594207361
+      level_dimensionado-_0003_plataformaestatica_6: 1098289518947917969
+      level_dimensionado-_0003_plataformaestatica_7: -4140707140338856559
+      level_dimensionado-_0003_plataformaestatica_8: 6515746508579734662
+      level_dimensionado-_0003_plataformaestatica_9: 8129600642311809249
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

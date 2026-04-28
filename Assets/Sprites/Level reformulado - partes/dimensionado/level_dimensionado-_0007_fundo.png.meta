@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: ee8f0dc2104d79d4aa0cb14b6195a85b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7516205703753189545
+    second: level_dimensionado-_0007_fundo_0
+  - first:
+      213: -2011646699420462985
+    second: level_dimensionado-_0007_fundo_1
+  - first:
+      213: -496826015670746244
+    second: level_dimensionado-_0007_fundo_2
+  - first:
+      213: -5590929904593646583
+    second: level_dimensionado-_0007_fundo_3
+  - first:
+      213: 9098955393797756254
+    second: level_dimensionado-_0007_fundo_4
+  - first:
+      213: -624353334318771730
+    second: level_dimensionado-_0007_fundo_5
+  - first:
+      213: -4901028144980758963
+    second: level_dimensionado-_0007_fundo_6
+  - first:
+      213: 5923760687539231605
+    second: level_dimensionado-_0007_fundo_7
+  - first:
+      213: -5198940285206553949
+    second: level_dimensionado-_0007_fundo_8
+  - first:
+      213: -8408363132966762778
+    second: level_dimensionado-_0007_fundo_9
+  - first:
+      213: -920180454810668714
+    second: level_dimensionado-_0007_fundo_10
+  - first:
+      213: -9176148653385528656
+    second: level_dimensionado-_0007_fundo_11
+  - first:
+      213: -7423137445395861583
+    second: level_dimensionado-_0007_fundo_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16749
+        width: 3422
+        height: 968
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a849f6d34dee4860800000000000000
+      internalID: 7516205703753189545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_1
+      rect:
+        serializedVersion: 2
+        x: 3580
+        y: 16749
+        width: 1115
+        height: 968
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770d47b2cf13514e0800000000000000
+      internalID: -2011646699420462985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_2
+      rect:
+        serializedVersion: 2
+        x: 4853
+        y: 16664
+        width: 3389
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73c5ccfe5bea19f0800000000000000
+      internalID: -496826015670746244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_3
+      rect:
+        serializedVersion: 2
+        x: 8399
+        y: 15749
+        width: 1025
+        height: 1968
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c4690bfd60962b0800000000000000
+      internalID: -5590929904593646583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_4
+      rect:
+        serializedVersion: 2
+        x: 9582
+        y: 13748
+        width: 2604
+        height: 3969
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55907ae8bbf54e70800000000000000
+      internalID: 9098955393797756254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11475
+        width: 9424
+        height: 5116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1599d43f9d557f0800000000000000
+      internalID: -624353334318771730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_6
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 8019
+        width: 8242
+        height: 5571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4eea307edc0cfbb0800000000000000
+      internalID: -4901028144980758963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6291
+        width: 3786
+        height: 5117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b133bb5fc653250800000000000000
+      internalID: 5923760687539231605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_8
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 5291
+        width: 4479
+        height: 2570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa9bc31b57a9d7b0800000000000000
+      internalID: -5198940285206553949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_9
+      rect:
+        serializedVersion: 2
+        x: 8497
+        y: 5382
+        width: 2564
+        height: 2479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6860da74e7f4b80800000000000000
+      internalID: -8408363132966762778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_10
+      rect:
+        serializedVersion: 2
+        x: 11218
+        y: 2381
+        width: 968
+        height: 5480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651b0cd60ccda33f0800000000000000
+      internalID: -920180454810668714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 4695
+        height: 5879
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bac6c4ca65c7a080800000000000000
+      internalID: -9176148653385528656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_dimensionado-_0007_fundo_12
+      rect:
+        serializedVersion: 2
+        x: 4853
+        y: 1199
+        width: 6208
+        height: 3934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf6748a2d7bbf890800000000000000
+      internalID: -7423137445395861583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      level_dimensionado-_0007_fundo_0: 7516205703753189545
+      level_dimensionado-_0007_fundo_1: -2011646699420462985
+      level_dimensionado-_0007_fundo_10: -920180454810668714
+      level_dimensionado-_0007_fundo_11: -9176148653385528656
+      level_dimensionado-_0007_fundo_12: -7423137445395861583
+      level_dimensionado-_0007_fundo_2: -496826015670746244
+      level_dimensionado-_0007_fundo_3: -5590929904593646583
+      level_dimensionado-_0007_fundo_4: 9098955393797756254
+      level_dimensionado-_0007_fundo_5: -624353334318771730
+      level_dimensionado-_0007_fundo_6: -4901028144980758963
+      level_dimensionado-_0007_fundo_7: 5923760687539231605
+      level_dimensionado-_0007_fundo_8: -5198940285206553949
+      level_dimensionado-_0007_fundo_9: -8408363132966762778
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

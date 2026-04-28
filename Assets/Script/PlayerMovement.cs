@@ -4,56 +4,60 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movimento")]
-    [SerializeField] private float speed = 8f;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Vector2 moveInput;
-    [SerializeField] private float bloqueioMovimentoTimer;
-    [SerializeField] private bool facingRight = true;
+    private Rigidbody2D rb;
 
-    [Header("Pulo")]
-    [SerializeField] private float jumpForce = 18f;
-    [SerializeField] private int maxJumps = 1;
-    [SerializeField] private int jumpsLeft;
-    [SerializeField] private bool isGrounded;
+    [Header("Movimento")]
+    [SerializeField] private float speed = 25f;
+    [SerializeField] private float horizontalMovement;
+    [SerializeField] private bool isFacingRight = true;
 
     [Header("Gravidade")]
-    [SerializeField] private int gravityBase = 2;
-    [SerializeField] private float maxFallSpeed = 45;
+    [SerializeField] private int gravityBase = 4;
+    [SerializeField] private float maxFallSpeed = 50;
     [SerializeField] private float fallSpeedMultiplier = 3;
 
-    [Header("Parede: Deslizar e Pular")]
+    [Header("Pulo")]
+    [SerializeField] private float jumpForce = 25f;
+    [SerializeField] private int maxJumps = 1;
+    [SerializeField] private int jumpsLeft;
+
+    [Header("Detecção de Chão")]
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Vector2 groundCheckSize = new Vector2(4.63f, 0.2f);
+    [SerializeField] private bool isGrounded;
+
+    [Header("Movimento nas Paredes")]
+    [SerializeField] private float wallSlideSpeed = 1;
+    [SerializeField] private bool isWallSliding;
+
+    [Header("Pulo nas Paredes")]
+    [SerializeField] private Vector2 wallJumpPower = new Vector2(25f, 25f);
+    [SerializeField] private float wallJumpTime = 0.5f;
+    [SerializeField] private bool isWallJumping;
+    [SerializeField] private float wallJumpDirection;
+    [SerializeField] private float wallJumpTimer;
+
+    [Header("Detecção de Parede")]
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private float wallSlidingSpeed = 2f;
-    [SerializeField] private Vector2 wallJumpPower = new Vector2(10f, 12f);
-    [SerializeField] private float tempoBloqueioMovimento = 0.2f;
-    [SerializeField] private float tempoPresoNaParede = 0.15f;
-    private bool isTouchingWall;
-    private bool isWallSliding;
-    private float agarrarTimer;
+    [SerializeField] private Vector2 wallCheckSize = new Vector2(1f, 0.1f);
 
     [Header("Vida e Dano")]
     [SerializeField] private int vidaMaxima = 3;
     private int vidaAtual;
-    public VidaUI controleDeUI;
     [SerializeField] private float forcaKnockbackX = 7f;
-    [SerializeField] private float forcaKnockbackY = 5f;
+    [SerializeField] private float forcaKnockbackY = 5f;    //Arrumar (IDamagble)
     [SerializeField] private float knockbackDuration = 0.3f;
     private bool isKnockback;
 
     [Header("Ataque e Feedback")]
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = 0.5f;
-    [SerializeField] private int attackDamage = 1;
+    [SerializeField] private int attackDamage = 1;          //Arrumar
     [SerializeField] private float attackColdown = 1f;
     private bool onAttack = false;
     [SerializeField] private LayerMask enemyLayer;
-
-    [Header("Detecção de Chão")]
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private float checkRadius = 0.2f;
-    [SerializeField] private LayerMask groundLayer;
 
     [Header("Checkpoint e Câmera")]
     private Vector2 pontoDeCheckpoint;
@@ -67,25 +71,46 @@ public class PlayerMovement : MonoBehaviour
         cameraSeguir = FindAnyObjectByType<CameraSeguir>();
     }
 
-    void Start()
+    void Start() // Primeira coisa que aocntece
     {
         vidaAtual = vidaMaxima;
         pontoDeCheckpoint = transform.position;
-
-        if (controleDeUI != null) controleDeUI.AtualizarCoracoes(vidaAtual, vidaMaxima);
     }
 
     void Update()
     {
-        if (isKnockback) return;
+        //Métodos
+        GroundCheck();
+        ProcessGravity(); 
+        ProcessWallSlide();
+        ProcessWallJump();
 
-        CheckSurroundings();
-        HandleWallSliding();
-        HandleMovement();
-        Gravity();
+        if (!isWallJumping)
+        {
+            //Movimento do jogador
+            rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
+            Flip();
+        }
     }
 
-    private void Gravity()
+    void FixedUpdate() //Sla
+    {
+        if (isKnockback) return;
+    }
+
+    private void GroundCheck() //Checa de o jogador está tocando no chão
+    {
+        if (Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer))
+        {
+            jumpsLeft = maxJumps;
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+    }
+    private void ProcessGravity() //Melhora a gravidade bosta da Unity
     {
         if (rb.linearVelocity.y < 0)
         {
@@ -98,103 +123,120 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void CheckSurroundings()
+    private bool WallCheck() //Checa de o jogador está tocando as paredes
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
-        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, wallLayer);
 
-        // Garante que o pulo recarregue ao tocar no chão OU ao agarrar na parede
-        if (isGrounded || isWallSliding)
-        {
-            jumpsLeft = maxJumps;
-        }
+        return (Physics2D.OverlapBox(wallCheck.position, wallCheckSize, 0, wallLayer));
+
     }
 
-    private void HandleMovement()
+    private void ProcessWallSlide()
     {
-        if (bloqueioMovimentoTimer > 0)
+        if (!isGrounded & WallCheck() & horizontalMovement != 0)
         {
-            bloqueioMovimentoTimer -= Time.deltaTime;
-        }
-        else
-        {
-            // Movimento Horizontal
-            rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
-
-            // Lógica de Flip centralizada
-            if (moveInput.x > 0 && !facingRight) Flip();
-            else if (moveInput.x < 0 && facingRight) Flip();
-        }
-    }
-
-    private void HandleWallSliding()
-    {
-        if (isTouchingWall && !isGrounded && moveInput.x != 0)
-        {
-            if (!isWallSliding) agarrarTimer = tempoPresoNaParede;
             isWallSliding = true;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed));
         }
         else
         {
             isWallSliding = false;
         }
-
-        if (isWallSliding && agarrarTimer > 0)
-            agarrarTimer -= Time.deltaTime;
     }
 
-    void FixedUpdate()
+    private void ProcessWallJump()
     {
-        if (isKnockback) return;
-
         if (isWallSliding)
         {
-            if (agarrarTimer > 0)
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-            else
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, 0f));
+            isWallJumping = false;
+            wallJumpDirection = -transform.localScale.x;
+            wallJumpTimer = wallJumpTime;
+
+            CancelInvoke(nameof(CancelWallJump));
+        } 
+        else if (wallJumpTimer > 0f)
+        {
+            wallJumpTimer -= Time.deltaTime;
         }
     }
 
-    private void Flip()
+    private void CancelWallJump()
     {
-        facingRight = !facingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        isWallJumping = false;
     }
 
-    // --- INPUTS (New Input System) ---
-
-    public void OnMove(InputAction.CallbackContext context)
+    private void Flip() //Método responsável por fazer o sprite da personagm virar conforme a direção
     {
-        moveInput = context.ReadValue<Vector2>();
+        if (isFacingRight && horizontalMovement < 0 || !isFacingRight && horizontalMovement > 0)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
     }
 
-    public void OnJump(InputAction.CallbackContext context)
+    // --- INPUTS  ---
+
+    public void OnMove(InputAction.CallbackContext context) //Recebe o input de movimento
     {
+        horizontalMovement = context.ReadValue<Vector2>().x;
+    }
+
+    public void OnJump(InputAction.CallbackContext context) //Pulo
+    {   
+        //Pulo normal segurando espaço
         if (context.performed)
         {
-            if (isWallSliding)
+            if (jumpsLeft > 0)
             {
-                WallJump();
-            }
-            else if (isGrounded || jumpsLeft > 0)
-            {
-                // Pulo normal implementado pela sua dupla
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 jumpsLeft--;
             }
         }
-        else if (context.canceled)
+
+        //Pra caso solte antes de atingir a parábola ou queira um little pulo
+        else if (context.canceled && (rb.linearVelocity.y > 0))
         {
-            // A lógica limpa da sua dupla para controlar a altura do pulo
-            if (rb.linearVelocity.y > 0)
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+        }
+
+        //Wall Jump
+        if (context.performed && wallJumpTimer > 0f)
+        {
+            isWallJumping = true;
+            rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
+            wallJumpTimer = 0;
+
+            //Força o flip da personagem no Wall Jump
+            if (transform.localScale.x != wallJumpDirection)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+                isFacingRight = !isFacingRight;
+                Vector3 ls = transform.localScale;
+                ls.x *= -1f;
+                transform.localScale = ls;
             }
+
+            Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f); 
         }
     }
+
+    private void OnDrawGizmosSelected() //Só estética pros Ground e Wall Cehck's
+    {
+        //Cor pro objeto GroundCheck
+        Gizmos.color = Color.white;
+        Gizmos.DrawCube(groundCheck.position, groundCheckSize);
+
+        //Cor pro objeto WallCheck
+        Gizmos.color = Color.blue;
+        Gizmos.DrawCube(wallCheck.position, wallCheckSize);
+
+        //Sla
+        if (attackPoint == null) return;
+        Gizmos.color = Color.red;       //Sujeito a alterações
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    //Daqui pra baixo cpa eu mudo tudo
 
     public async void OnAttack(InputAction.CallbackContext context)
     {
@@ -217,6 +259,7 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (Collider2D inimigo in inimigosAtingidos)
         {
+            // TryGetComponent é mais performático que GetComponent
             if (inimigo.TryGetComponent(out VidaGlitch scriptVida))
             {
                 scriptVida.ReceberDano(attackDamage);
@@ -230,8 +273,6 @@ public class PlayerMovement : MonoBehaviour
 
         vidaAtual -= dano;
         Debug.Log("Tomei dano! Vida restante: " + vidaAtual);
-
-        if (controleDeUI != null) controleDeUI.AtualizarCoracoes(vidaAtual, vidaMaxima);
 
         if (vidaAtual <= 0) Morrer();
         else StartCoroutine(AplicarKnockback(posicaoDoPerigo));
@@ -254,36 +295,15 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         isKnockback = false;
 
-        if (controleDeUI != null) controleDeUI.AtualizarCoracoes(vidaAtual, vidaMaxima);
-
         if (areaDoCheckpoint != null && cameraSeguir != null)
         {
             cameraSeguir.FocarNoQuadrinho(areaDoCheckpoint);
         }
     }
 
-    private void WallJump()
-    {
-        isWallSliding = false;
-        bloqueioMovimentoTimer = tempoBloqueioMovimento;
-        float direcaoPulo = -Mathf.Sign(transform.localScale.x);
-        rb.linearVelocity = Vector2.zero;
-        rb.AddForce(new Vector2(wallJumpPower.x * direcaoPulo, wallJumpPower.y), ForceMode2D.Impulse);
-
-        // Garante que o Flip aconteça no pulo da parede de forma limpa
-        if ((direcaoPulo > 0 && !facingRight) || (direcaoPulo < 0 && facingRight)) Flip();
-    }
-
     public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
     {
         pontoDeCheckpoint = novaPosicao;
         areaDoCheckpoint = novaAreaDeCamera;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null) return;
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
