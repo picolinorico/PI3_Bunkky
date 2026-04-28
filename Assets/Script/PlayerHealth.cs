@@ -1,5 +1,5 @@
-using System.Diagnostics;
 using UnityEngine;
+
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
@@ -18,11 +18,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         Enemy enemy = collision.GetComponent<Enemy>();
         if (enemy)
         {
-            TakeDamage();
+            TakeDamage(1);
         }
     }
 
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
@@ -32,9 +32,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
 
-    private void Die()
+    public void Die()
     {
-        Debug.Log("Morreu!");
-        Destroy(gameObjectb);
+        Debug.Log("");
     }
 }
