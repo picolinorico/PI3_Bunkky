@@ -1,46 +1,49 @@
 fileFormatVersion: 2
-guid: 6958ebe176d8b7c4ebbfef840278ed6c
+guid: f294cf4f456b9764398fb4a6f454bb8a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7285104100621103090
-    second: fundo_0
+      213: -3134337574518355572
+    second: colliderdano_0
   - first:
-      213: -746064910013925833
-    second: fundo_1
+      213: -3024308565822622119
+    second: colliderdano_1
   - first:
-      213: -3045973270298300667
-    second: fundo_2
+      213: 8460011479175363704
+    second: colliderdano_2
   - first:
-      213: 3684992023440700097
-    second: fundo_3
+      213: -9185400382902231696
+    second: colliderdano_3
   - first:
-      213: 1841660306138996714
-    second: fundo_4
+      213: 887106813317386390
+    second: colliderdano_4
   - first:
-      213: -8190178970532839666
-    second: fundo_5
+      213: -4103658159682978467
+    second: colliderdano_5
   - first:
-      213: 7765203029797455187
-    second: fundo_6
+      213: -5935236799706458363
+    second: colliderdano_6
   - first:
-      213: 5746223165354222630
-    second: fundo_7
+      213: 5316348346474890857
+    second: colliderdano_7
   - first:
-      213: 6917295837021617324
-    second: fundo_8
+      213: -3632743920705853212
+    second: colliderdano_8
   - first:
-      213: 4506757395259111422
-    second: fundo_9
+      213: 5506953667525890429
+    second: colliderdano_9
   - first:
-      213: -2343868576748522279
-    second: fundo_10
+      213: -237011892115904882
+    second: colliderdano_10
   - first:
-      213: 219317402216747510
-    second: fundo_11
+      213: 5840175954400280126
+    second: colliderdano_11
   - first:
-      213: -1048707868532856117
-    second: fundo_12
+      213: -1098134649163507467
+    second: colliderdano_12
+  - first:
+      213: -4594960282446626557
+    second: colliderdano_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -82,12 +85,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,78 +139,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fundo_0
+      name: colliderdano_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 184
-        width: 38
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ff2345d493e91560800000000000000
-      internalID: 7285104100621103090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fundo_1
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 184
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7367c3bcae175a5f0800000000000000
-      internalID: -746064910013925833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fundo_2
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 183
-        width: 38
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50fe88ce2778ab5d0800000000000000
-      internalID: -3045973270298300667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fundo_3
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 173
-        width: 12
+        x: 219
+        y: 1729
+        width: 92
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c2b45da8b8b32330800000000000000
-      internalID: 3684992023440700097
+      spriteID: c898ca815989084d0800000000000000
+      internalID: -3134337574518355572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_4
+      name: colliderdano_1
       rect:
         serializedVersion: 2
-        x: 105
-        y: 151
-        width: 29
-        height: 44
+        x: 399
+        y: 1729
+        width: 82
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aef1a587a44ee8910800000000000000
-      internalID: 1841660306138996714
+      spriteID: 956b8f2026f7706d0800000000000000
+      internalID: -3024308565822622119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_5
+      name: colliderdano_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 126
-        width: 104
-        height: 57
+        x: 539
+        y: 1529
+        width: 152
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0ff386ae93a65e80800000000000000
-      internalID: -8190178970532839666
+      spriteID: 87c79f30e9ff76570800000000000000
+      internalID: 8460011479175363704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_6
+      name: colliderdano_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 69
-        width: 42
-        height: 57
+        x: 29
+        y: 1279
+        width: 372
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3554dd7830b83cb60800000000000000
-      internalID: 7765203029797455187
+      spriteID: 07d1061a407e68080800000000000000
+      internalID: -9185400382902231696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_7
+      name: colliderdano_4
       rect:
         serializedVersion: 2
-        x: 43
-        y: 88
-        width: 92
-        height: 62
+        x: 739
+        y: 1269
+        width: 232
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6242f0b268faebf40800000000000000
-      internalID: 5746223165354222630
+      spriteID: 6909c9552f2af4c00800000000000000
+      internalID: 887106813317386390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_8
+      name: colliderdano_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 52
-        height: 66
+        x: 39
+        y: 899
+        width: 152
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cac36f31aeb2fff50800000000000000
-      internalID: 6917295837021617324
+      spriteID: d5d767855a0ec07c0800000000000000
+      internalID: -4103658159682978467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_9
+      name: colliderdano_6
       rect:
         serializedVersion: 2
-        x: 43
-        y: 58
-        width: 50
-        height: 29
+        x: 639
+        y: 889
+        width: 222
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef7b84129f73b8e30800000000000000
-      internalID: 4506757395259111422
+      spriteID: 5079bafa39dc1ada0800000000000000
+      internalID: -5935236799706458363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_10
+      name: colliderdano_7
       rect:
         serializedVersion: 2
-        x: 93
-        y: 59
-        width: 29
-        height: 28
+        x: 39
+        y: 719
+        width: 242
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d434b2a2f7e87fd0800000000000000
-      internalID: -2343868576748522279
+      spriteID: 9660fd567a677c940800000000000000
+      internalID: 5316348346474890857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_11
+      name: colliderdano_8
       rect:
         serializedVersion: 2
-        x: 123
-        y: 26
-        width: 11
-        height: 61
+        x: 719
+        y: 589
+        width: 182
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,20 +330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f1d03ce30c2b0300800000000000000
-      internalID: 219317402216747510
+      spriteID: 4e82e56b6a6e59dc0800000000000000
+      internalID: -3632743920705853212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fundo_12
+      name: colliderdano_9
       rect:
         serializedVersion: 2
-        x: 53
-        y: 13
-        width: 69
-        height: 44
+        x: 1049
+        y: 749
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,8 +352,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bca21f6ffbd3271f0800000000000000
-      internalID: -1048707868532856117
+      spriteID: d715a6bfe21ac6c40800000000000000
+      internalID: 5506953667525890429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colliderdano_10
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 719
+        width: 22
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8663ea90f6f5bcf0800000000000000
+      internalID: -237011892115904882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colliderdano_11
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 429
+        width: 332
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e7ec386197c0150800000000000000
+      internalID: 5840175954400280126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colliderdano_12
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 139
+        width: 182
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f89f01da54a2c0f0800000000000000
+      internalID: -1098134649163507467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colliderdano_13
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 139
+        width: 172
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3018dbfd7fb6b30c0800000000000000
+      internalID: -4594960282446626557
       vertices: []
       indices: 
       edges: []
@@ -425,7 +450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -435,19 +460,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fundo_0: 7285104100621103090
-      fundo_1: -746064910013925833
-      fundo_10: -2343868576748522279
-      fundo_11: 219317402216747510
-      fundo_12: -1048707868532856117
-      fundo_2: -3045973270298300667
-      fundo_3: 3684992023440700097
-      fundo_4: 1841660306138996714
-      fundo_5: -8190178970532839666
-      fundo_6: 7765203029797455187
-      fundo_7: 5746223165354222630
-      fundo_8: 6917295837021617324
-      fundo_9: 4506757395259111422
+      colliderdano_0: -3134337574518355572
+      colliderdano_1: -3024308565822622119
+      colliderdano_10: -237011892115904882
+      colliderdano_11: 5840175954400280126
+      colliderdano_12: -1098134649163507467
+      colliderdano_13: -4594960282446626557
+      colliderdano_2: 8460011479175363704
+      colliderdano_3: -9185400382902231696
+      colliderdano_4: 887106813317386390
+      colliderdano_5: -4103658159682978467
+      colliderdano_6: -5935236799706458363
+      colliderdano_7: 5316348346474890857
+      colliderdano_8: -3632743920705853212
+      colliderdano_9: 5506953667525890429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,40 +1,49 @@
 fileFormatVersion: 2
-guid: 71795b0a865510d43958ed436d3a5578
+guid: 6637d8b8aeb47354d9e48cc7f647d4a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8827337546187261132
-    second: platafromas estaticas_0
+      213: -4680419164706830353
+    second: plataformaestatica_0
   - first:
-      213: -8590981767459993367
-    second: platafromas estaticas_1
+      213: 4998450083823400470
+    second: plataformaestatica_1
   - first:
-      213: -8354117710376304035
-    second: platafromas estaticas_2
+      213: 5551959444281269971
+    second: plataformaestatica_2
   - first:
-      213: 5783703482871518277
-    second: platafromas estaticas_3
+      213: 3857623518020836990
+    second: plataformaestatica_3
   - first:
-      213: -2177166643467660347
-    second: platafromas estaticas_4
+      213: -8054477468678940726
+    second: plataformaestatica_4
   - first:
-      213: 3757336408521466885
-    second: platafromas estaticas_5
+      213: 7446855365230127351
+    second: plataformaestatica_5
   - first:
-      213: 8598820791015625723
-    second: platafromas estaticas_6
+      213: 320952349752825563
+    second: plataformaestatica_6
   - first:
-      213: 6874076564249192331
-    second: platafromas estaticas_7
+      213: 2971906955178074405
+    second: plataformaestatica_7
   - first:
-      213: -1291955345781135013
-    second: platafromas estaticas_8
+      213: -3321580554821625266
+    second: plataformaestatica_8
   - first:
-      213: 5375670432861859439
-    second: platafromas estaticas_9
+      213: -4754995984218213648
+    second: plataformaestatica_9
   - first:
-      213: -4774895199823544514
-    second: platafromas estaticas_10
+      213: -1585364001535839675
+    second: plataformaestatica_10
+  - first:
+      213: 4041258153316321283
+    second: plataformaestatica_11
+  - first:
+      213: 4919238457609957695
+    second: plataformaestatica_12
+  - first:
+      213: -2233823111482189027
+    second: plataformaestatica_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,12 +85,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -130,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platafromas estaticas_0
+      name: plataformaestatica_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 172
-        width: 10
-        height: 6
+        x: 39
+        y: 1729
+        width: 82
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43b3a0f554ffe7580800000000000000
-      internalID: -8827337546187261132
+      spriteID: fe708bf419fcb0fb0800000000000000
+      internalID: -4680419164706830353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_1
+      name: plataformaestatica_1
       rect:
         serializedVersion: 2
-        x: 93
-        y: 176
-        width: 10
-        height: 6
+        x: 939
+        y: 1769
+        width: 82
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e880b67993b6c880800000000000000
-      internalID: -8590981767459993367
+      spriteID: 616b0d94edf0e5540800000000000000
+      internalID: 4998450083823400470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_2
+      name: plataformaestatica_2
       rect:
         serializedVersion: 2
-        x: 114
-        y: 171
-        width: 16
-        height: 6
+        x: 549
+        y: 1689
+        width: 82
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5288355436301c80800000000000000
-      internalID: -8354117710376304035
+      spriteID: 3de92c3f2b58c0d40800000000000000
+      internalID: 5551959444281269971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_3
+      name: plataformaestatica_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 168
-        width: 10
-        height: 6
+        x: 1149
+        y: 1719
+        width: 142
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5441fbe9ca7d34050800000000000000
-      internalID: 5783703482871518277
+      spriteID: e7e13dca628098530800000000000000
+      internalID: 3857623518020836990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_4
+      name: plataformaestatica_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 152
-        width: 10
-        height: 6
+        x: 9
+        y: 1529
+        width: 82
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c3d74f097629c1e0800000000000000
-      internalID: -2177166643467660347
+      spriteID: ac7110caa6fb83090800000000000000
+      internalID: -8054477468678940726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_5
+      name: plataformaestatica_5
       rect:
         serializedVersion: 2
-        x: 77
-        y: 152
-        width: 10
-        height: 6
+        x: 779
+        y: 1529
+        width: 82
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 504609b6e8db42430800000000000000
-      internalID: 3757336408521466885
+      spriteID: 7f8e042ef7b885760800000000000000
+      internalID: 7446855365230127351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_6
+      name: plataformaestatica_6
       rect:
         serializedVersion: 2
-        x: 5
-        y: 110
-        width: 22
-        height: 8
+        x: 59
+        y: 1109
+        width: 202
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf3dabf63f5255770800000000000000
-      internalID: 8598820791015625723
+      spriteID: bd618dc2670447400800000000000000
+      internalID: 320952349752825563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_7
+      name: plataformaestatica_7
       rect:
         serializedVersion: 2
-        x: 63
-        y: 106
-        width: 10
-        height: 6
+        x: 639
+        y: 1069
+        width: 82
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8729eaf630a56f50800000000000000
-      internalID: 6874076564249192331
+      spriteID: 521e6e041a55e3920800000000000000
+      internalID: 2971906955178074405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_8
+      name: plataformaestatica_8
       rect:
         serializedVersion: 2
-        x: 27
-        y: 95
-        width: 29
-        height: 11
+        x: 279
+        y: 1009
+        width: 102
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b596c05457d021ee0800000000000000
-      internalID: -1291955345781135013
+      spriteID: e4a1309751067e1d0800000000000000
+      internalID: -3321580554821625266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_9
+      name: plataformaestatica_9
       rect:
         serializedVersion: 2
-        x: 88
-        y: 97
-        width: 43
-        height: 6
+        x: 889
+        y: 979
+        width: 82
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +352,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6e2d44f6c73a9a40800000000000000
-      internalID: 5375670432861859439
+      spriteID: 0f2b34c685cd20eb0800000000000000
+      internalID: -4754995984218213648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platafromas estaticas_10
+      name: plataformaestatica_10
       rect:
         serializedVersion: 2
-        x: 83
-        y: 71
-        width: 34
-        height: 7
+        x: 1189
+        y: 989
+        width: 112
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,8 +374,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3fbcce3d1a2cbdb0800000000000000
-      internalID: -4774895199823544514
+      spriteID: 542b3c817d7aff9e0800000000000000
+      internalID: -1585364001535839675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformaestatica_11
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 959
+        width: 92
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 308021201ee651830800000000000000
+      internalID: 4041258153316321283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformaestatica_12
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 739
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31384f5055a44440800000000000000
+      internalID: 4919238457609957695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plataformaestatica_13
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 719
+        width: 162
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1bdb0527bddff0e0800000000000000
+      internalID: -2233823111482189027
       vertices: []
       indices: 
       edges: []
@@ -375,7 +450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -385,17 +460,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      platafromas estaticas_0: -8827337546187261132
-      platafromas estaticas_1: -8590981767459993367
-      platafromas estaticas_10: -4774895199823544514
-      platafromas estaticas_2: -8354117710376304035
-      platafromas estaticas_3: 5783703482871518277
-      platafromas estaticas_4: -2177166643467660347
-      platafromas estaticas_5: 3757336408521466885
-      platafromas estaticas_6: 8598820791015625723
-      platafromas estaticas_7: 6874076564249192331
-      platafromas estaticas_8: -1291955345781135013
-      platafromas estaticas_9: 5375670432861859439
+      plataformaestatica_0: -4680419164706830353
+      plataformaestatica_1: 4998450083823400470
+      plataformaestatica_10: -1585364001535839675
+      plataformaestatica_11: 4041258153316321283
+      plataformaestatica_12: 4919238457609957695
+      plataformaestatica_13: -2233823111482189027
+      plataformaestatica_2: 5551959444281269971
+      plataformaestatica_3: 3857623518020836990
+      plataformaestatica_4: -8054477468678940726
+      plataformaestatica_5: 7446855365230127351
+      plataformaestatica_6: 320952349752825563
+      plataformaestatica_7: 2971906955178074405
+      plataformaestatica_8: -3321580554821625266
+      plataformaestatica_9: -4754995984218213648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

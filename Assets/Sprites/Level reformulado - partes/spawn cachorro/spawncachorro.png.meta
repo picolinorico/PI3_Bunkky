@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 22d6bfaf3f2ab234181593c44c4b8e90
+guid: bea5d9d6945c78b4c9790cb273bb8404
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6899058002142361398
-    second: colliders dano_0
+      213: -7237783436338064372
+    second: spawncachorro_0
   - first:
-      213: -7436827120931136182
-    second: colliders dano_1
+      213: -9081242337653738882
+    second: spawncachorro_1
   - first:
-      213: -6739523844597629571
-    second: colliders dano_2
+      213: -8057525601369978089
+    second: spawncachorro_2
   - first:
-      213: -5791233267195404559
-    second: colliders dano_3
+      213: 2170489485817687604
+    second: spawncachorro_3
   - first:
-      213: 2179983949850311900
-    second: colliders dano_4
+      213: -5265499807813765415
+    second: spawncachorro_4
   - first:
-      213: 1789728712685631577
-    second: colliders dano_5
+      213: -4883843308049347446
+    second: spawncachorro_5
   - first:
-      213: 3119956761539191594
-    second: colliders dano_6
+      213: -5509588243733522309
+    second: spawncachorro_6
   - first:
-      213: 963688553176195178
-    second: colliders dano_7
+      213: -5574175955236307569
+    second: spawncachorro_7
   - first:
-      213: -878685683082252351
-    second: colliders dano_8
+      213: -3849705303117377584
+    second: spawncachorro_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,13 +124,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: colliders dano_0
+      name: spawncachorro_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 127
-        width: 39
-        height: 25
+        x: 479
+        y: 1849
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 637f28e33b06ebf50800000000000000
-      internalID: 6899058002142361398
+      spriteID: c041dd3ef4a3e8b90800000000000000
+      internalID: -7237783436338064372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_1
+      name: spawncachorro_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 152
-        width: 49
-        height: 24
+        x: 779
+        y: 1849
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4d98e0b2251bc890800000000000000
-      internalID: -7436827120931136182
+      spriteID: e7239e85532f8f180800000000000000
+      internalID: -9081242337653738882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_2
+      name: spawncachorro_2
       rect:
         serializedVersion: 2
-        x: 3
-        y: 89
-        width: 17
-        height: 14
+        x: 129
+        y: 1679
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7dbb7755c66872a0800000000000000
-      internalID: -6739523844597629571
+      spriteID: 71b0ab9f72bed2090800000000000000
+      internalID: -8057525601369978089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_3
+      name: spawncachorro_3
       rect:
         serializedVersion: 2
-        x: 63
-        y: 88
-        width: 35
-        height: 42
+        x: 1289
+        y: 1519
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fe9469d60861afa0800000000000000
-      internalID: -5791233267195404559
+      spriteID: 43e22e600b02f1e10800000000000000
+      internalID: 2170489485817687604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_4
+      name: spawncachorro_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 71
-        width: 26
-        height: 9
+        x: 179
+        y: 1169
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cdc71e23adbd04e10800000000000000
-      internalID: 2179983949850311900
+      spriteID: 9d67f5692df2de6b0800000000000000
+      internalID: -5265499807813765415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_5
+      name: spawncachorro_5
       rect:
         serializedVersion: 2
-        x: 71
-        y: 58
-        width: 20
-        height: 19
+        x: 959
+        y: 889
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 958b1f328c466d810800000000000000
-      internalID: 1789728712685631577
+      spriteID: a8ccc05136a193cb0800000000000000
+      internalID: -4883843308049347446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_6
+      name: spawncachorro_6
       rect:
         serializedVersion: 2
-        x: 93
-        y: 42
-        width: 41
-        height: 45
+        x: 539
+        y: 589
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a232f16f4205c4b20800000000000000
-      internalID: 3119956761539191594
+      spriteID: b785891fea20a83b0800000000000000
+      internalID: -5509588243733522309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_7
+      name: spawncachorro_7
       rect:
         serializedVersion: 2
-        x: 27
-        y: 13
-        width: 20
-        height: 10
+        x: 269
+        y: 249
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a606d2e12a5bf5d00800000000000000
-      internalID: 963688553176195178
+      spriteID: f8dbd90808c84a2b0800000000000000
+      internalID: -5574175955236307569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colliders dano_8
+      name: spawncachorro_8
       rect:
         serializedVersion: 2
-        x: 66
-        y: 13
-        width: 19
-        height: 13
+        x: 999
+        y: 269
+        width: 22
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,8 +315,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cf29a6d6084ec3f0800000000000000
-      internalID: -878685683082252351
+      spriteID: 0df40c56c69139ac0800000000000000
+      internalID: -3849705303117377584
       vertices: []
       indices: 
       edges: []
@@ -335,15 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      colliders dano_0: 6899058002142361398
-      colliders dano_1: -7436827120931136182
-      colliders dano_2: -6739523844597629571
-      colliders dano_3: -5791233267195404559
-      colliders dano_4: 2179983949850311900
-      colliders dano_5: 1789728712685631577
-      colliders dano_6: 3119956761539191594
-      colliders dano_7: 963688553176195178
-      colliders dano_8: -878685683082252351
+      spawncachorro_0: -7237783436338064372
+      spawncachorro_1: -9081242337653738882
+      spawncachorro_2: -8057525601369978089
+      spawncachorro_3: 2170489485817687604
+      spawncachorro_4: -5265499807813765415
+      spawncachorro_5: -4883843308049347446
+      spawncachorro_6: -5509588243733522309
+      spawncachorro_7: -5574175955236307569
+      spawncachorro_8: -3849705303117377584
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
