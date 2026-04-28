@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: edee867bbb003e2478b4f700ac8e194c
+guid: 824726c0938a31247ad09f02efd06551
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3310002292416464744
-    second: image-removebg-preview_0
+      213: 1136745194609547617
+    second: coelha base _0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image-removebg-preview_0
+      name: coelha base _0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 26
-        width: 348
-        height: 437
+        x: 0
+        y: 52
+        width: 1536
+        height: 1629
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 867463d3c8d7fed20800000000000000
-      internalID: 3310002292416464744
+      spriteID: 16995d45bb786cf00800000000000000
+      internalID: 1136745194609547617
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 380c5a1a5b0c703419300f67aeff6c81
+    spriteID: 976ad9b45677be144ba8d59af2160749
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      image-removebg-preview_0: 3310002292416464744
+      coelha base _0: 1136745194609547617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
