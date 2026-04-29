@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -248,11 +249,13 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && !onAttack)
         {
             onAttack = true;
+            animator.SetBool("Atacando", true);
             Debug.Log("POW!");
             Atacar();
 
             await Awaitable.WaitForSecondsAsync(attackColdown);
             onAttack = false;
+            animator.SetBool("Atacando", false);
         }
     }
 

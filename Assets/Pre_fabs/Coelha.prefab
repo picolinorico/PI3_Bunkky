@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 116410124331224941}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 0.25, z: -1.7798337}
+  m_LocalPosition: {x: 1.36, y: 0.11, z: -1.7798337}
   m_LocalScale: {x: 0.7668061, y: 0.7668061, z: 0.7668061}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1564249743689541962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.17, z: 0}
+  m_LocalPosition: {x: 0.09, y: -1.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 2784854273265512851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.99, y: -0.2, z: -1.7798337}
+  m_LocalPosition: {x: 2.6, y: -0.04, z: -1.7798337}
   m_LocalScale: {x: 0.7668061, y: 0.7668061, z: 0.7668061}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 3618374561178426510}
   - component: {fileID: 2739353275618611997}
   - component: {fileID: 5859870232971852710}
+  - component: {fileID: 5883112291657805823}
   m_Layer: 0
   m_Name: Coelha
   m_TagString: Player
@@ -123,8 +124,8 @@ Transform:
   m_GameObject: {fileID: 3810250304835834200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.9, y: 17.1, z: 2.3211}
-  m_LocalScale: {x: 1.3041106, y: 1.3041106, z: 1.3041106}
+  m_LocalPosition: {x: -2.2657, y: 22.0577, z: -3.3}
+  m_LocalScale: {x: 2.167431, y: 2.167431, z: 2.167431}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7641387798784200283}
@@ -181,15 +182,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3310002292416464744, guid: edee867bbb003e2478b4f700ac8e194c, type: 3}
+  m_Sprite: {fileID: 1136745194609547617, guid: 824726c0938a31247ad09f02efd06551, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.462, y: 3.154}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!50 &1362165598510752006
 Rigidbody2D:
@@ -206,7 +207,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 412605cb6b5a92c4e985db69d4f2ee1a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -230,31 +231,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba614b9dd2344a4fb11734d132aeaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 30
-  rb: {fileID: 1362165598510752006}
-  moveInput: {x: 0, y: 0}
-  bloqueioMovimentoTimer: 0
-  facingRight: 1
-  jumpForce: 30
+  speed: 25
+  horizontalMovement: 0
+  isFacingRight: 1
+  gravityBase: 4
+  maxFallSpeed: 50
+  fallSpeedMultiplier: 3
+  jumpForce: 25
   maxJumps: 1
   jumpsLeft: 0
+  groundCheck: {fileID: 7641387798784200283}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckSize: {x: 2.59, y: 0.2}
   isGrounded: 0
-  gravityBase: 6
-  maxFallSpeed: 50
-  fallSpeedMultiplier: 2
+  wallSlideSpeed: 1
+  isWallSliding: 0
+  wallJumpPower: {x: 25, y: 25}
+  wallJumpTime: 0.5
+  isWallJumping: 0
+  wallJumpDirection: 0
+  wallJumpTimer: 0
   wallCheck: {fileID: 4323865436875216671}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
-  wallSlidingSpeed: 2
-  wallJumpPower: {x: 25, y: 25}
-  tempoBloqueioMovimento: 0.2
-  tempoPresoNaParede: 0.15
-  vidaMaxima: 3
-  controleDeUI: {fileID: 0}
-  forcaKnockbackX: 7
-  forcaKnockbackY: 5
-  knockbackDuration: 0.3
+  wallCheckSize: {x: 0.19, y: 3.59}
   attackPoint: {fileID: 6541895803041029382}
   attackRange: 0.5
   attackDamage: 1
@@ -262,11 +265,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  groundCheck: {fileID: 7641387798784200283}
-  checkRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
+  animator: {fileID: 5883112291657805823}
 --- !u!114 &2739353275618611997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,6 +446,28 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.07314698}
-  m_Size: {x: 3.4800003, y: 4.223706}
+  m_Offset: {x: 0.07985003, y: 0.07314777}
+  m_Size: {x: 2.5537412, y: 3.3932664}
   m_Direction: 0
+--- !u!95 &5883112291657805823
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3810250304835834200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c64caf7cbce566a4086e9305cf76bdd5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
