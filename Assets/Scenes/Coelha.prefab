@@ -189,7 +189,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1362165598510752006
 Rigidbody2D:
@@ -231,33 +231,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 30
-  horizontalMovement: 0
-  isFacingRight: 1
-  gravityBase: 6
-  maxFallSpeed: 50
-  fallSpeedMultiplier: 2
+  rb: {fileID: 1362165598510752006}
+  moveInput: {x: 0, y: 0}
+  bloqueioMovimentoTimer: 0
+  facingRight: 1
   jumpForce: 30
   maxJumps: 1
   jumpsLeft: 0
-  groundCheck: {fileID: 7641387798784200283}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  groundCheckSize: {x: 4.63, y: 0.2}
   isGrounded: 0
-  wallSlideSpeed: 1
-  isWallSliding: 0
-  wallJumpPower: {x: 25, y: 25}
-  wallJumpTime: 0.5
-  isWallJumping: 0
-  wallJumpDirection: 0
-  wallJumpTimer: 0
+  gravityBase: 6
+  maxFallSpeed: 50
+  fallSpeedMultiplier: 2
   wallCheck: {fileID: 4323865436875216671}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
-  wallCheckSize: {x: 1, y: 0.1}
+  wallSlidingSpeed: 2
+  wallJumpPower: {x: 25, y: 25}
+  tempoBloqueioMovimento: 0.2
+  tempoPresoNaParede: 0.15
   vidaMaxima: 3
+  controleDeUI: {fileID: 0}
   forcaKnockbackX: 7
   forcaKnockbackY: 5
   knockbackDuration: 0.3
@@ -268,6 +262,11 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  groundCheck: {fileID: 7641387798784200283}
+  checkRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &2739353275618611997
 MonoBehaviour:
   m_ObjectHideFlags: 0

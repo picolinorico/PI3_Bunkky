@@ -10,12 +10,12 @@ public class DanoEspinho : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Puxa o script mestre do Player
-            PlayerMovement scriptDoPlayer = collision.gameObject.GetComponent<PlayerMovement>();
+            PlayerHealth scriptDoPlayer = collision.gameObject.GetComponent<PlayerHealth>();
 
             if (scriptDoPlayer != null)
             {
                 // Manda o dano e a posição do espinho
-                scriptDoPlayer.ReceberDano(danoCausado, transform.position);
+                scriptDoPlayer.TakeDamage(danoCausado);
             }
         }
     }
