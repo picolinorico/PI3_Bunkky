@@ -53,7 +53,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
 
     public Animator animator;
-    public bool isKnockback;
+
+    [Header("Knockback")]
+    public bool isKnockback; // Já estava aí, deixei só para você se localizar
+    [SerializeField] private Vector2 forcaKnockback = new Vector2(15f, 10f); // Aumentei o padrão
+    [SerializeField] private float tempoKnockback = 0.3f;
 
     [Header("Checkpoint e Câmera")]
     private Vector2 pontoDeCheckpoint;
@@ -284,13 +288,19 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator RotinaKnockback()
     {
         isKnockback = true;
+
+        // Zera a velocidade atual para que o movimento do player não anule o empurrão
         rb.linearVelocity = Vector2.zero;
 
-        // Joga o player para trás (contrário de onde ele está olhando) e um pouco para cima
+        // Descobre para que lado o player está olhando e empurra pro outro
         float direcaoKnockback = transform.localScale.x > 0 ? -1f : 1f;
-        rb.AddForce(new Vector2(direcaoKnockback * 7f, 5f), ForceMode2D.Impulse);
 
-        yield return new WaitForSeconds(0.3f);
+        // Usa a força que você configurar lá na Unity
+        rb.AddForce(new Vector2(direcaoKnockback * forcaKnockback.x, forcaKnockback.y), ForceMode2D.Impulse);
+
+        // Fica travado pelo tempo configurado
+        yield return new WaitForSeconds(tempoKnockback);
+
         isKnockback = false;
     }
 

@@ -9582,6 +9582,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.968483, y: 60.149162}
   m_EdgeRadius: 0
+--- !u!1 &668208947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603993485718825058, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+  m_PrefabInstance: {fileID: 8914780115948359177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &681676379
 GameObject:
   m_ObjectHideFlags: 0
@@ -32204,13 +32209,21 @@ PrefabInstance:
       propertyPath: wallSlideSpeed
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+      propertyPath: forcaKnockback.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+      propertyPath: forcaKnockback.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 116.3
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41.3
+      value: 22.1
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32247,13 +32260,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1603993485718825058, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9134679924262930677}
   m_SourcePrefab: {fileID: 100100000, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
 --- !u!4 &9134679924262930670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
   m_PrefabInstance: {fileID: 8914780115948359177}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9134679924262930677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668208947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c27a64ebc065f047af95d43dc90b7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 3
+  currentHealth: 0
+  controleDeUI: {fileID: 1945205042}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
