@@ -1,19 +1,17 @@
 using UnityEngine;
 using UnityEngine.Splines.ExtrusionShapes;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class Enemy : MonoBehaviour
 {
-    [Header("Movimento")]
+
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float speed = 5;
-    [SerializeField] private bool isFacingRight = true;
-
-    [Header("Detecção de Chão")]
     [SerializeField] private bool isGrounded;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private bool shouldJump;
 
-    [Header("Detecção de Parede")]
-    [SerializeField] private Transform wallCheck;
+    [SerializeField] private Transform player;
+    [SerializeField] private float speed = 20;
+    [SerializeField] private float jumpForce = 30;
+    [SerializeField] private LayerMask groundLayer;
 
     void Start()
     {
@@ -22,47 +20,48 @@ public class Enemy : MonoBehaviour, IDamageable
 
     void Update()
     {
-        float direction = isFacingRight ? 1f : -1f;
-        rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
-
-        // Lança um raio para detectar parede à frente
-        RaycastHit2D wallHit = Physics2D.Raycast(wallCheck.position, transform.right, 0.5f, groundLayer);
-
-        // Lança um raio para baixo para ver se o chão acabou (evita cair no buraco)
-        RaycastHit2D groundHit = Physics2D.Raycast(wallCheck.position, Vector2.down, 1.0f, groundLayer);
-
-        // Se bater na parede OU o chão acabar, ele vira
-        //if (wallHit.collider != null || groundHit.collider == null)
-        //{
-        //    Flip();
-        //}
-    }
-
-    public void TakeDamage(int damage)
-    {
-        Die();
-    }
-
-    public void Die()
-    {
-        Debug.Log("Inimigo Morto!");
-        Destroy(gameObject);
-    }
-
-    void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        transform.Rotate(0, 180, 0);
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if (isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 4f, groundLayer))
         {
-            if (collision.gameObject.TryGetComponent(out PlayerHealth player))
+            Debug.Log("AHAHAHSDJKHSASDFSDF");
+            isGrounded = true;
+        }
+
+        float direction = Mathf.Sign(player.position.x - transform.position.x);
+
+        bool isPlayerAbove = Physics2D.Raycast(transform.position, Vector2.up, 3f, 1 << player.gameObject.layer);
+
+        if (isGrounded)
+        {
+            rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+
+
+            RaycastHit2D groundInFront = Physics2D.Raycast(transform.position, new Vector2(direction, 0), 2f, groundLayer);
+
+            RaycastHit2D gapAhead = Physics2D.Raycast(transform.position + new Vector3(direction, 0, 0), Vector2.down, 2f, groundLayer);
+
+            RaycastHit2D platformAbove = Physics2D.Raycast(transform.position, Vector2.up, 3f, groundLayer);
+
+            if (!groundInFront.collider && !gapAhead.collider)
             {
-                player.TakeDamage(1);
+                shouldJump = true;
             }
+            else if (isPlayerAbove)
+            {
+                shouldJump = true;
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isGrounded && shouldJump)
+        {
+            shouldJump = false;
+            Vector2 direction = (player.position - transform.position).normalized;
+
+            Vector2 jumpDirection = direction * jumpForce;
+
+            rb.AddForce(new Vector2(jumpDirection.x, jumpForce), ForceMode2D.Impulse);
         }
     }
 }
