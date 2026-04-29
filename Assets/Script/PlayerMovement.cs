@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
 
     [Header("Movimento")]
     [SerializeField] private float speed = 25f;
