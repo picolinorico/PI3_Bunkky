@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: c4e762dd1ffe7ac42bc3972d090d3ac1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 499264291528836780
+    second: spritesheet_ursocandando_0
+  - first:
+      213: 703007317799262051
+    second: spritesheet_ursocandando_1
+  - first:
+      213: 4663131239146387392
+    second: spritesheet_ursocandando_2
+  - first:
+      213: 6441747896739099527
+    second: spritesheet_ursocandando_3
+  - first:
+      213: -7474037410197119336
+    second: spritesheet_ursocandando_4
+  - first:
+      213: 2505166735785524101
+    second: spritesheet_ursocandando_5
+  - first:
+      213: -4821282719724349370
+    second: spritesheet_ursocandando_6
+  - first:
+      213: -5175653759964181343
+    second: spritesheet_ursocandando_7
+  - first:
+      213: 3541773235493770262
+    second: spritesheet_ursocandando_8
+  - first:
+      213: 785609089546631158
+    second: spritesheet_ursocandando_9
+  - first:
+      213: -8089476752566995545
+    second: spritesheet_ursocandando_10
+  - first:
+      213: 1537285044472796682
+    second: spritesheet_ursocandando_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3154
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca60d995a3ebde600800000000000000
+      internalID: 499264291528836780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3149
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 367dceb4e6591c900800000000000000
+      internalID: 703007317799262051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 71
+        width: 2199
+        height: 3774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7f85ad725c6b040800000000000000
+      internalID: 4663131239146387392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_3
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 96
+        width: 3122
+        height: 3749
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783f0cd059fa56950800000000000000
+      internalID: 6441747896739099527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_4
+      rect:
+        serializedVersion: 2
+        x: 5526
+        y: 73
+        width: 2833
+        height: 3772
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e58371392e64890800000000000000
+      internalID: -7474037410197119336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_5
+      rect:
+        serializedVersion: 2
+        x: 8660
+        y: 64
+        width: 2397
+        height: 3781
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58bfe9d8fd324c220800000000000000
+      internalID: 2505166735785524101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_6
+      rect:
+        serializedVersion: 2
+        x: 11057
+        y: 0
+        width: 2257
+        height: 3845
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648d91129ec571db0800000000000000
+      internalID: -4821282719724349370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_7
+      rect:
+        serializedVersion: 2
+        x: 13314
+        y: 92
+        width: 2496
+        height: 3753
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac8becb3526c28b0800000000000000
+      internalID: -5175653759964181343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_8
+      rect:
+        serializedVersion: 2
+        x: 15810
+        y: 161
+        width: 2115
+        height: 3684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61497981ef7e62130800000000000000
+      internalID: 3541773235493770262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_9
+      rect:
+        serializedVersion: 2
+        x: 17925
+        y: 85
+        width: 2030
+        height: 3760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7bebafd4b07ea00800000000000000
+      internalID: 785609089546631158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_10
+      rect:
+        serializedVersion: 2
+        x: 8539
+        y: 2614
+        width: 280
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5b670e0c76cbf80800000000000000
+      internalID: -8089476752566995545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_ursocandando_11
+      rect:
+        serializedVersion: 2
+        x: 8359
+        y: 2352
+        width: 517
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0652526a98855510800000000000000
+      internalID: 1537285044472796682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritesheet_ursocandando_0: 499264291528836780
+      spritesheet_ursocandando_1: 703007317799262051
+      spritesheet_ursocandando_10: -8089476752566995545
+      spritesheet_ursocandando_11: 1537285044472796682
+      spritesheet_ursocandando_2: 4663131239146387392
+      spritesheet_ursocandando_3: 6441747896739099527
+      spritesheet_ursocandando_4: -7474037410197119336
+      spritesheet_ursocandando_5: 2505166735785524101
+      spritesheet_ursocandando_6: -4821282719724349370
+      spritesheet_ursocandando_7: -5175653759964181343
+      spritesheet_ursocandando_8: 3541773235493770262
+      spritesheet_ursocandando_9: 785609089546631158
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
