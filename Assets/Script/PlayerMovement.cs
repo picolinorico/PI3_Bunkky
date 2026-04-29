@@ -8,24 +8,24 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     [Header("Movimento")]
-    [SerializeField] private float speed = 25f;
+    [SerializeField] private float speed = 30f;
     [SerializeField] private float horizontalMovement;
     [SerializeField] private bool isFacingRight = true;
 
     [Header("Gravidade")]
-    [SerializeField] private int gravityBase = 4;
-    [SerializeField] private float maxFallSpeed = 50;
+    [SerializeField] private int gravityBase = 6;
+    [SerializeField] private float maxFallSpeed = 70;
     [SerializeField] private float fallSpeedMultiplier = 3;
 
     [Header("Pulo")]
-    [SerializeField] private float jumpForce = 25f;
+    [SerializeField] private float jumpForce = 35f;
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpsLeft;
 
     [Header("Detecção de Chão")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Vector2 groundCheckSize = new Vector2(4.63f, 0.2f);
+    [SerializeField] private Vector2 groundCheckSize = new Vector2(2.09f, 0.1f);
     [SerializeField] private bool isGrounded;
 
     [Header("Movimento nas Paredes")]
@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isWallSliding;
 
     [Header("Pulo nas Paredes")]
-    [SerializeField] private Vector2 wallJumpPower = new Vector2(25f, 25f);
-    [SerializeField] private float wallJumpTime = 0.5f;
+    [SerializeField] private Vector2 wallJumpPower = new Vector2(12f, 24f);
+    [SerializeField] private float wallJumpTime = 0.15f;
     [SerializeField] private bool isWallJumping;
     [SerializeField] private float wallJumpDirection;
     [SerializeField] private float wallJumpTimer;
@@ -42,13 +42,13 @@ public class PlayerMovement : MonoBehaviour
     [Header("Detecção de Parede")]
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private Vector2 wallCheckSize = new Vector2(1f, 0.1f);
+    [SerializeField] private Vector2 wallCheckSize = new Vector2(0.11f, 4.43f);
 
     [Header("Ataque e Feedback")]
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = 0.5f;
     [SerializeField] private int attackDamage = 1;          //Arrumar
-    [SerializeField] private float attackColdown = 1f;
+    [SerializeField] private float attackColdown = 0.5f;
     private bool onAttack = false;
     [SerializeField] private LayerMask enemyLayer;
 

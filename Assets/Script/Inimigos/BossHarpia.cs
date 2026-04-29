@@ -9,7 +9,7 @@ public class BossHarpia : MonoBehaviour
 
     private Transform player;
     private Vector2 pontoDestino;
-    private bool escolhendoNovoPonto = false;
+    //private bool escolhendoNovoPonto = false;
 
     void Start()
     {
