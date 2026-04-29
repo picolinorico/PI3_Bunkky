@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
 
     public Animator animator;
+    public bool isKnockback;
 
     [Header("Checkpoint e Câmera")]
     private Vector2 pontoDeCheckpoint;
@@ -275,41 +276,38 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //public void ReceberDano(int dano, Vector2 posicaoDoPerigo)
-    //{
-    //    if (isKnockback) return;
+    public void AplicarKnockback()
+    {
+        StartCoroutine(RotinaKnockback());
+    }
 
-    //    vidaAtual -= dano;
-    //    Debug.Log("Tomei dano! Vida restante: " + vidaAtual);
+    private IEnumerator RotinaKnockback()
+    {
+        isKnockback = true;
+        rb.linearVelocity = Vector2.zero;
 
-    //    if (vidaAtual <= 0) Morrer();
-    //    else StartCoroutine(AplicarKnockback(posicaoDoPerigo));
-    //}
+        // Joga o player para trás (contrário de onde ele está olhando) e um pouco para cima
+        float direcaoKnockback = transform.localScale.x > 0 ? -1f : 1f;
+        rb.AddForce(new Vector2(direcaoKnockback * 7f, 5f), ForceMode2D.Impulse);
 
-    //private IEnumerator AplicarKnockback(Vector2 posicaoDoPerigo)
-    //{
-    //    isKnockback = true;
-    //    rb.linearVelocity = Vector2.zero;
-    //    float direcaoX = transform.position.x < posicaoDoPerigo.x ? -1 : 1;
-    //    rb.AddForce(new Vector2(direcaoX * forcaKnockbackX, forcaKnockbackY), ForceMode2D.Impulse);
-    //    yield return new WaitForSeconds(knockbackDuration);
-    //    isKnockback = false;
-    //}
+        yield return new WaitForSeconds(0.3f);
+        isKnockback = false;
+    }
 
-    //private void Morrer()
-    //{
-    //    vidaAtual = vidaMaxima;
-    //    transform.position = pontoDeCheckpoint;
-    //    rb.linearVelocity = Vector2.zero;
-    //    isKnockback = false;
+    // Função chamada pelo PlayerHealth
+    public void Respawnar()
+    {
+        transform.position = pontoDeCheckpoint;
+        rb.linearVelocity = Vector2.zero;
+        isKnockback = false;
 
-    //    if (areaDoCheckpoint != null && cameraSeguir != null)
-    //    {
-    //        cameraSeguir.FocarNoQuadrinho(areaDoCheckpoint);
-    //    }
-    //}
+        if (areaDoCheckpoint != null && cameraSeguir != null)
+        {
+            cameraSeguir.FocarNoQuadrinho(areaDoCheckpoint);
+        }
+    }
 
-    public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
+public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
     {
         pontoDeCheckpoint = novaPosicao;
         areaDoCheckpoint = novaAreaDeCamera;
