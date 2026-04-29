@@ -1,67 +1,102 @@
 using UnityEngine;
-using UnityEngine.Splines.ExtrusionShapes;
+using System.Collections;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
+    [Header("Configurações de Vida")]
+    [SerializeField] private int maxHealth = 3;
+    private int _currentHealth;
 
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private bool isGrounded;
-    [SerializeField] private bool shouldJump;
+    [Header("Configurações de Ataque")]
+    [SerializeField] private int contactDamage = 1;
 
-    [SerializeField] private Transform player;
-    [SerializeField] private float speed = 20;
-    [SerializeField] private float jumpForce = 30;
-    [SerializeField] private LayerMask groundLayer;
+    [Header("Movimentação (Patrulha)")]
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private Transform[] waypoints;
+    private int _currentWaypointIndex = 0;
 
-    void Start()
+    [Header("Feedback Visual")]
+    [SerializeField] private GameObject deathEffect;
+    private SpriteRenderer _sr;
+    private Color _originalColor;
+
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
+        _originalColor = _sr.color;
+        _currentHealth = maxHealth;
     }
 
-    void Update()
+    private void Update()
     {
-        if (isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 4f, groundLayer))
+        Patrol();
+    }
+
+    private void Patrol()
+    {
+        // Se não houver waypoints configurados, o inimigo fica parado
+        if (waypoints == null || waypoints.Length < 2) return;
+
+        Transform target = waypoints[_currentWaypointIndex];
+        transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+
+        // Verifica se chegou no ponto de destino
+        if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
-            Debug.Log("AHAHAHSDJKHSASDFSDF");
-            isGrounded = true;
-        }
-
-        float direction = Mathf.Sign(player.position.x - transform.position.x);
-
-        bool isPlayerAbove = Physics2D.Raycast(transform.position, Vector2.up, 3f, 1 << player.gameObject.layer);
-
-        if (isGrounded)
-        {
-            rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
-
-
-            RaycastHit2D groundInFront = Physics2D.Raycast(transform.position, new Vector2(direction, 0), 2f, groundLayer);
-
-            RaycastHit2D gapAhead = Physics2D.Raycast(transform.position + new Vector3(direction, 0, 0), Vector2.down, 2f, groundLayer);
-
-            RaycastHit2D platformAbove = Physics2D.Raycast(transform.position, Vector2.up, 3f, groundLayer);
-
-            if (!groundInFront.collider && !gapAhead.collider)
-            {
-                shouldJump = true;
-            }
-            else if (isPlayerAbove)
-            {
-                shouldJump = true;
-            }
+            _currentWaypointIndex = (_currentWaypointIndex + 1) % waypoints.Length;
+            Flip();
         }
     }
 
-    private void FixedUpdate()
+    private void Flip()
     {
-        if (isGrounded && shouldJump)
+        // Mantendo o padrão de rotação 180 no eixo Y que você usa no Player
+        transform.Rotate(0, 180, 0);
+    }
+
+    // DETECÇÃO DE DANO AO PLAYER (CONTATO)
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            shouldJump = false;
-            Vector2 direction = (player.position - transform.position).normalized;
-
-            Vector2 jumpDirection = direction * jumpForce;
-
-            rb.AddForce(new Vector2(jumpDirection.x, jumpForce), ForceMode2D.Impulse);
+            PlayerHealth player = collision.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                // Aplica dano e empurra o player para longe da posição deste inimigo
+                player.TakeDamage(0);
+            }
         }
+    }
+
+    // IMPLEMENTAÇÃO DA INTERFACE IDAMAGEABLE (O Inimigo recebendo dano)
+    public void TakeDamage(int damage)
+    {
+        _currentHealth -= damage;
+
+        // Feedback de flash vermelho
+        StopCoroutine(nameof(DamageFlash));
+        StartCoroutine(nameof(DamageFlash));
+
+        if (_currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private IEnumerator DamageFlash()
+    {
+        _sr.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        _sr.color = _originalColor;
+    }
+
+    private void Die()
+    {
+        if (deathEffect != null)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 }

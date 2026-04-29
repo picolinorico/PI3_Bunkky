@@ -3818,6 +3818,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1196790014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &196891079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196891080}
+  m_Layer: 7
+  m_Name: PontoA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196891080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196891079}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 90.39819, y: 23.763077, z: -2.4}
+  m_LocalScale: {x: 4.6410275, y: 10.626096, z: 4.6410275}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &198276035
 GameObject:
   m_ObjectHideFlags: 0
@@ -13448,7 +13479,7 @@ GameObject:
   - component: {fileID: 977861224}
   - component: {fileID: 977861228}
   m_Layer: 7
-  m_Name: Inimigo
+  m_Name: Cachorro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13574,7 +13605,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 70
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13595,8 +13626,8 @@ Transform:
   m_GameObject: {fileID: 977861223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66, y: 20.7, z: -2.4}
-  m_LocalScale: {x: 3.3591988, y: 3.3591988, z: 3.3591988}
+  m_LocalPosition: {x: 113, y: 24.22, z: -2.4}
+  m_LocalScale: {x: 4.6410275, y: 10.626096, z: 4.6410275}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -13610,10 +13641,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 977861223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce826bd260df87f4a9719dab592d94e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d4ae523ec31ab4ba78af4bd3cff3d8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VidaGlitch
-  vidaMaxima: 3
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  maxHealth: 3
+  contactDamage: 1
+  moveSpeed: 2
+  waypoints:
+  - {fileID: 196891080}
+  - {fileID: 1649194486}
+  deathEffect: {fileID: 0}
 --- !u!1 &982289590
 GameObject:
   m_ObjectHideFlags: 0
@@ -23828,6 +23865,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EsconderSala
   prefabTelaPreta: {fileID: 8659122764309812155, guid: 2f1048df998abad44972061a67d1afa8, type: 3}
   tempoDeTransicao: 0.1
+--- !u!1 &1649194485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649194486}
+  m_Layer: 7
+  m_Name: PontoB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649194486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649194485}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 126.83026, y: 23.763077, z: -2.4}
+  m_LocalScale: {x: 4.6410275, y: 10.626096, z: 4.6410275}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1660348674
 GameObject:
   m_ObjectHideFlags: 0
@@ -31311,11 +31379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -48.2657
+      value: -50.9
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.0577
+      value: 23.7
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31363,6 +31431,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1649194486}
+  - {fileID: 196891080}
   - {fileID: 977861227}
   - {fileID: 1660348678}
   - {fileID: 8914780115948359177}
