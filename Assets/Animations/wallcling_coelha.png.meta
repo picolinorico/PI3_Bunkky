@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: 09819b50fbdd6a447a4c2ee14642ad04
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -604911923758469124
+    second: wallcling_coelha_0
+  - first:
+      213: 8137240321368952074
+    second: wallcling_coelha_1
+  - first:
+      213: 5575842482093062390
+    second: wallcling_coelha_2
+  - first:
+      213: -3089986018336755584
+    second: wallcling_coelha_3
+  - first:
+      213: -5421059196266281497
+    second: wallcling_coelha_4
+  - first:
+      213: 7582305470306571330
+    second: wallcling_coelha_5
+  - first:
+      213: 4069292970728297136
+    second: wallcling_coelha_6
+  - first:
+      213: 7068921406750433787
+    second: wallcling_coelha_7
+  - first:
+      213: -2876897159659906717
+    second: wallcling_coelha_8
+  - first:
+      213: -3286001841872018565
+    second: wallcling_coelha_9
+  - first:
+      213: 1012341393286684719
+    second: wallcling_coelha_10
+  - first:
+      213: 4270207096314855941
+    second: wallcling_coelha_11
+  - first:
+      213: -3041326169732170280
+    second: wallcling_coelha_12
+  - first:
+      213: 5791470976166602831
+    second: wallcling_coelha_13
+  - first:
+      213: 8462104874315912160
+    second: wallcling_coelha_14
+  - first:
+      213: -2425029182965791050
+    second: wallcling_coelha_15
+  - first:
+      213: 698422447175359027
+    second: wallcling_coelha_16
+  - first:
+      213: -1947914448347156617
+    second: wallcling_coelha_17
+  - first:
+      213: -3001946394629234846
+    second: wallcling_coelha_18
+  - first:
+      213: -5426371166884957234
+    second: wallcling_coelha_19
+  - first:
+      213: -8911467768244550128
+    second: wallcling_coelha_20
+  - first:
+      213: 991208419937092254
+    second: wallcling_coelha_21
+  - first:
+      213: -7692803885591264864
+    second: wallcling_coelha_22
+  - first:
+      213: 556962896492822927
+    second: wallcling_coelha_23
+  - first:
+      213: -4489691860028122360
+    second: wallcling_coelha_24
+  - first:
+      213: 6840167299000962804
+    second: wallcling_coelha_25
+  - first:
+      213: 7282313127833816660
+    second: wallcling_coelha_26
+  - first:
+      213: 2481752471524353191
+    second: wallcling_coelha_27
+  - first:
+      213: -2732287538778199073
+    second: wallcling_coelha_28
+  - first:
+      213: 2946801014917088653
+    second: wallcling_coelha_29
+  - first:
+      213: 1002262975364592977
+    second: wallcling_coelha_30
+  - first:
+      213: -808309422662076317
+    second: wallcling_coelha_31
+  - first:
+      213: 392008389099985315
+    second: wallcling_coelha_32
+  - first:
+      213: 2534760414834073493
+    second: wallcling_coelha_33
+  - first:
+      213: 2716560743599180184
+    second: wallcling_coelha_34
+  - first:
+      213: -5883294280353445410
+    second: wallcling_coelha_35
+  - first:
+      213: 3327401559920387274
+    second: wallcling_coelha_36
+  - first:
+      213: 2570403648020601690
+    second: wallcling_coelha_37
+  - first:
+      213: -4661168139333094560
+    second: wallcling_coelha_38
+  - first:
+      213: 3095577984894452242
+    second: wallcling_coelha_39
+  - first:
+      213: -5260300704850314962
+    second: wallcling_coelha_40
+  - first:
+      213: -6844367301158386052
+    second: wallcling_coelha_41
+  - first:
+      213: 4166140939384006181
+    second: wallcling_coelha_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wallcling_coelha_0
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 118
+        width: 1301
+        height: 1529
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff6aff6fcbea97f0800000000000000
+      internalID: -604911923758469124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_1
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 70
+        width: 1315
+        height: 1568
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d8e2795f84de070800000000000000
+      internalID: 8137240321368952074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_5
+      rect:
+        serializedVersion: 2
+        x: 4268
+        y: 79
+        width: 1299
+        height: 1547
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244df1807a2c93960800000000000000
+      internalID: 7582305470306571330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_6
+      rect:
+        serializedVersion: 2
+        x: 6266
+        y: 129
+        width: 1319
+        height: 1518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b211479568097830800000000000000
+      internalID: 4069292970728297136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_7
+      rect:
+        serializedVersion: 2
+        x: 8268
+        y: 127
+        width: 1311
+        height: 1520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1a382119ad91260800000000000000
+      internalID: 7068921406750433787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_8
+      rect:
+        serializedVersion: 2
+        x: 10270
+        y: 119
+        width: 1309
+        height: 1528
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369142796453318d0800000000000000
+      internalID: -2876897159659906717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_10
+      rect:
+        serializedVersion: 2
+        x: 12281
+        y: 84
+        width: 1326
+        height: 1542
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f20e642322f8c0e00800000000000000
+      internalID: 1012341393286684719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_13
+      rect:
+        serializedVersion: 2
+        x: 14281
+        y: 87
+        width: 1308
+        height: 1525
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4825651b207f5050800000000000000
+      internalID: 5791470976166602831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_16
+      rect:
+        serializedVersion: 2
+        x: 16278
+        y: 81
+        width: 1310
+        height: 1523
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33adb0be38b41b900800000000000000
+      internalID: 698422447175359027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wallcling_coelha_19
+      rect:
+        serializedVersion: 2
+        x: 18285
+        y: 70
+        width: 1299
+        height: 1542
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec376628c28a1b4b0800000000000000
+      internalID: -5426371166884957234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7812c0540a0de594c9300a86059d5fcc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wallcling_coelha_0: -604911923758469124
+      wallcling_coelha_1: 8137240321368952074
+      wallcling_coelha_10: 1012341393286684719
+      wallcling_coelha_11: 4270207096314855941
+      wallcling_coelha_12: -3041326169732170280
+      wallcling_coelha_13: 5791470976166602831
+      wallcling_coelha_14: 8462104874315912160
+      wallcling_coelha_15: -2425029182965791050
+      wallcling_coelha_16: 698422447175359027
+      wallcling_coelha_17: -1947914448347156617
+      wallcling_coelha_18: -3001946394629234846
+      wallcling_coelha_19: -5426371166884957234
+      wallcling_coelha_2: 5575842482093062390
+      wallcling_coelha_20: -8911467768244550128
+      wallcling_coelha_21: 991208419937092254
+      wallcling_coelha_22: -7692803885591264864
+      wallcling_coelha_23: 556962896492822927
+      wallcling_coelha_24: -4489691860028122360
+      wallcling_coelha_25: 6840167299000962804
+      wallcling_coelha_26: 7282313127833816660
+      wallcling_coelha_27: 2481752471524353191
+      wallcling_coelha_28: -2732287538778199073
+      wallcling_coelha_29: 2946801014917088653
+      wallcling_coelha_3: -3089986018336755584
+      wallcling_coelha_30: 1002262975364592977
+      wallcling_coelha_31: -808309422662076317
+      wallcling_coelha_32: 392008389099985315
+      wallcling_coelha_33: 2534760414834073493
+      wallcling_coelha_34: 2716560743599180184
+      wallcling_coelha_35: -5883294280353445410
+      wallcling_coelha_36: 3327401559920387274
+      wallcling_coelha_37: 2570403648020601690
+      wallcling_coelha_38: -4661168139333094560
+      wallcling_coelha_39: 3095577984894452242
+      wallcling_coelha_4: -5421059196266281497
+      wallcling_coelha_40: -5260300704850314962
+      wallcling_coelha_41: -6844367301158386052
+      wallcling_coelha_42: 4166140939384006181
+      wallcling_coelha_5: 7582305470306571330
+      wallcling_coelha_6: 4069292970728297136
+      wallcling_coelha_7: 7068921406750433787
+      wallcling_coelha_8: -2876897159659906717
+      wallcling_coelha_9: -3286001841872018565
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

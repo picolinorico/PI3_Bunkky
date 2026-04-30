@@ -139,11 +139,13 @@ public class PlayerMovement : MonoBehaviour
         if (!isGrounded & WallCheck() & horizontalMovement != 0)
         {
             isWallSliding = true;
+            animator.SetBool("Wallcling", true);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed));
         }
         else
         {
             isWallSliding = false;
+            animator.SetBool("Wallcling", false);
         }
     }
 
