@@ -750,7 +750,7 @@ GameObject:
   - component: {fileID: 77047061}
   - component: {fileID: 77047060}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (12)"
+  m_Name: espinho (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 97370481}
   - component: {fileID: 97370480}
   m_Layer: 0
-  m_Name: Balaoespinhosharpia (1)
+  m_Name: Balaoespinhoharpia (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2043,7 +2043,7 @@ GameObject:
   - component: {fileID: 128853592}
   - component: {fileID: 128853591}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (8)"
+  m_Name: espinho (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,11 +2058,11 @@ Transform:
   m_GameObject: {fileID: 128853588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.311, y: 19.972, z: 0}
-  m_LocalScale: {x: 1.4367778, y: 1.4367778, z: 1.4367778}
+  m_LocalPosition: {x: -1.389038, y: 1.771973, z: 0}
+  m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1267901537}
+  m_Father: {fileID: 1039706049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &128853590
 SpriteRenderer:
@@ -2334,7 +2334,7 @@ GameObject:
   - component: {fileID: 129667475}
   - component: {fileID: 129667474}
   m_Layer: 0
-  m_Name: Balaoespinhosharpia (5)
+  m_Name: Balaoespinhoharpia (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2879,7 +2879,7 @@ GameObject:
   - component: {fileID: 146271497}
   - component: {fileID: 146271496}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (6)"
+  m_Name: espinho (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2894,11 +2894,11 @@ Transform:
   m_GameObject: {fileID: 146271493}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.785, y: 19.959, z: 0}
-  m_LocalScale: {x: 1.4367781, y: 1.4367781, z: 1.4367778}
+  m_LocalPosition: {x: 10.084962, y: 1.7589712, z: 0}
+  m_LocalScale: {x: 1.4367782, y: 1.4367782, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1267901537}
+  m_Father: {fileID: 1039706049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &146271495
 SpriteRenderer:
@@ -4490,7 +4490,7 @@ GameObject:
   - component: {fileID: 204170793}
   - component: {fileID: 204170792}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (8)"
+  m_Name: espinho (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5354,8 +5354,8 @@ Transform:
   m_GameObject: {fileID: 306567711}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.40001, y: -57.19999, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -53.23142, y: 49.321865, z: -4.448804}
+  m_LocalScale: {x: 0.39721465, y: 0.39721465, z: 0.39721465}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 362265748}
@@ -5376,7 +5376,7 @@ Transform:
   - {fileID: 653433834}
   - {fileID: 1559926429}
   - {fileID: 802806711}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1003847507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308304910
 GameObject:
@@ -5783,7 +5783,7 @@ GameObject:
   - component: {fileID: 339014606}
   - component: {fileID: 339014605}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (6)"
+  m_Name: espinho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6683,8 +6683,8 @@ Transform:
   m_GameObject: {fileID: 381089475}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -68.34999, y: 38.45999, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -61.55306, y: 87.31941, z: -4.448804}
+  m_LocalScale: {x: 0.39721465, y: 0.39721465, z: 0.39721465}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1573749984}
@@ -6752,7 +6752,7 @@ Transform:
   - {fileID: 202829325}
   - {fileID: 357424844}
   - {fileID: 1006970067}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1003847507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383771612
 GameObject:
@@ -6941,9 +6941,9 @@ Transform:
   m_Children:
   - {fileID: 1328822820}
   - {fileID: 1703237518}
+  - {fileID: 1884184749}
   - {fileID: 1039706049}
   - {fileID: 713828947}
-  - {fileID: 1884184749}
   m_Father: {fileID: 931290104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392662670
@@ -8120,7 +8120,7 @@ GameObject:
   - component: {fileID: 539727154}
   - component: {fileID: 539727153}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (8)"
+  m_Name: espinho (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8135,11 +8135,11 @@ Transform:
   m_GameObject: {fileID: 539727150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.216999, y: 19.368948, z: 0}
-  m_LocalScale: {x: 1.9195352, y: 1.9195352, z: 1.9195352}
+  m_LocalPosition: {x: 4.517006, y: 1.1689453, z: 0}
+  m_LocalScale: {x: 1.9195353, y: 1.9195353, z: 1.9195353}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1458718536}
+  m_Father: {fileID: 713828947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &539727152
 SpriteRenderer:
@@ -8577,7 +8577,7 @@ GameObject:
   - component: {fileID: 561500362}
   - component: {fileID: 561500361}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (8)"
+  m_Name: espinho (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8592,11 +8592,11 @@ Transform:
   m_GameObject: {fileID: 561500358}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.929, y: 19.350948, z: 0}
-  m_LocalScale: {x: 1.9195354, y: 1.9195354, z: 1.9195352}
+  m_LocalPosition: {x: 34.229004, y: 1.1508789, z: 0}
+  m_LocalScale: {x: 1.9195354, y: 1.9195354, z: 1.9195353}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1458718536}
+  m_Father: {fileID: 713828947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &561500360
 SpriteRenderer:
@@ -9229,7 +9229,7 @@ GameObject:
   - component: {fileID: 602135298}
   - component: {fileID: 602135297}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (7)"
+  m_Name: espinho (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9244,11 +9244,11 @@ Transform:
   m_GameObject: {fileID: 602135294}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.524, y: 19.368948, z: 0}
-  m_LocalScale: {x: 1.9195352, y: 1.9195352, z: 1.9195352}
+  m_LocalPosition: {x: -24.223995, y: 1.1689453, z: 0}
+  m_LocalScale: {x: 1.9195353, y: 1.9195353, z: 1.9195353}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1458718536}
+  m_Father: {fileID: 713828947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &602135296
 SpriteRenderer:
@@ -9736,7 +9736,7 @@ GameObject:
   - component: {fileID: 631604351}
   - component: {fileID: 631604350}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (7)"
+  m_Name: espinho (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10613,7 +10613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 713828947}
   m_Layer: 0
-  m_Name: triangulo (4)
+  m_Name: grupo espinhos (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10632,7 +10632,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1458718536}
+  - {fileID: 1811633389}
+  - {fileID: 1069912078}
+  - {fileID: 539727151}
+  - {fileID: 602135295}
+  - {fileID: 1294154017}
+  - {fileID: 561500359}
   m_Father: {fileID: 388350293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721908426
@@ -10957,39 +10962,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9.149586, y: 4.632904}
   m_EdgeRadius: 0
---- !u!1 &747553382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 747553383}
-  m_Layer: 0
-  m_Name: "colliders dano - ponto de exclama\xE7\xE3o  (1)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &747553383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747553382}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.555653, y: -63.86127, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1015440715}
-  - {fileID: 1984049576}
-  m_Father: {fileID: 815158213}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774701424
 GameObject:
   m_ObjectHideFlags: 0
@@ -11136,7 +11108,7 @@ GameObject:
   - component: {fileID: 780446788}
   - component: {fileID: 780446787}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo (11)"
+  m_Name: espinho raio (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11843,7 +11815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815158213}
   m_Layer: 0
-  m_Name: epinhos raio
+  m_Name: espinhos raio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11865,7 +11837,8 @@ Transform:
   - {fileID: 1175453541}
   - {fileID: 1227652927}
   - {fileID: 780446785}
-  - {fileID: 747553383}
+  - {fileID: 1015440715}
+  - {fileID: 1984049576}
   m_Father: {fileID: 931290104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818379468
@@ -12194,9 +12167,9 @@ Transform:
   - {fileID: 914218908}
   - {fileID: 97370478}
   - {fileID: 1525406243}
+  - {fileID: 1265693870}
   - {fileID: 1917321931}
   - {fileID: 129667473}
-  - {fileID: 1265693870}
   m_Father: {fileID: 931290104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839029544
@@ -12368,7 +12341,7 @@ GameObject:
   - component: {fileID: 856401074}
   - component: {fileID: 856401073}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (5)"
+  m_Name: espinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12874,7 +12847,7 @@ GameObject:
   - component: {fileID: 879622155}
   - component: {fileID: 879622154}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (6)"
+  m_Name: espinho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13321,7 +13294,7 @@ GameObject:
   - component: {fileID: 900593056}
   - component: {fileID: 900593055}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (10)"
+  m_Name: espinho (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13612,7 +13585,7 @@ GameObject:
   - component: {fileID: 914218911}
   - component: {fileID: 914218910}
   m_Layer: 0
-  m_Name: Balaoespinhosharpia
+  m_Name: Balaoespinhoharpia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14694,7 +14667,7 @@ GameObject:
   - component: {fileID: 962233082}
   - component: {fileID: 962233081}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (8)"
+  m_Name: espinho (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14709,11 +14682,11 @@ Transform:
   m_GameObject: {fileID: 962233078}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.554, y: 19.959, z: 0}
-  m_LocalScale: {x: 1.4367781, y: 1.4367781, z: 1.4367778}
+  m_LocalPosition: {x: 20.853975, y: 1.7589703, z: 0}
+  m_LocalScale: {x: 1.4367782, y: 1.4367782, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1267901537}
+  m_Father: {fileID: 1039706049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &962233080
 SpriteRenderer:
@@ -15601,7 +15574,10 @@ Transform:
   m_LocalPosition: {x: 86.6117, y: -181.3693, z: 11.2}
   m_LocalScale: {x: 2.5175304, y: 2.5175304, z: 2.5175304}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 381089476}
+  - {fileID: 306567712}
+  - {fileID: 1347946518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006970066
@@ -15773,7 +15749,7 @@ GameObject:
   - component: {fileID: 1015440718}
   - component: {fileID: 1015440717}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo (9)"
+  m_Name: espinho raio (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15788,11 +15764,11 @@ Transform:
   m_GameObject: {fileID: 1015440714}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.43209022, w: -0.9018304}
-  m_LocalPosition: {x: -12.4, y: -2.1, z: 0}
-  m_LocalScale: {x: 1.9420351, y: 1.7173945, z: 2.2283823}
+  m_LocalPosition: {x: 44.155655, y: -65.96127, z: 0}
+  m_LocalScale: {x: 1.942035, y: 1.7173945, z: 2.228382}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 747553383}
+  m_Father: {fileID: 815158213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.201}
 --- !u!212 &1015440716
 SpriteRenderer:
@@ -16171,7 +16147,7 @@ GameObject:
   - component: {fileID: 1029347589}
   - component: {fileID: 1029347588}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (14)"
+  m_Name: espinho (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16459,7 +16435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039706049}
   m_Layer: 0
-  m_Name: triangulo (3)
+  m_Name: grupo espinhos (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16478,7 +16454,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1267901537}
+  - {fileID: 1575378661}
+  - {fileID: 1779321190}
+  - {fileID: 128853589}
+  - {fileID: 1287342892}
+  - {fileID: 146271494}
+  - {fileID: 962233079}
   m_Father: {fileID: 388350293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1041074858
@@ -16572,7 +16553,7 @@ GameObject:
   - component: {fileID: 1042149033}
   - component: {fileID: 1042149032}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (13)"
+  m_Name: espinho (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17295,7 +17276,7 @@ GameObject:
   - component: {fileID: 1069912081}
   - component: {fileID: 1069912080}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (6)"
+  m_Name: espinho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17310,11 +17291,11 @@ Transform:
   m_GameObject: {fileID: 1069912077}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.80299973, y: 19.368948, z: 0}
-  m_LocalScale: {x: 1.9195352, y: 1.9195352, z: 1.9195352}
+  m_LocalPosition: {x: -9.896996, y: 1.1689453, z: 0}
+  m_LocalScale: {x: 1.9195353, y: 1.9195353, z: 1.9195353}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1458718536}
+  m_Father: {fileID: 713828947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1069912079
 SpriteRenderer:
@@ -18081,7 +18062,7 @@ GameObject:
   - component: {fileID: 1135127124}
   - component: {fileID: 1135127123}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (7)"
+  m_Name: espinho (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18372,7 +18353,7 @@ GameObject:
   - component: {fileID: 1175453544}
   - component: {fileID: 1175453543}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo (9)"
+  m_Name: espinho raio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19167,7 +19148,7 @@ GameObject:
   - component: {fileID: 1227652930}
   - component: {fileID: 1227652929}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo (10)"
+  m_Name: espinho raio (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19487,7 +19468,7 @@ GameObject:
   - component: {fileID: 1229513588}
   - component: {fileID: 1229513587}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (5)"
+  m_Name: espinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19916,7 +19897,7 @@ GameObject:
   - component: {fileID: 1255927641}
   - component: {fileID: 1255927640}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (8)"
+  m_Name: espinho (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20207,7 +20188,7 @@ GameObject:
   - component: {fileID: 1265693873}
   - component: {fileID: 1265693872}
   m_Layer: 0
-  m_Name: Balaoespinhosharpia (3)
+  m_Name: Balaoespinhoharpia (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20601,43 +20582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DanoEspinho
   danoCausado: 1
---- !u!1 &1267901536
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1267901537}
-  m_Layer: 0
-  m_Name: triangulo (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1267901537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1267901536}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.7, y: -18.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1575378661}
-  - {fileID: 1779321190}
-  - {fileID: 128853589}
-  - {fileID: 1287342892}
-  - {fileID: 146271494}
-  - {fileID: 962233079}
-  m_Father: {fileID: 1039706049}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1276761885
 GameObject:
   m_ObjectHideFlags: 0
@@ -20787,7 +20731,7 @@ GameObject:
   - component: {fileID: 1287342895}
   - component: {fileID: 1287342894}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (7)"
+  m_Name: espinho (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20802,11 +20746,11 @@ Transform:
   m_GameObject: {fileID: 1287342891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.205, y: 19.972, z: 0}
-  m_LocalScale: {x: 1.4367778, y: 1.4367778, z: 1.4367778}
+  m_LocalPosition: {x: -22.905031, y: 1.7719746, z: 0}
+  m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1267901537}
+  m_Father: {fileID: 1039706049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1287342893
 SpriteRenderer:
@@ -21156,7 +21100,7 @@ GameObject:
   - component: {fileID: 1294154020}
   - component: {fileID: 1294154019}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (6)"
+  m_Name: espinho (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21171,11 +21115,11 @@ Transform:
   m_GameObject: {fileID: 1294154016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.543, y: 19.350948, z: 0}
-  m_LocalScale: {x: 1.9195354, y: 1.9195354, z: 1.9195352}
+  m_LocalPosition: {x: 19.84301, y: 1.1508789, z: 0}
+  m_LocalScale: {x: 1.9195354, y: 1.9195354, z: 1.9195353}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1458718536}
+  m_Father: {fileID: 713828947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1294154018
 SpriteRenderer:
@@ -21600,7 +21544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328822820}
   m_Layer: 0
-  m_Name: triangulo
+  m_Name: grupo espinhos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21939,12 +21883,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347946516}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.4606, y: -182.5, z: 2.8}
-  m_LocalScale: {x: 2.5175304, y: 2.5175304, z: 2.5175304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.060019195, y: -0.4491333, z: -3.336603}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1003847507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1357045271
 GameObject:
@@ -23081,43 +23025,6 @@ Transform:
   - {fileID: 1432557377}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1458718535
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1458718536}
-  m_Layer: 0
-  m_Name: triangulo (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1458718536
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458718535}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.7, y: -18.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1811633389}
-  - {fileID: 1069912078}
-  - {fileID: 539727151}
-  - {fileID: 602135295}
-  - {fileID: 1294154017}
-  - {fileID: 561500359}
-  m_Father: {fileID: 713828947}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1461787709
 GameObject:
   m_ObjectHideFlags: 0
@@ -23375,7 +23282,7 @@ GameObject:
   - component: {fileID: 1482910907}
   - component: {fileID: 1482910906}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (6)"
+  m_Name: espinho (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23941,7 +23848,7 @@ GameObject:
   - component: {fileID: 1525406245}
   - component: {fileID: 1525406244}
   m_Layer: 0
-  m_Name: Balaoespinhosharpia (2)
+  m_Name: Balaoespinhoharpia (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24592,7 +24499,7 @@ GameObject:
   - component: {fileID: 1556491430}
   - component: {fileID: 1556491429}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (7)"
+  m_Name: espinho (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25039,7 +24946,7 @@ GameObject:
   - component: {fileID: 1575378664}
   - component: {fileID: 1575378663}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (5)"
+  m_Name: espinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25054,11 +24961,11 @@ Transform:
   m_GameObject: {fileID: 1575378660}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.742, y: 19.846, z: 0}
-  m_LocalScale: {x: 1.4367778, y: 1.4367778, z: 1.4367778}
+  m_LocalPosition: {x: -33.44205, y: 1.6459999, z: 0}
+  m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1267901537}
+  m_Father: {fileID: 1039706049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1575378662
 SpriteRenderer:
@@ -26093,7 +26000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703237518}
   m_Layer: 0
-  m_Name: triangulo (1)
+  m_Name: grupo espinhos (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26269,7 +26176,7 @@ GameObject:
   - component: {fileID: 1708157203}
   - component: {fileID: 1708157202}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (11)"
+  m_Name: espinho (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27562,7 +27469,7 @@ GameObject:
   - component: {fileID: 1766894865}
   - component: {fileID: 1766894864}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (9)"
+  m_Name: espinho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28019,7 +27926,7 @@ GameObject:
   - component: {fileID: 1779321193}
   - component: {fileID: 1779321192}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (6)"
+  m_Name: espinho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28034,11 +27941,11 @@ Transform:
   m_GameObject: {fileID: 1779321189}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.479, y: 19.972, z: 0}
-  m_LocalScale: {x: 1.4367778, y: 1.4367778, z: 1.4367778}
+  m_LocalPosition: {x: -12.179049, y: 1.7719746, z: 0}
+  m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1267901537}
+  m_Father: {fileID: 1039706049}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1779321191
 SpriteRenderer:
@@ -28663,7 +28570,7 @@ GameObject:
   - component: {fileID: 1811633392}
   - component: {fileID: 1811633391}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (5)"
+  m_Name: espinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28678,11 +28585,11 @@ Transform:
   m_GameObject: {fileID: 1811633388}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.6, y: 19.2, z: 0}
-  m_LocalScale: {x: 1.9195352, y: 1.9195352, z: 1.9195352}
+  m_LocalPosition: {x: -38.299995, y: 0.99993896, z: 0}
+  m_LocalScale: {x: 1.9195353, y: 1.9195353, z: 1.9195353}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1458718536}
+  m_Father: {fileID: 713828947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1811633390
 SpriteRenderer:
@@ -29047,7 +28954,7 @@ GameObject:
   - component: {fileID: 1812631599}
   - component: {fileID: 1812631598}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (5)"
+  m_Name: espinho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30022,7 +29929,7 @@ Transform:
   m_GameObject: {fileID: 1874599987}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.7, y: 132.5, z: 0}
+  m_LocalPosition: {x: 90.4, y: 77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30051,7 +29958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884184749}
   m_Layer: 0
-  m_Name: triangulo (2)
+  m_Name: grupo espinhos (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30233,7 +30140,7 @@ GameObject:
   - component: {fileID: 1890692403}
   - component: {fileID: 1890692402}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (4)"
+  m_Name: espinho (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30695,7 +30602,7 @@ GameObject:
   - component: {fileID: 1917321934}
   - component: {fileID: 1917321933}
   m_Layer: 0
-  m_Name: Balaoespinhosharpia (4)
+  m_Name: Balaoespinhoharpia (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31834,7 +31741,7 @@ GameObject:
   - component: {fileID: 1984049579}
   - component: {fileID: 1984049578}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo (10)"
+  m_Name: espinho raio (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31849,11 +31756,11 @@ Transform:
   m_GameObject: {fileID: 1984049575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.18178757, w: -0.9833378}
-  m_LocalPosition: {x: -17.3882, y: 1.5227, z: 0}
+  m_LocalPosition: {x: 39.16745, y: -62.338566, z: 0}
   m_LocalScale: {x: 2.5008976, y: 2.2401774, z: 3.033484}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 747553383}
+  m_Father: {fileID: 815158213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20.948}
 --- !u!212 &1984049577
 SpriteRenderer:
@@ -32691,7 +32598,7 @@ GameObject:
   - component: {fileID: 2073817546}
   - component: {fileID: 2073817545}
   m_Layer: 0
-  m_Name: "Ilustrac\u0327a\u0303o_Sem_Ti\u0301tulo 2 (8)"
+  m_Name: espinho (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33716,8 +33623,6 @@ SceneRoots:
   - {fileID: 8914780115948359177}
   - {fileID: 1003847507}
   - {fileID: 1276761887}
-  - {fileID: 381089476}
-  - {fileID: 306567712}
   - {fileID: 1803941827}
   - {fileID: 42912250}
   - {fileID: 931290104}
@@ -33732,6 +33637,5 @@ SceneRoots:
   - {fileID: 356866541}
   - {fileID: 474519603}
   - {fileID: 1763945243}
-  - {fileID: 1347946518}
   - {fileID: 76666318}
   - {fileID: 1329512866}
