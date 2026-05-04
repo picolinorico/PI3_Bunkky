@@ -260,9 +260,12 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("POW!");
             Atacar();
 
+            
             await Awaitable.WaitForSecondsAsync(attackColdown);
             onAttack = false;
             animator.SetBool("Atacando", false);
+            
+
         }
     }
 
