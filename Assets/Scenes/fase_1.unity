@@ -35338,6 +35338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coelha
       objectReference: {fileID: 0}
+    - target: {fileID: 1603993485718825058, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: jumpForce
       value: 42
@@ -35368,11 +35372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.3
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.1
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.z

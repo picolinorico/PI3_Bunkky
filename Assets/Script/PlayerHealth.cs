@@ -27,13 +27,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage) // Garanta que o nome e tipo batem com a interface
     {
-        // Se o player já está em knockback, ignora o dano extra
+        Debug.Log("SOU A COELHA E ESTOU EXECUTANDO TAKEDAMAGE!");
+
         if (playerMovement != null && playerMovement.isKnockback) return;
 
         currentHealth -= damage;
-        Debug.Log("Tomei dano! Vida restante: " + currentHealth);
+        Debug.Log("Vida restante: " + currentHealth);
 
         if (controleDeUI != null) controleDeUI.AtualizarCoracoes(currentHealth, maxHealth);
 
@@ -43,7 +44,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
         else if (playerMovement != null)
         {
-            // Aplica o empurrão para trás se sobreviveu
             playerMovement.AplicarKnockback();
         }
     }

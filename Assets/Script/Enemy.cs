@@ -55,15 +55,23 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     // DETECÇÃO DE DANO AO PLAYER (CONTATO)
-    private void OnTriggerStay2D(Collider2D collision)
+    // No script Enemy.cs
+    // Troque OnTriggerStay2D por este:
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerHealth player = collision.GetComponent<PlayerHealth>();
-            if (player != null)
+            // Tenta pegar no objeto que bateu OU nos pais/filhos
+            IDamageable playerVida = collision.gameObject.GetComponentInParent<IDamageable>();
+
+            if (playerVida != null)
             {
-                // Aplica dano e empurra o player para longe da posição deste inimigo
-                player.TakeDamage(0);
+                playerVida.TakeDamage(1);
+                Debug.Log("Mandei o comando de dano!");
+            }
+            else
+            {
+                Debug.Log("Achei o Player, mas ele não tem o script IDamageable!");
             }
         }
     }

@@ -273,14 +273,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Atacar()
     {
+        // 1. Encontra todos os colliders na área do ataque que estão na Layer de Inimigos
         Collider2D[] inimigosAtingidos = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
         foreach (Collider2D inimigo in inimigosAtingidos)
         {
-            // TryGetComponent é mais performático que GetComponent
-            if (inimigo.TryGetComponent(out VidaGlitch scriptVida))
+            // 2. Tenta pegar QUALQUER script que use IDamageable (Enemy, VidaGlitch, etc.)
+            if (inimigo.TryGetComponent(out IDamageable objetoComVida))
             {
-                scriptVida.ReceberDano(attackDamage);
+                // 3. Chama o método da interface (que você já implementou em ambos)
+                objetoComVida.TakeDamage(attackDamage);
+                Debug.Log("Atingiu: " + inimigo.name);
             }
         }
     }
