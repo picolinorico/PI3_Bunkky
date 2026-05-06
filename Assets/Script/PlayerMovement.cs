@@ -61,14 +61,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Checkpoint e Câmera")]
     private Vector2 pontoDeCheckpoint;
-    private BoxCollider2D areaDoCheckpoint;
-    private CameraSeguir cameraSeguir;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Faz o cache da câmera uma única vez no início
-        cameraSeguir = FindAnyObjectByType<CameraSeguir>();
     }
 
     void Start() // Primeira coisa que aocntece
@@ -319,15 +315,11 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         isKnockback = false;
 
-        if (areaDoCheckpoint != null && cameraSeguir != null)
-        {
-            cameraSeguir.FocarNoQuadrinho(areaDoCheckpoint);
-        }
+        // A Cinemachine vai seguir o player automaticamente para a nova posição!
     }
 
-public void AtualizarCheckpoint(Vector2 novaPosicao, BoxCollider2D novaAreaDeCamera)
+    public void AtualizarCheckpoint(Vector2 novaPosicao)
     {
         pontoDeCheckpoint = novaPosicao;
-        areaDoCheckpoint = novaAreaDeCamera;
     }
 }
