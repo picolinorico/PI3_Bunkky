@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int maxJumps = 1;
     [SerializeField] private int jumpsLeft;
     [SerializeField] private float coyoteTime = 0.2f;
+    [SerializeField] private float coyoteTimeCounter;
 
     [Header("Detecção de Chão")]
     [SerializeField] private Transform groundCheck;
