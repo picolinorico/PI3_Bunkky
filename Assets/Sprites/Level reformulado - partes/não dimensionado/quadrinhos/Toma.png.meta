@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e64ceb19d8285f94b91303851edd339e
+guid: 42679f536fb9cc84282ba39641dcbbb4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6188238884080460872
-    second: quadrinhos_0
+      213: 3802751551719101524
+    second: Toma_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quadrinhos_0
+      name: Toma_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1360
-        height: 1950
+        x: 11
+        y: 7
+        width: 330
+        height: 330
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 90, y: 116, z: 84, w: 115}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84420e67a7a01e550800000000000000
-      internalID: 6188238884080460872
+      spriteID: 4545841736616c430800000000000000
+      internalID: 3802751551719101524
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a7c324b5d56501642940e44b9cf3ccc1
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      quadrinhos_0: 6188238884080460872
+      Toma_0: 3802751551719101524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

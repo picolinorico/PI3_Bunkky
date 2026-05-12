@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e64ceb19d8285f94b91303851edd339e
+guid: a5ae349318a20e448b1a57ab08f5f883
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6188238884080460872
-    second: quadrinhos_0
+      213: 5966156910846578597
+    second: fodassekkkkMAIOR_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quadrinhos_0
+      name: fodassekkkkMAIOR_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1360
-        height: 1950
+        width: 114
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84420e67a7a01e550800000000000000
-      internalID: 6188238884080460872
+      spriteID: 5af8041b91c0cc250800000000000000
+      internalID: 5966156910846578597
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      quadrinhos_0: 6188238884080460872
+      fodassekkkkMAIOR_0: 5966156910846578597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
