@@ -35,8 +35,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         if (playerMovement != null && playerMovement.isKnockback) return;
 
         currentHealth -= damage;
-        StopCoroutine(nameof(DamageFlash));
-        StartCoroutine(nameof(DamageFlash));
+        //StopCoroutine(nameof(DamageFlash));
+        //StartCoroutine(nameof(DamageFlash));
         Debug.Log("Vida restante: " + currentHealth);
 
         if (controleDeUI != null) controleDeUI.AtualizarCoracoes(currentHealth, maxHealth);
