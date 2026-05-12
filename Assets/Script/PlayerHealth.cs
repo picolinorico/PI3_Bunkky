@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
@@ -34,6 +35,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         if (playerMovement != null && playerMovement.isKnockback) return;
 
         currentHealth -= damage;
+        StopCoroutine(nameof(DamageFlash));
+        StartCoroutine(nameof(DamageFlash));
         Debug.Log("Vida restante: " + currentHealth);
 
         if (controleDeUI != null) controleDeUI.AtualizarCoracoes(currentHealth, maxHealth);
@@ -58,4 +61,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         // Em vez de destruir, chama o respawn do seu script de movimento
         if (playerMovement != null) playerMovement.Respawnar();
     }
+
+    //private IEnumerator DamageFlash()
+    //{
+    //    _sr.color = new Color(2f, 2f, 2f, 0.9f);
+    //    yield return new WaitForSeconds(0.3f);
+    //    _sr.color = _originalColor;
+    //}
 }

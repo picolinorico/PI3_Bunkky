@@ -93,8 +93,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private IEnumerator DamageFlash()
     {
-        _sr.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
+        _sr.color = new Color(2f, 2f, 2f, 0.9f);
+        yield return new WaitForSeconds(0.3f);
         _sr.color = _originalColor;
     }
 

@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Knockback")]
     public bool isKnockback; // Já estava aí, deixei só para você se localizar
-    [SerializeField] private Vector2 forcaKnockback = new Vector2(15f, 10f); // Aumentei o padrão
+    [SerializeField] private Vector2 forcaKnockback = new Vector2(30f, 0f); // Aumentei o padrão
     [SerializeField] private float tempoKnockback = 0.3f;
 
     [Header("Checkpoint e Câmera")]
