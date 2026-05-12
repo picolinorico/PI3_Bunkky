@@ -74,18 +74,22 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //Métodos
+        // Métodos de detecção continuam rodando
         GroundCheck();
-        ProcessGravity(); 
+        ProcessGravity();
         ProcessWallSlide();
         ProcessWallJump();
+
         if (horizontalMovement == 0)
         {
             animator.SetBool("Andando", false);
         }
-        if (!isWallJumping)
+
+        // AQUI ESTÁ O SEGREDO: Só processa o movimento se NÃO estiver em knockback
+        if (!isWallJumping && !isKnockback)
         {
-            //Movimento do jogador
+            // Se estiver em knockback, essa linha abaixo NÃO PODE RODAR, 
+            // senão ela "apaga" a força do AddForce do knockback.
             rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
             Flip();
         }
@@ -291,6 +295,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator RotinaKnockback()
     {
+        Debug.Log("GALDINOOOOOOOO");
         isKnockback = true;
 
         // Zera a velocidade atual para que o movimento do player não anule o empurrão
