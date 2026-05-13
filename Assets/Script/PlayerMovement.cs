@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,12 +16,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxFallSpeed = 70;
     [SerializeField] private float fallSpeedMultiplier = 3;
 
-    [Header("Pulo")]
+    [Header("Pulo e Coyote")]
     [SerializeField] private float jumpForce = 35f;
-    [SerializeField] private int maxJumps = 1;
+    [SerializeField] private int maxJumps = 2; // Coloque 2 no Inspector para Pulo Duplo
     [SerializeField] private int jumpsLeft;
     [SerializeField] private float coyoteTime = 0.2f;
-    [SerializeField] private float coyoteTimeCounter;
+    private float coyoteTimeCounter;
 
     [Header("Detecção de Chão")]
     [SerializeField] private Transform groundCheck;
@@ -32,91 +31,76 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movimento nas Paredes")]
     [SerializeField] private float wallSlideSpeed = 1;
-    [SerializeField] private bool isWallSliding;
+    private bool isWallSliding;
 
     [Header("Pulo nas Paredes")]
     [SerializeField] private Vector2 wallJumpPower = new Vector2(12f, 24f);
     [SerializeField] private float wallJumpTime = 0.15f;
-    [SerializeField] private bool isWallJumping;
-    [SerializeField] private float wallJumpDirection;
-    [SerializeField] private float wallJumpTimer;
+    private bool isWallJumping;
+    private float wallJumpDirection;
+    private float wallJumpTimer;
 
     [Header("Detecção de Parede")]
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private Vector2 wallCheckSize = new Vector2(0.11f, 4.43f);
 
-    [Header("Ataque e Feedback")]
+    [Header("Ataque")]
     [SerializeField] private Transform attackPoint;
     [SerializeField] private float attackRange = 0.5f;
-    [SerializeField] private int attackDamage = 1;          //Arrumar
+    [SerializeField] private int attackDamage = 1;
     [SerializeField] private float attackColdown = 0.5f;
-    private bool onAttack = false;
     [SerializeField] private LayerMask enemyLayer;
+    private bool onAttack = false;
 
     public Animator animator;
 
     [Header("Knockback")]
-    public bool isKnockback; // Já estava aí, deixei só para você se localizar
-    [SerializeField] private Vector2 forcaKnockback = new Vector2(30f, 0f); // Aumentei o padrão
+    public bool isKnockback;
+    [SerializeField] private Vector2 forcaKnockback = new Vector2(30f, 10f);
     [SerializeField] private float tempoKnockback = 0.3f;
 
-    [Header("Checkpoint e Câmera")]
+    [Header("Checkpoint")]
     private Vector2 pontoDeCheckpoint;
 
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    void Awake() => rb = GetComponent<Rigidbody2D>();
 
-    void Start() // Primeira coisa que aocntece
-    {
-        pontoDeCheckpoint = transform.position;
-    }
+    void Start() => pontoDeCheckpoint = transform.position;
 
     void Update()
     {
-        // Métodos de detecção continuam rodando
         GroundCheck();
         ProcessGravity();
         ProcessWallSlide();
         ProcessWallJump();
 
-        if (horizontalMovement == 0)
-        {
-            animator.SetBool("Andando", false);
-        }
+        if (horizontalMovement == 0) animator.SetBool("Andando", false);
 
-        // AQUI ESTÁ O SEGREDO: Só processa o movimento se NÃO estiver em knockback
         if (!isWallJumping && !isKnockback)
         {
-            // Se estiver em knockback, essa linha abaixo NÃO PODE RODAR, 
-            // senão ela "apaga" a força do AddForce do knockback.
             rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
             Flip();
         }
     }
 
-    void FixedUpdate() //Sla
-    {
-
-    }
-
-    private void GroundCheck() //Checa de o jogador está tocando no chão
+    private void GroundCheck()
     {
         if (Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer))
         {
             animator.SetBool("Pulando", false);
-            jumpsLeft = maxJumps;
             isGrounded = true;
+            jumpsLeft = maxJumps;
+            coyoteTimeCounter = coyoteTime;
         }
         else
         {
             animator.SetBool("Pulando", true);
             isGrounded = false;
+            coyoteTimeCounter -= Time.deltaTime;
         }
     }
-    private void ProcessGravity() //Melhora a gravidade bosta da Unity
+
+    private void ProcessGravity()
     {
         if (rb.linearVelocity.y < 0)
         {
@@ -129,16 +113,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private bool WallCheck() //Checa de o jogador está tocando as paredes
-    {
-
-        return (Physics2D.OverlapBox(wallCheck.position, wallCheckSize, 0, wallLayer));
-
-    }
-
     private void ProcessWallSlide()
     {
-        if (!isGrounded & WallCheck() & horizontalMovement != 0)
+        if (!isGrounded && WallCheck() && horizontalMovement != 0)
         {
             isWallSliding = true;
             animator.SetBool("Wallcling", true);
@@ -158,21 +135,17 @@ public class PlayerMovement : MonoBehaviour
             isWallJumping = false;
             wallJumpDirection = -transform.localScale.x;
             wallJumpTimer = wallJumpTime;
-
             CancelInvoke(nameof(CancelWallJump));
-        } 
+        }
         else if (wallJumpTimer > 0f)
         {
             wallJumpTimer -= Time.deltaTime;
         }
     }
 
-    private void CancelWallJump()
-    {
-        isWallJumping = false;
-    }
+    private bool WallCheck() => Physics2D.OverlapBox(wallCheck.position, wallCheckSize, 0, wallLayer);
 
-    private void Flip() //Método responsável por fazer o sprite da personagm virar conforme a direção
+    private void Flip()
     {
         if (isFacingRight && horizontalMovement < 0 || !isFacingRight && horizontalMovement > 0)
         {
@@ -183,75 +156,75 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // --- INPUTS  ---
-
-    public void OnMove(InputAction.CallbackContext context) //Recebe o input de movimento
+    public void OnMove(InputAction.CallbackContext context)
     {
         horizontalMovement = context.ReadValue<Vector2>().x;
-        animator.SetBool("Andando", true);
+        if (horizontalMovement != 0) animator.SetBool("Andando", true);
     }
 
-    public void OnJump(InputAction.CallbackContext context) //Pulo
+    public void OnJump(InputAction.CallbackContext context)
     {
-
-        
-        //Pulo normal segurando espaço
         if (context.performed)
         {
-            animator.SetBool("Pulando", true);
-            if (jumpsLeft > 0)
+            // 1. Prioridade total para o Wall Jump
+            if (wallJumpTimer > 0f)
             {
-                animator.SetBool("Pulando", true);
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-                jumpsLeft--;
+                RealizarWallJump();
+                return;
+            }
+
+            // 2. Se tem Coyote, pula direto sem gastar o estoque de "pulo extra"
+            if (coyoteTimeCounter > 0f)
+            {
+                ExecutarPulo(false); // false = não gasta jumpsLeft
+            }
+            // 3. Se não tem Coyote, mas tem pulo sobrando (Double Jump)
+            else if (jumpsLeft > 0)
+            {
+                ExecutarPulo(true); // true = gasta jumpsLeft
             }
         }
-
-        //Pra caso solte antes de atingir a parábola ou queira um little pulo
-        else if (context.canceled && (rb.linearVelocity.y > 0))
+        else if (context.canceled && rb.linearVelocity.y > 0)
         {
-            
+            // Pulo curto
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
-
-        //Wall Jump
-        if (context.performed && wallJumpTimer > 0f)
-        {
-            animator.SetBool("Pulando", true);
-            isWallJumping = true;
-            rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
-            wallJumpTimer = 0;
-
-            //Força o flip da personagem no Wall Jump
-            if (transform.localScale.x != wallJumpDirection)
-            {
-                isFacingRight = !isFacingRight;
-                Vector3 ls = transform.localScale;
-                ls.x *= -1f;
-                transform.localScale = ls;
-            }
-
-            Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f); 
-        }
     }
 
-    private void OnDrawGizmosSelected() //Só estética pros Ground e Wall Cehck's
+    private void ExecutarPulo(bool gastarReserva)
     {
-        //Cor pro objeto GroundCheck
-        Gizmos.color = Color.white;
-        Gizmos.DrawCube(groundCheck.position, groundCheckSize);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        animator.SetBool("Pulando", true);
 
-        //Cor pro objeto WallCheck
-        Gizmos.color = Color.blue;
-        Gizmos.DrawCube(wallCheck.position, wallCheckSize);
+        if (gastarReserva)
+        {
+            jumpsLeft--;
+        }
 
-        //Sla
-        if (attackPoint == null) return;
-        Gizmos.color = Color.red;       //Sujeito a alterações
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        // Crucial: Independente de como pulou, agora você está no ar.
+        coyoteTimeCounter = 0f;
+        isGrounded = false;
     }
 
-    //Daqui pra baixo cpa eu mudo tudo
+    private void RealizarWallJump()
+    {
+        isWallJumping = true;
+        rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
+        animator.SetBool("Pulando", true);
+        wallJumpTimer = 0;
+
+        if (transform.localScale.x != wallJumpDirection)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
+
+        Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f);
+    }
+
+    private void CancelWallJump() => isWallJumping = false;
 
     public async void OnAttack(InputAction.CallbackContext context)
     {
@@ -259,33 +232,21 @@ public class PlayerMovement : MonoBehaviour
         {
             onAttack = true;
             animator.SetBool("Atacando", true);
-            Debug.Log("POW!");
             Atacar();
-
-            
             await Awaitable.WaitForSecondsAsync(attackColdown);
             onAttack = false;
             animator.SetBool("Atacando", false);
-            
-
         }
     }
 
-    // --- LÓGICA DE COMBATE E MORTE ---
-
     private void Atacar()
     {
-        // 1. Encontra todos os colliders na área do ataque que estão na Layer de Inimigos
         Collider2D[] inimigosAtingidos = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
-
         foreach (Collider2D inimigo in inimigosAtingidos)
         {
-            // 2. Tenta pegar QUALQUER script que use IDamageable (Enemy, VidaGlitch, etc.)
             if (inimigo.TryGetComponent(out IDamageable objetoComVida))
             {
-                // 3. Chama o método da interface (que você já implementou em ambos)
                 objetoComVida.TakeDamage(attackDamage);
-                Debug.Log("Atingiu: " + inimigo.name);
             }
         }
     }
@@ -297,36 +258,27 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator RotinaKnockback()
     {
-        Debug.Log("GALDINOOOOOOOO");
         isKnockback = true;
-
-        // Zera a velocidade atual para que o movimento do player não anule o empurrão
         rb.linearVelocity = Vector2.zero;
-
-        // Descobre para que lado o player está olhando e empurra pro outro
         float direcaoKnockback = transform.localScale.x > 0 ? -1f : 1f;
-
-        // Usa a força que você configurar lá na Unity
         rb.AddForce(new Vector2(direcaoKnockback * forcaKnockback.x, forcaKnockback.y), ForceMode2D.Impulse);
-
-        // Fica travado pelo tempo configurado
         yield return new WaitForSeconds(tempoKnockback);
-
         isKnockback = false;
     }
 
-    // Função chamada pelo PlayerHealth
     public void Respawnar()
     {
         transform.position = pontoDeCheckpoint;
         rb.linearVelocity = Vector2.zero;
         isKnockback = false;
-
-        // A Cinemachine vai seguir o player automaticamente para a nova posição!
     }
 
-    public void AtualizarCheckpoint(Vector2 novaPosicao)
+    public void AtualizarCheckpoint(Vector2 novaPosicao) => pontoDeCheckpoint = novaPosicao;
+
+    private void OnDrawGizmosSelected()
     {
-        pontoDeCheckpoint = novaPosicao;
+        if (groundCheck) Gizmos.DrawCube(groundCheck.position, groundCheckSize);
+        if (wallCheck) Gizmos.DrawCube(wallCheck.position, wallCheckSize);
+        if (attackPoint) Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
