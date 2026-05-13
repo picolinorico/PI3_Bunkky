@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Ataque")]
     [SerializeField] private Transform attackPoint;
-    [SerializeField] private float attackRange = 0.5f;
+    [SerializeField] private Vector2 attackSize = new Vector2(2f, 1f);
     [SerializeField] private int attackDamage = 1;
     [SerializeField] private float attackColdown = 0.5f;
     [SerializeField] private LayerMask enemyLayer;
@@ -241,7 +241,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Atacar()
     {
-        Collider2D[] inimigosAtingidos = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+        // O segredo está aqui: tem que ser OverlapBoxAll
+        Collider2D[] inimigosAtingidos = Physics2D.OverlapBoxAll(attackPoint.position, attackSize, 0f, enemyLayer);
+
         foreach (Collider2D inimigo in inimigosAtingidos)
         {
             if (inimigo.TryGetComponent(out IDamageable objetoComVida))
@@ -279,6 +281,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (groundCheck) Gizmos.DrawCube(groundCheck.position, groundCheckSize);
         if (wallCheck) Gizmos.DrawCube(wallCheck.position, wallCheckSize);
-        if (attackPoint) Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireCube(attackPoint.position, attackSize);
     }
 }
