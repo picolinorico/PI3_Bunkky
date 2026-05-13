@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/fase_1.unity
     guid: e94d842494705734e9b09b8080814264
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/harpia.unity
     guid: 9e1d4a263aeefb742999142a2c69700b
   m_configObjects:
