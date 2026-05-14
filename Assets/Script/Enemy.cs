@@ -15,21 +15,33 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private Transform[] waypoints;
     private int _currentWaypointIndex = 0;
 
+    [Header("Knockback")]
+    [SerializeField] private Vector2 forcaKnockback = new Vector2(7f, 5f);
+    [SerializeField] private float tempoKnockback = 0.2f;
+    private bool _isKnockedBack; // Trava a patrulha enquanto apanha
+
     [Header("Feedback Visual")]
     [SerializeField] private GameObject deathEffect;
     private SpriteRenderer _sr;
     private Color _originalColor;
 
+    private Rigidbody2D _rb;
+
     private void Awake()
     {
         _sr = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
         _originalColor = _sr.color;
         _currentHealth = maxHealth;
     }
 
     private void Update()
     {
-        Patrol();
+        // Só continua andando se NÃO estiver sofrendo knockback
+        if (!_isKnockedBack)
+        {
+            Patrol();
+        }
     }
 
     private void Patrol()
@@ -89,6 +101,41 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             Die();
         }
+        else
+        {
+            // Se tomou dano e sobreviveu, aplica o Knockback
+            StartCoroutine(RotinaKnockback());
+        }
+    }
+
+    private IEnumerator RotinaKnockback()
+    {
+        _isKnockedBack = true;
+
+        if (_rb != null)
+        {
+            // Zera a velocidade atual para o pulo não bugar
+            _rb.linearVelocity = Vector2.zero;
+
+            // Procura o Player na cena para saber de qual lado o soco veio
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                // Se o inimigo está à DIREITA do player, empurra pra Direita (1). Senão, Esquerda (-1).
+                float direcao = transform.position.x > player.transform.position.x ? 1f : -1f;
+
+                // Aplica o empurrão!
+                _rb.AddForce(new Vector2(direcao * forcaKnockback.x, forcaKnockback.y), ForceMode2D.Impulse);
+            }
+        }
+
+        // Espera o tempo configurado
+        yield return new WaitForSeconds(tempoKnockback);
+
+        // Zera o movimento de novo pra ele não continuar escorregando como se fosse gelo
+        if (_rb != null) _rb.linearVelocity = Vector2.zero;
+
+        _isKnockedBack = false;
     }
 
     private IEnumerator DamageFlash()
