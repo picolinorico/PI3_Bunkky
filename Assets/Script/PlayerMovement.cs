@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
     private Rigidbody2D rb;
 
     [Header("Movimento")]
@@ -18,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Pulo e Coyote")]
     [SerializeField] private float jumpForce = 35f;
-    [SerializeField] private int maxJumps = 2; // Coloque 2 no Inspector para Pulo Duplo
+    [SerializeField] private int maxJumps = 2;
     [SerializeField] private int jumpsLeft;
     [SerializeField] private float coyoteTime = 0.2f;
     private float coyoteTimeCounter;
@@ -53,7 +54,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
     private bool onAttack = false;
 
-    public Animator animator;
+    [Header("Upgrade Permanente (3 Mortes)")]
+    [SerializeField] private int deadEnemies = 0;
+    [SerializeField] private int deathsForUpgrades = 3;
+    [SerializeField] private Vector2 sizeUpgrade = new Vector2(8f, 2f); // Alcance maior
+    //[SerializeField] private int danoUpgrade = 2;
+    private bool isUpgraded = false;
 
     [Header("Knockback")]
     public bool isKnockback;
@@ -94,11 +100,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Pulando", true);
             isGrounded = false;
             coyoteTimeCounter -= Time.deltaTime;
         }
     }
+
+    // --- RESTO DOS MÉTODOS MANTIDOS ---
 
     private void ProcessGravity()
     {
@@ -107,10 +114,7 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = gravityBase * fallSpeedMultiplier;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -maxFallSpeed));
         }
-        else
-        {
-            rb.gravityScale = gravityBase;
-        }
+        else rb.gravityScale = gravityBase;
     }
 
     private void ProcessWallSlide()
@@ -137,10 +141,7 @@ public class PlayerMovement : MonoBehaviour
             wallJumpTimer = wallJumpTime;
             CancelInvoke(nameof(CancelWallJump));
         }
-        else if (wallJumpTimer > 0f)
-        {
-            wallJumpTimer -= Time.deltaTime;
-        }
+        else if (wallJumpTimer > 0f) wallJumpTimer -= Time.deltaTime;
     }
 
     private bool WallCheck() => Physics2D.OverlapBox(wallCheck.position, wallCheckSize, 0, wallLayer);
@@ -166,27 +167,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            // 1. Prioridade total para o Wall Jump
-            if (wallJumpTimer > 0f)
-            {
-                RealizarWallJump();
-                return;
-            }
+            if (wallJumpTimer > 0f) { RealizarWallJump(); return; }
 
-            // 2. Se tem Coyote, pula direto sem gastar o estoque de "pulo extra"
-            if (coyoteTimeCounter > 0f)
-            {
-                ExecutarPulo(false); // false = não gasta jumpsLeft
-            }
-            // 3. Se não tem Coyote, mas tem pulo sobrando (Double Jump)
-            else if (jumpsLeft > 0)
-            {
-                ExecutarPulo(true); // true = gasta jumpsLeft
-            }
+            if (coyoteTimeCounter > 0f) ExecutarPulo(false);
+            else if (jumpsLeft > 0) ExecutarPulo(true);
         }
         else if (context.canceled && rb.linearVelocity.y > 0)
         {
-            // Pulo curto
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
     }
@@ -195,13 +182,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         animator.SetBool("Pulando", true);
-
-        if (gastarReserva)
-        {
-            jumpsLeft--;
-        }
-
-        // Crucial: Independente de como pulou, agora você está no ar.
+        if (gastarReserva) jumpsLeft--;
         coyoteTimeCounter = 0f;
         isGrounded = false;
     }
@@ -212,58 +193,99 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
         animator.SetBool("Pulando", true);
         wallJumpTimer = 0;
-
-        if (transform.localScale.x != wallJumpDirection)
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
-        }
-
+        if (transform.localScale.x != wallJumpDirection) FlipManualmente();
         Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f);
+    }
+
+    private void FlipManualmente()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 ls = transform.localScale;
+        ls.x *= -1f;
+        transform.localScale = ls;
     }
 
     private void CancelWallJump() => isWallJumping = false;
 
-    public async void OnAttack(InputAction.CallbackContext context)
+    public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.performed && !onAttack)
         {
-            onAttack = true;
-            animator.SetBool("Atacando", true);
-            Atacar();
-            await Awaitable.WaitForSecondsAsync(attackColdown);
-            onAttack = false;
-            animator.SetBool("Atacando", false);
+            StartCoroutine(RotinaAtaquePorAnimacao());
         }
     }
 
-    private void Atacar()
+    private IEnumerator RotinaAtaquePorAnimacao()
     {
-        // O segredo está aqui: tem que ser OverlapBoxAll
+        onAttack = true;
+        //animator.SetBool("Forte", isUpgraded);
+        animator.SetBool("Atacando", true);
+
+        // Espera passar 1 frame para o Animator transicionar para o estado correto
+        yield return new WaitForEndOfFrame();
+
+        AnimatorStateInfo estadoAtual = animator.GetCurrentAnimatorStateInfo(0);
+        float duracaoDaAnimacao = estadoAtual.length;
+        float tempoPassado = 0f;
+        System.Collections.Generic.List<Collider2D> inimigosJaAtingidos = new System.Collections.Generic.List<Collider2D>();
+
+        while (tempoPassado < duracaoDaAnimacao)
+        {
+            Atacar(inimigosJaAtingidos);
+
+            tempoPassado += Time.deltaTime;
+            yield return null;
+        }
+
+        onAttack = false;
+        animator.SetBool("Atacando", false);
+    }
+
+    private void Atacar(System.Collections.Generic.List<Collider2D> jaAtingidos)
+    {
         Collider2D[] inimigosAtingidos = Physics2D.OverlapBoxAll(attackPoint.position, attackSize, 0f, enemyLayer);
 
         foreach (Collider2D inimigo in inimigosAtingidos)
         {
+            // SE o inimigo já tomou dano NESTE ataque, pula ele e vai pro próximo
+            if (jaAtingidos.Contains(inimigo)) continue;
+
             if (inimigo.TryGetComponent(out IDamageable objetoComVida))
             {
                 objetoComVida.TakeDamage(attackDamage);
+
+                // Adiciona o bicho na lista negra para ele não tomar dano de novo até você atacar outra vez
+                jaAtingidos.Add(inimigo);
+                Debug.Log($"Deu {attackDamage} de dano em: " + inimigo.name);
             }
         }
     }
 
-    public void AplicarKnockback()
+    // --- LÓGICA DO UPGRADE ---
+    public void RegistrarMorte()
     {
-        StartCoroutine(RotinaKnockback());
+        Debug.Log("AAAAAAAA");
+        if (isUpgraded) return;
+
+        deadEnemies++;
+        if (deadEnemies >= deathsForUpgrades)
+        {
+            isUpgraded = true;
+            attackSize = sizeUpgrade;
+            //attackDamage = danoUpgrade;
+            Debug.Log("ATAQUE MELHORADO PERMANENTE!");
+            // Aqui você pode instanciar uma partícula de brilho na coelha se quiser
+        }
     }
+
+    public void AplicarKnockback() => StartCoroutine(RotinaKnockback());
 
     private IEnumerator RotinaKnockback()
     {
         isKnockback = true;
         rb.linearVelocity = Vector2.zero;
-        float direcaoKnockback = transform.localScale.x > 0 ? -1f : 1f;
-        rb.AddForce(new Vector2(direcaoKnockback * forcaKnockback.x, forcaKnockback.y), ForceMode2D.Impulse);
+        float dir = transform.localScale.x > 0 ? -1f : 1f;
+        rb.AddForce(new Vector2(dir * forcaKnockback.x, forcaKnockback.y), ForceMode2D.Impulse);
         yield return new WaitForSeconds(tempoKnockback);
         isKnockback = false;
     }
@@ -273,14 +295,17 @@ public class PlayerMovement : MonoBehaviour
         transform.position = pontoDeCheckpoint;
         rb.linearVelocity = Vector2.zero;
         isKnockback = false;
+        // Se quiser resetar o upgrade ao morrer, descomente abaixo:
+        // jaUpgradou = false; inimigosMortos = 0; 
     }
 
     public void AtualizarCheckpoint(Vector2 novaPosicao) => pontoDeCheckpoint = novaPosicao;
 
     private void OnDrawGizmosSelected()
     {
-        if (groundCheck) Gizmos.DrawCube(groundCheck.position, groundCheckSize);
-        if (wallCheck) Gizmos.DrawCube(wallCheck.position, wallCheckSize);
-        Gizmos.DrawWireCube(attackPoint.position, attackSize);
+        Gizmos.color = Color.red;
+        if (groundCheck) Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
+        if (wallCheck) Gizmos.DrawWireCube(wallCheck.position, wallCheckSize);
+        if (attackPoint) Gizmos.DrawWireCube(attackPoint.position, attackSize);
     }
 }

@@ -89,6 +89,7 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     // IMPLEMENTAÇÃO DA INTERFACE IDAMAGEABLE (O Inimigo recebendo dano)
+    // IMPLEMENTAÇÃO DA INTERFACE IDAMAGEABLE (O Inimigo recebendo dano)
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
@@ -99,6 +100,16 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (_currentHealth <= 0)
         {
+            // 1. Procuramos o PlayerMovement REAL que está rodando na fase
+            PlayerMovement playerReal = Object.FindFirstObjectByType<PlayerMovement>();
+
+            if (playerReal != null)
+            {
+                // 2. Avisamos o Player REAL que ele garantiu mais um abate
+                playerReal.RegistrarMorte();
+            }
+
+            // 3. Chama o seu método de morte (para soltar partículas e dar o Destroy)
             Die();
         }
         else
