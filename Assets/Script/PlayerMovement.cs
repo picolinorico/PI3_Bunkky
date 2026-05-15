@@ -54,7 +54,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
     private bool onAttack = false;
 
-    [Header("Upgrade Permanente (3 Mortes)")]
+    [Header("Habilidades Desbloqueáveis")]
+    [SerializeField] private bool canWallCling = false; // Começa desativado
     [SerializeField] private int deadEnemies = 0;
     [SerializeField] private int deathsForUpgrades = 3;
     [SerializeField] private Vector2 sizeUpgrade = new Vector2(8f, 2f); // Alcance maior
@@ -68,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Checkpoint")]
     private Vector2 pontoDeCheckpoint;
+
+    [Header("Conexão com a UI")]
+    public UpgradeUI interfaceDeUpgrades;
 
     void Awake() => rb = GetComponent<Rigidbody2D>();
 
@@ -119,7 +123,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void ProcessWallSlide()
     {
-        if (!isGrounded && WallCheck() && horizontalMovement != 0)
+        // A novidade é o "&& canWallCling" no final. 
+        // Se for falso, ela ignora a parede e cai direto.
+        if (!isGrounded && WallCheck() && horizontalMovement != 0 && canWallCling)
         {
             isWallSliding = true;
             animator.SetBool("Wallcling", true);
@@ -275,6 +281,19 @@ public class PlayerMovement : MonoBehaviour
             //attackDamage = danoUpgrade;
             Debug.Log("ATAQUE MELHORADO PERMANENTE!");
             // Aqui você pode instanciar uma partícula de brilho na coelha se quiser
+            if (interfaceDeUpgrades != null) interfaceDeUpgrades.LigarIconeAtaque();
+        }
+    }
+
+    public void DesbloquearWallCling()
+    {
+        if (!canWallCling)
+        {
+            canWallCling = true;
+            Debug.Log("UPGRADE LIBERADO: Wallcling e Pulo na Parede ativados!");
+
+            // AVISA A UI PARA ACENDER O ÍCONE:
+            if (interfaceDeUpgrades != null) interfaceDeUpgrades.LigarIconeWallcling();
         }
     }
 

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Camera
+  - caramelo
+  - urso
   layers:
   - Default
   - TransparentFX

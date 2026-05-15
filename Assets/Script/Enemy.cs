@@ -89,7 +89,6 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     // IMPLEMENTAÇÃO DA INTERFACE IDAMAGEABLE (O Inimigo recebendo dano)
-    // IMPLEMENTAÇÃO DA INTERFACE IDAMAGEABLE (O Inimigo recebendo dano)
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
@@ -105,8 +104,15 @@ public class Enemy : MonoBehaviour, IDamageable
 
             if (playerReal != null)
             {
-                // 2. Avisamos o Player REAL que ele garantiu mais um abate
-                playerReal.RegistrarMorte();
+                // Verifica a Tag do inimigo que acabou de morrer para dar a recompensa certa:
+                if (gameObject.CompareTag("caramelo"))
+                {
+                    playerReal.RegistrarMorte();
+                }
+                else if (gameObject.CompareTag("urso"))
+                {
+                    playerReal.DesbloquearWallCling();
+                }
             }
 
             // 3. Chama o seu método de morte (para soltar partículas e dar o Destroy)
