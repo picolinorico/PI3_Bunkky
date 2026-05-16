@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private Vector2 attackSize = new Vector2(2f, 1f);
     [SerializeField] private int attackDamage = 1;
-    [SerializeField] private float attackColdown = 0.5f;
+    //[SerializeField] private float attackColdown = 0.5f;
     [SerializeField] private LayerMask enemyLayer;
     private bool onAttack = false;
 
@@ -97,10 +97,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer))
         {
-            animator.SetBool("Pulando", false);
-            isGrounded = true;
-            jumpsLeft = maxJumps;
-            coyoteTimeCounter = coyoteTime;
+            // SÓ desliga a animação e reseta os pulos se o personagem NÃO estiver subindo
+            if (rb.linearVelocity.y <= 0.1f)
+            {
+                animator.SetBool("Pulando", false);
+                isGrounded = true;
+                jumpsLeft = maxJumps;
+                coyoteTimeCounter = coyoteTime;
+            }
         }
         else
         {
@@ -173,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
+            animator.SetBool("Pulando", true);
             if (wallJumpTimer > 0f) { RealizarWallJump(); return; }
 
             if (coyoteTimeCounter > 0f) ExecutarPulo(false);
@@ -197,7 +202,6 @@ public class PlayerMovement : MonoBehaviour
     {
         isWallJumping = true;
         rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
-        animator.SetBool("Pulando", true);
         wallJumpTimer = 0;
         if (transform.localScale.x != wallJumpDirection) FlipManualmente();
         Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f);

@@ -1,21 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class EnemyStatic : MonoBehaviour, IDamageable
 {
     [Header("Configurações de Vida")]
     [SerializeField] private int maxHealth = 3;
     private int _currentHealth;
 
-    [Header("Movimentação (Patrulha)")]
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private Transform[] waypoints;
-    private int _currentWaypointIndex = 0;
-
     [Header("Knockback")]
     [SerializeField] private Vector2 forcaKnockback = new Vector2(7f, 5f);
     [SerializeField] private float tempoKnockback = 0.2f;
-    private bool _isKnockedBack; // Trava a patrulha enquanto apanha
 
     [Header("Feedback Visual")]
     [SerializeField] private GameObject deathEffect;
@@ -34,27 +28,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        // Só continua andando se NÃO estiver sofrendo knockback
-        if (!_isKnockedBack)
-        {
-            Patrol();
-        }
-    }
 
-    private void Patrol()
-    {
-        // Se não houver waypoints configurados, o inimigo fica parado
-        if (waypoints == null || waypoints.Length < 2) return;
-
-        Transform target = waypoints[_currentWaypointIndex];
-        transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-
-        // Verifica se chegou no ponto de destino
-        if (Vector2.Distance(transform.position, target.position) < 0.1f)
-        {
-            _currentWaypointIndex = (_currentWaypointIndex + 1) % waypoints.Length;
-            Flip();
-        }
     }
 
     private void Flip()
@@ -124,8 +98,6 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private IEnumerator RotinaKnockback()
     {
-        _isKnockedBack = true;
-
         if (_rb != null)
         {
             // Zera a velocidade atual para o pulo não bugar
@@ -149,7 +121,6 @@ public class Enemy : MonoBehaviour, IDamageable
         // Zera o movimento de novo pra ele não continuar escorregando como se fosse gelo
         if (_rb != null) _rb.linearVelocity = Vector2.zero;
 
-        _isKnockedBack = false;
     }
 
     private IEnumerator DamageFlash()
