@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.Cinemachine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
@@ -12,6 +13,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public VidaUI controleDeUI; // Para os corações
     private PlayerMovement playerMovement; // Para o knockback e checkpoint
 
+    private CinemachineImpulseSource impulseSource;
+
     void Awake()
     {
         _sr = GetComponent<SpriteRenderer>();
@@ -22,6 +25,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
         playerMovement = GetComponent<PlayerMovement>();
+
+        // PUXA O COMPONENTE AQUI:
+        impulseSource = GetComponent<CinemachineImpulseSource>();
 
         // Atualiza a UI logo que o jogo começa
         if (controleDeUI != null) controleDeUI.AtualizarCoracoes(currentHealth, maxHealth);
@@ -48,6 +54,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         Debug.Log("Vida restante: " + currentHealth);
 
         if (controleDeUI != null) controleDeUI.AtualizarCoracoes(currentHealth, maxHealth);
+
+        if (impulseSource != null)
+        {
+            impulseSource.GenerateImpulse(); // BOOM! Tela treme.
+        }
 
         if (currentHealth <= 0)
         {
