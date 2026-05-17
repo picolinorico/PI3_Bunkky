@@ -2,51 +2,34 @@ using UnityEngine;
 
 public class PlataformaMovel : MonoBehaviour
 {
-    [Header("Configurações de Trajeto")]
-    [SerializeField] private Transform pontoA;
-    [SerializeField] private Transform pontoB;
-    [SerializeField] private float velocidade = 3f;
+    public Transform pointA;
+    public Transform pointB;
+    public float moveSpeed = 2f;
 
-    [Header("Posição Inicial")]
-    [Tooltip("Se marcado, começa no Ponto B. Se desmarcado, começa no Ponto A.")]
-    [SerializeField] private bool comecarNoPontoB = false;
+    private Vector3 nextPosition;
 
-    private Vector3 destinoAtual;
-
+    // Start is called before the first frame update
     void Start()
     {
-        // Define a posição inicial e o próximo destino baseado no Checkbox do Inspector
-        if (comecarNoPontoB)
-        {
-            transform.position = pontoB.position;
-            destinoAtual = pontoA.position;
-        }
-        else
-        {
-            transform.position = pontoA.position;
-            destinoAtual = pontoB.position;
-        }
+        nextPosition = pointB.position;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        // Movimento constante em direção ao destino
-        transform.position = Vector3.MoveTowards(transform.position, destinoAtual, velocidade * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, nextPosition, moveSpeed * Time.deltaTime);
 
-        // Troca de destino ao chegar
-        if (Vector3.Distance(transform.position, destinoAtual) < 0.05f)
+        if (transform.position == nextPosition)
         {
-            destinoAtual = (destinoAtual == pontoA.position) ? pontoB.position : pontoA.position;
+            nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
         }
     }
 
-    // Sistema para o player "grudar" na plataforma
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verifica se é o player e se o objeto não está sendo destruído
-        if (collision.gameObject.CompareTag("Player") && gameObject.activeInHierarchy)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.SetParent(transform);
+            collision.gameObject.transform.parent = transform;
         }
     }
 
@@ -54,11 +37,7 @@ public class PlataformaMovel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Só tira o pai se a Coelha ainda existir
-            if (collision.transform != null)
-            {
-                collision.transform.SetParent(null);
-            }
+            collision.gameObject.transform.parent = transform;
         }
     }
 }
