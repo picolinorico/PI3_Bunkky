@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 3557109670312609862}
   - component: {fileID: 1065509936369568872}
   - component: {fileID: 1680176793252417648}
-  m_Layer: 0
+  - component: {fileID: 1458608575080370696}
+  - component: {fileID: 5325288487779864946}
+  m_Layer: 8
   m_Name: Coelha
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -31,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 1603993485718825058}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.2657, y: 27.0577, z: -3.3}
+  m_LocalPosition: {x: -23.8, y: 22.7, z: -13}
   m_LocalScale: {x: 2.167431, y: 2.167431, z: 2.167431}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -87,7 +89,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1136745194609547617, guid: 824726c0938a31247ad09f02efd06551, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -138,41 +140,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba614b9dd2344a4fb11734d132aeaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  animator: {fileID: 1680176793252417648}
   speed: 30
   horizontalMovement: 0
   isFacingRight: 1
-  gravityBase: 6
-  maxFallSpeed: 70
-  fallSpeedMultiplier: 3
-  jumpForce: 35
+  gravityBase: 10
+  maxFallSpeed: 60
+  fallSpeedMultiplier: 2
+  jumpForce: 50
   maxJumps: 1
   jumpsLeft: 0
+  coyoteTime: 0.2
   groundCheck: {fileID: 538382274152517276}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundCheckSize: {x: 2.09, y: 0.1}
   isGrounded: 0
-  wallSlideSpeed: 1
-  isWallSliding: 0
-  wallJumpPower: {x: 25, y: 25}
-  wallJumpTime: 0.5
-  isWallJumping: 0
-  wallJumpDirection: 0
-  wallJumpTimer: 0
+  wallSlideSpeed: 3.5
+  wallJumpPower: {x: 20, y: 40}
+  wallJumpTime: 0.13
   wallCheck: {fileID: 6143116487719366610}
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
   wallCheckSize: {x: 0.11, y: 4.43}
   attackPoint: {fileID: 6132532900369520831}
-  attackRange: 0.5
+  attackSize: {x: 6.49, y: 1.31}
   attackDamage: 1
-  attackColdown: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  animator: {fileID: 1680176793252417648}
+  canWallCling: 0
+  deadEnemies: 0
+  deathsForUpgrades: 3
+  sizeUpgrade: {x: 8, y: 2}
+  isKnockback: 0
+  forcaKnockback: {x: 40, y: 15}
+  tempoKnockback: 0.2
+  interfaceDeUpgrades: {fileID: 0}
 --- !u!114 &3557109670312609862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +384,74 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1458608575080370696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603993485718825058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c27a64ebc065f047af95d43dc90b7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 3
+  currentHealth: 0
+  controleDeUI: {fileID: 0}
+--- !u!114 &5325288487779864946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603993485718825058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseSource
+  ImpulseDefinition:
+    ImpulseChannel: 1
+    ImpulseShape: 4
+    CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ImpulseDuration: 0.2
+    ImpulseType: 0
+    DissipationRate: 0.25
+    RawSignal: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    RepeatMode: 0
+    Randomize: 1
+    TimeEnvelope:
+      AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      AttackTime: 0
+      SustainTime: 0.2
+      DecayTime: 0.7
+      ScaleWithImpact: 1
+      HoldForever: 0
+    ImpactRadius: 100
+    DirectionMode: 0
+    DissipationMode: 2
+    DissipationDistance: 100
+    PropagationSpeed: 343
+  DefaultVelocity: {x: 2, y: 2, z: 0}
 --- !u!1 &3529108926358812849
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +508,7 @@ Transform:
   m_GameObject: {fileID: 5377928426602613041}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: -0.04, z: -1.7798337}
+  m_LocalPosition: {x: 2.22, y: -0.28, z: -1.7798337}
   m_LocalScale: {x: 0.7668061, y: 0.7668061, z: 0.7668061}
   m_ConstrainProportionsScale: 0
   m_Children: []
