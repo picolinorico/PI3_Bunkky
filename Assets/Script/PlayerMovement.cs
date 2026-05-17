@@ -231,7 +231,7 @@ public class PlayerMovement : MonoBehaviour
     {
         onAttack = true;
         //animator.SetBool("Forte", isUpgraded);
-        animator.SetBool("Power atacando", true);
+        animator.SetBool("Atacando", true);
 
         // Espera passar 1 frame para o Animator transicionar para o estado correto
         yield return new WaitForEndOfFrame();
@@ -250,7 +250,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         onAttack = false;
-        animator.SetBool("Power atacando", false);
+        animator.SetBool("Atacando", false);
     }
 
     private void Atacar(System.Collections.Generic.List<Collider2D> jaAtingidos)
