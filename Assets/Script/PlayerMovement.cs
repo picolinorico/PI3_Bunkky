@@ -182,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (coyoteTimeCounter > 0f) ExecutarPulo(false);
             else if (jumpsLeft > 0) ExecutarPulo(true);
+            
         }
         else if (context.canceled && rb.linearVelocity.y > 0)
         {
@@ -196,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
         if (gastarReserva) jumpsLeft--;
         coyoteTimeCounter = 0f;
         isGrounded = false;
+        
     }
 
     private void RealizarWallJump()
@@ -229,7 +231,7 @@ public class PlayerMovement : MonoBehaviour
     {
         onAttack = true;
         //animator.SetBool("Forte", isUpgraded);
-        animator.SetBool("Atacando", true);
+        animator.SetBool("Power atacando", true);
 
         // Espera passar 1 frame para o Animator transicionar para o estado correto
         yield return new WaitForEndOfFrame();
@@ -248,7 +250,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         onAttack = false;
-        animator.SetBool("Atacando", false);
+        animator.SetBool("Power atacando", false);
     }
 
     private void Atacar(System.Collections.Generic.List<Collider2D> jaAtingidos)

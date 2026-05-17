@@ -354,9 +354,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Wallcling
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Andando
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1306470887589784212}
   m_Solo: 0
