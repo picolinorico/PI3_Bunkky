@@ -37,7 +37,7 @@ public class PlataformaMovel : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.parent = transform;
+            collision.gameObject.transform.parent = null;
         }
     }
 }
