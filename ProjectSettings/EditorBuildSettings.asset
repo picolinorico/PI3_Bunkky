@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/fase_1.unity
-    guid: d9dc1a73d97ca974b839a62f546f167c
+    path: Assets/Scenes/Cutscene.unity
+    guid: 6659c9105bbf70449a970f1de424a9ac
+  - enabled: 1
+    path: Assets/Scenes/fase_1- teste.unity
+    guid: 033b5722ca2178843bfd4da3ff10cc9c
   - enabled: 1
     path: Assets/Scenes/Vitoria.unity
     guid: 110134cd706085546adb9972d4d193e2
