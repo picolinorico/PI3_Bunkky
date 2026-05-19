@@ -186,23 +186,21 @@ public class PlayerMovement : MonoBehaviour
             
         }
         else if (context.canceled && rb.linearVelocity.y > 0)
-        {
-         
+        {   
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
-        
+ 
     }
 
     private void ExecutarPulo(bool gastarReserva)
     {
-        
+        animator.SetTrigger("Pular");
+        animator.SetBool("Pulando", true);
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        animator.SetTrigger("Pulando 0");
-
         if (gastarReserva) jumpsLeft--;
         coyoteTimeCounter = 0f;
         isGrounded = false;
-        
+
     }
 
     private void RealizarWallJump()
