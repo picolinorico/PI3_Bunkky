@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene.unity
     guid: 6659c9105bbf70449a970f1de424a9ac
   - enabled: 1
-    path: Assets/Scenes/FASE_1.unity
+    path: Assets/Scenes/fase_1.unity
     guid: 033b5722ca2178843bfd4da3ff10cc9c
   - enabled: 1
     path: Assets/Scenes/Vitoria.unity
