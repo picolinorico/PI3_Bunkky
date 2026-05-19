@@ -233,7 +233,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator RotinaAtaquePorAnimacao()
     {
         onAttack = true;
-        //animator.SetBool("Forte", isUpgraded);
+        animator.SetBool("Forte", isUpgraded);
         animator.SetBool("Atacando", true);
 
         // Espera passar 1 frame para o Animator transicionar para o estado correto
