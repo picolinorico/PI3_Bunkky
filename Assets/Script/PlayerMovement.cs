@@ -177,23 +177,28 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            animator.SetBool("Pulando", true);
+            
             if (wallJumpTimer > 0f) { RealizarWallJump(); return; }
 
             if (coyoteTimeCounter > 0f) ExecutarPulo(false);
             else if (jumpsLeft > 0) ExecutarPulo(true);
+                
             
         }
         else if (context.canceled && rb.linearVelocity.y > 0)
         {
+         
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
+        
     }
 
     private void ExecutarPulo(bool gastarReserva)
     {
+        
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        animator.SetBool("Pulando", true);
+        animator.SetTrigger("Pulando 0");
+
         if (gastarReserva) jumpsLeft--;
         coyoteTimeCounter = 0f;
         isGrounded = false;
