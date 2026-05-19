@@ -57511,6 +57511,10 @@ PrefabInstance:
       value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+      propertyPath: wallCheckSize.x
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: wallJumpPower.x
       value: 20
       objectReference: {fileID: 0}
