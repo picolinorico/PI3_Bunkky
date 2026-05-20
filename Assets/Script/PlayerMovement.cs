@@ -206,6 +206,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void RealizarWallJump()
     {
+        animator.SetTrigger("Pular");
         animator.SetBool("Wallcling", false);
         isWallJumping = true;
         rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
