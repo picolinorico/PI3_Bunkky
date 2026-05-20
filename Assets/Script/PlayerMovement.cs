@@ -146,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isWallSliding)
         {
+            
             isWallJumping = false;
             wallJumpDirection = -transform.localScale.x;
             wallJumpTimer = wallJumpTime;
@@ -205,6 +206,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void RealizarWallJump()
     {
+        animator.SetTrigger("Pular");
+        animator.SetBool("Wallcling", false);
         isWallJumping = true;
         rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
         wallJumpTimer = 0;
@@ -240,7 +243,8 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         AnimatorStateInfo estadoAtual = animator.GetCurrentAnimatorStateInfo(0);
-        float duracaoDaAnimacao = estadoAtual.length;
+        float duracaoDaAnimacao = 0.25f;
+        Debug.Log(duracaoDaAnimacao);
         float tempoPassado = 0f;
         System.Collections.Generic.List<Collider2D> inimigosJaAtingidos = new System.Collections.Generic.List<Collider2D>();
 
@@ -251,9 +255,10 @@ public class PlayerMovement : MonoBehaviour
             tempoPassado += Time.deltaTime;
             yield return null;
         }
-
+        duracaoDaAnimacao = 0f;
         onAttack = false;
         animator.SetBool("Atacando", false);
+        animator.SetBool("Forte", false);
     }
 
     private void Atacar(System.Collections.Generic.List<Collider2D> jaAtingidos)
