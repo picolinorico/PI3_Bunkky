@@ -12962,7 +12962,7 @@ Transform:
   m_GameObject: {fileID: 391156954}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -205, y: 1.8, z: 0}
+  m_LocalPosition: {x: -165.6, y: 1.8, z: 0}
   m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16688,7 +16688,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.0981646, y: -15.255692}
+  m_Offset: {x: -2.3578658, y: -15.255692}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16698,7 +16698,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.82045, y: 0.06006241}
+  m_Size: {x: 12.811721, y: 0.06006241}
   m_EdgeRadius: 0
 --- !u!70 &524899159
 CapsuleCollider2D:
@@ -16730,12 +16730,12 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.9577589, y: -1.1881084}
-  m_Size: {x: 18.356436, y: 28.615414}
+  m_Offset: {x: 0.9577589, y: -1.0263844}
+  m_Size: {x: 18.356436, y: 28.291965}
   m_Direction: 0
 --- !u!50 &524899161
 Rigidbody2D:
@@ -16745,7 +16745,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524899157}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -25931,7 +25931,7 @@ Transform:
   m_GameObject: {fileID: 840329385}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -182.8, y: 1.8, z: 0}
+  m_LocalPosition: {x: -143.4, y: 1.8, z: 0}
   m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41281,7 +41281,7 @@ Transform:
   m_GameObject: {fileID: 1271212261}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -171.56, y: 1.8, z: 0}
+  m_LocalPosition: {x: -132.2, y: 1.8, z: 0}
   m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42631,7 +42631,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.0981646, y: -15.255692}
+  m_Offset: {x: -2.3738134, y: -15.255692}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -42641,7 +42641,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.82045, y: 0.06006241}
+  m_Size: {x: 12.752974, y: 0.06006241}
   m_EdgeRadius: 0
 --- !u!70 &1317341267
 CapsuleCollider2D:
@@ -42673,7 +42673,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -42688,7 +42688,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317341265}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -42758,7 +42758,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 06f33e36b5afbcc4aa1c38173bf4cb09, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -42775,7 +42775,7 @@ Transform:
   m_GameObject: {fileID: 1317341265}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.1, y: 25.53, z: -2.4}
+  m_LocalPosition: {x: 97.05, y: 25.53, z: -2.4}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47560,7 +47560,7 @@ Transform:
   m_GameObject: {fileID: 1499946391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45, y: 31.6, z: -23}
+  m_LocalPosition: {x: -42.73, y: 21.72, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51826,7 +51826,7 @@ Transform:
   m_GameObject: {fileID: 1660348674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.620157, y: 22.711977, z: -23}
+  m_LocalPosition: {x: -39.405384, y: 31.418058, z: -23}
   m_LocalScale: {x: 1.4828982, y: 1.4828982, z: 1.4828982}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59446,7 +59446,7 @@ Transform:
   m_GameObject: {fileID: 1899555342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -193.9, y: 1.8, z: 0}
+  m_LocalPosition: {x: -154.5, y: 1.8, z: 0}
   m_LocalScale: {x: 1.436778, y: 1.436778, z: 1.4367778}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72028,8 +72028,12 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+      propertyPath: groundCheckSize.x
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: groundCheckSize.y
-      value: 1
+      value: 1.18
       objectReference: {fileID: 0}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: fallSpeedMultiplier
@@ -72041,11 +72045,11 @@ PrefabInstance:
       objectReference: {fileID: 1676662642}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45
+      value: -42.73
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.6
+      value: 21.72
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.z
