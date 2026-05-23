@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private Vector2 attackSize = new Vector2(2f, 1f);
     [SerializeField] private int attackDamage = 1;
-    //[SerializeField] private float attackColdown = 0.5f;
+    [SerializeField] private float attackColdown = 0.5f;
     [SerializeField] private LayerMask enemyLayer;
     private bool onAttack = false;
 
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int deadEnemies = 0;
     [SerializeField] private int deathsForUpgrades = 3;
     [SerializeField] private Vector2 sizeUpgrade = new Vector2(8f, 2f); // Alcance maior
-    //[SerializeField] private int danoUpgrade = 2;
+    [SerializeField] private int danoUpgrade = 2;
     private bool isUpgraded = false;
 
     [Header("Knockback")]
@@ -292,7 +292,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isUpgraded = true;
             attackSize = sizeUpgrade;
-            //attackDamage = danoUpgrade;
+            attackDamage = danoUpgrade;
             Debug.Log("ATAQUE MELHORADO PERMANENTE!");
             // Aqui você pode instanciar uma partícula de brilho na coelha se quiser
             if (interfaceDeUpgrades != null) interfaceDeUpgrades.LigarIconeAtaque();
