@@ -1672,6 +1672,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!50 &66598423
 Rigidbody2D:
   serializedVersion: 5
@@ -10950,6 +10952,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!50 &308033909
 Rigidbody2D:
   serializedVersion: 5
@@ -18884,6 +18888,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!95 &579584225
 Animator:
   serializedVersion: 7
@@ -23353,6 +23359,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!50 &758635637
 Rigidbody2D:
   serializedVersion: 5
@@ -32185,6 +32193,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!95 &998307552
 Animator:
   serializedVersion: 7
@@ -47550,7 +47560,7 @@ Transform:
   m_GameObject: {fileID: 1499946391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.9, y: 2, z: -23}
+  m_LocalPosition: {x: -45, y: 31.6, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51816,7 +51826,7 @@ Transform:
   m_GameObject: {fileID: 1660348674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.9, y: 2, z: -23}
+  m_LocalPosition: {x: -30.620157, y: 22.711977, z: -23}
   m_LocalScale: {x: 1.4828982, y: 1.4828982, z: 1.4828982}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -57495,6 +57505,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 1
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!95 &1821817080
 Animator:
   serializedVersion: 7
@@ -68890,6 +68902,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!50 &2026545180
 Rigidbody2D:
   serializedVersion: 5
@@ -70113,6 +70127,8 @@ MonoBehaviour:
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!50 &2060649605
 Rigidbody2D:
   serializedVersion: 5
@@ -72025,11 +72041,11 @@ PrefabInstance:
       objectReference: {fileID: 1676662642}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.9
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 31.6
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.z
