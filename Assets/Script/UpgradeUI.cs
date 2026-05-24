@@ -14,15 +14,20 @@ public class UpgradeUI : MonoBehaviour
     public Color corDesbloqueado = Color.white;
 
     [Header("Aviso na Tela (Texto)")]
-    public RectTransform painelDeAviso; // Arraste o RectTransform do painel aqui
+    public RectTransform painelDeAviso;
     public TextMeshProUGUI textoDeAviso;
     public float tempoNaTela = 2.5f;
-    public float velocidadeEscrita = 0.05f; // Tempo entre cada letra
+    public float velocidadeEscrita = 0.03f; // Um pouco mais rápido para cyberpunk
 
-    [Header("Configuração de Movimento")]
-    public float posEscondidaY = -300f; // Posição abaixo da tela
-    public float posVisivelY = 150f;    // Posição onde ele para na tela
-    public float tempoAnimacaoSlide = 0.5f;
+    [Header("Configuração de Movimento do Painel")]
+    public float posEscondidaY = -300f;
+    public float posVisivelY = 150f;
+    public float tempoAnimacaoSlide = 0.4f;
+
+    [Header("Configuração de Animação do Ícone")]
+    public float tempoAnimacaoIcone = 0.3f;
+    // Quanto ele estica (1.4f = 140% do tamanho)
+    public Vector3 escalaDePulo = new Vector3(1.4f, 1.4f, 1f);
 
     [Header("Mensagens")]
     [TextArea] public string mensagemAtaque = "SISTEMA ATUALIZADO: Alcance de Ataque Expandido!";
@@ -30,10 +35,11 @@ public class UpgradeUI : MonoBehaviour
 
     private void Start()
     {
+        // Setup inicial das cores
         if (iconeAtaque != null) iconeAtaque.color = corBloqueado;
         if (iconeWallcling != null) iconeWallcling.color = corBloqueado;
 
-        // Começa escondido embaixo da tela
+        // Setup inicial da posição do painel
         if (painelDeAviso != null)
         {
             Vector2 pos = painelDeAviso.anchoredPosition;
@@ -42,47 +48,92 @@ public class UpgradeUI : MonoBehaviour
         }
     }
 
+    // --- MÉTODOS CHAMADOS PELO PLAYER ---
+
     public void LigarIconeAtaque()
     {
-        if (iconeAtaque != null) iconeAtaque.color = corDesbloqueado;
+        if (iconeAtaque != null)
+        {
+            iconeAtaque.color = corDesbloqueado;
+            // Inicia a animação procedural de "esticar" no ícone
+            StartCoroutine(AnimarPuloIcone(iconeAtaque.rectTransform));
+        }
         StartCoroutine(RotinaCompletaAviso(mensagemAtaque));
     }
 
     public void LigarIconeWallcling()
     {
-        if (iconeWallcling != null) iconeWallcling.color = corDesbloqueado;
+        if (iconeWallcling != null)
+        {
+            iconeWallcling.color = corDesbloqueado;
+            // Inicia a animação procedural de "esticar" no ícone
+            StartCoroutine(AnimarPuloIcone(iconeWallcling.rectTransform));
+        }
         StartCoroutine(RotinaCompletaAviso(mensagemWallcling));
     }
 
+    // --- COROTINA DE ANIMAÇÃO DO ÍCONE (Squash & Stretch procedural) ---
+    private IEnumerator AnimarPuloIcone(RectTransform rectIcone)
+    {
+        if (rectIcone == null) yield break;
+
+        // Garante que começamos do tamanho normal
+        rectIcone.localScale = Vector3.one;
+
+        float tempo = 0;
+        float metadeDoTempo = tempoAnimacaoIcone / 2f;
+
+        // 1. ESTICAR (De 1 para escalaDePulo)
+        while (tempo < metadeDoTempo)
+        {
+            tempo += Time.deltaTime;
+            // Usamos SmoothStep para um movimento mais "elástico" que o Lerp comum
+            float t = tempo / metadeDoTempo;
+            rectIcone.localScale = Vector3.Lerp(Vector3.one, escalaDePulo, Mathf.SmoothStep(0f, 1f, t));
+            yield return null;
+        }
+
+        // 2. VOLTAR AO NORMAL (De escalaDePulo para 1)
+        tempo = 0;
+        while (tempo < metadeDoTempo)
+        {
+            tempo += Time.deltaTime;
+            float t = tempo / metadeDoTempo;
+            rectIcone.localScale = Vector3.Lerp(escalaDePulo, Vector3.one, Mathf.SmoothStep(0f, 1f, t));
+            yield return null;
+        }
+
+        // Garante o tamanho final perfeito
+        rectIcone.localScale = Vector3.one;
+    }
+
+
+    // --- COROTINAS DE TEXTO E PAINEL (Mantidas do passo anterior) ---
+
     private IEnumerator RotinaCompletaAviso(string mensagemCompleta)
     {
-        // 1. PREPARAÇÃO
-        textoDeAviso.text = ""; // Limpa o texto
+        // ... (Código mantido igual ao anterior, limpando texto e ligando painel)
+        textoDeAviso.text = "";
         painelDeAviso.gameObject.SetActive(true);
 
-        // 2. SLIDE PARA CIMA (Entrada)
         yield return StartCoroutine(MoverPainel(posEscondidaY, posVisivelY));
 
-        // 3. EFEITO MÁQUINA DE ESCREVER
         foreach (char letra in mensagemCompleta.ToCharArray())
         {
             textoDeAviso.text += letra;
-            // Toca um som de "clique" aqui se você tiver!
             yield return new WaitForSeconds(velocidadeEscrita);
         }
 
-        // 4. ESPERA UM POUCO PARA O PLAYER LER
         yield return new WaitForSeconds(tempoNaTela);
 
-        // 5. SLIDE PARA BAIXO (Saída)
         yield return StartCoroutine(MoverPainel(posVisivelY, posEscondidaY));
 
         painelDeAviso.gameObject.SetActive(false);
     }
 
-    // Função auxiliar para mover o painel suavemente
     private IEnumerator MoverPainel(float deY, float paraY)
     {
+        // ... (Código mantido igual ao anterior, movendo suavemente)
         float tempo = 0;
         Vector2 pos = painelDeAviso.anchoredPosition;
 
