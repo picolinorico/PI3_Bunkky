@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     [Header("Conexões")]
     public VidaUI controleDeUI; // Para os corações
     private PlayerMovement playerMovement; // Para o knockback e checkpoint
+    public TransicaoMorte telaDeMorte;
 
     private CinemachineImpulseSource impulseSource;
 
@@ -46,6 +47,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         Debug.Log("SOU A COELHA E ESTOU EXECUTANDO TAKEDAMAGE!");
 
+        if (playerMovement != null && !playerMovement.enabled) return;
+
         if (playerMovement != null && playerMovement.isKnockback) return;
 
         currentHealth -= damage;
@@ -70,15 +73,23 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
 
-    public void Die()
+    private void Die()
     {
-        Debug.Log("Morreu! Voltando ao checkpoint...");
-        currentHealth = maxHealth; // Enche a vida
+        Debug.Log("Morreu!");
 
+        // Zera a vida 
+        currentHealth = maxHealth;
         if (controleDeUI != null) controleDeUI.AtualizarCoracoes(currentHealth, maxHealth);
 
-        // Em vez de destruir, chama o respawn do seu script de movimento
-        if (playerMovement != null) playerMovement.Respawnar();
+        // Chama a transição (e ela vai cuidar do resto)
+        if (telaDeMorte != null)
+        {
+            telaDeMorte.IniciarTransicao(playerMovement);
+        }
+        else
+        {
+            if (playerMovement != null) playerMovement.Respawnar();
+        }
     }
 
     private IEnumerator DamageFlash()
