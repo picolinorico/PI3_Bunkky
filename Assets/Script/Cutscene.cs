@@ -92,6 +92,9 @@ public class CutsceneSimples : MonoBehaviour
 
     public void PassarPagina()
     {
+        // DOUBLE CHECK: Se já estiver virando a página, ignora o comando e sai da função na hora!
+        if (isChangingPage) return;
+
         if (paginaAtual + 1 < paginas.Length)
         {
             StartCoroutine(MudarPaginaRoutine(paginaAtual + 1));
@@ -105,6 +108,9 @@ public class CutsceneSimples : MonoBehaviour
 
     public void VoltarPagina()
     {
+        // DOUBLE CHECK: Se já estiver virando a página, ignora o comando e sai da função na hora!
+        if (isChangingPage) return;
+
         if (paginaAtual - 1 >= 0)
         {
             StartCoroutine(MudarPaginaRoutine(paginaAtual - 1));
