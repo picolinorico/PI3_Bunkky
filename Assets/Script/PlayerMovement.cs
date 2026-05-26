@@ -50,7 +50,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform attackPoint;
     [SerializeField] private Vector2 attackSize = new Vector2(2f, 1f);
     [SerializeField] private int attackDamage = 1;
-    [SerializeField] private float attackColdown = 0.5f;
+    [SerializeField] private float attackCooldown = 0.5f;
+    [SerializeField] private float nextAttackTime = 0f;
     [SerializeField] private LayerMask enemyLayer;
     private bool onAttack = false;
 
@@ -66,6 +67,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isKnockback;
     [SerializeField] private Vector2 forcaKnockback = new Vector2(30f, 10f);
     [SerializeField] private float tempoKnockback = 0.3f;
+
+    [Header("Sons do Player")]
+    [SerializeField] private AudioSource audioSource; // Arraste o AudioSource da Coelha aqui
+    [SerializeField] private AudioClip somAtaqueNormal;
+    [SerializeField]
+    private AudioClip somAtaqueForte;
 
     [Header("Checkpoint")]
     private Vector2 pontoDeCheckpoint;
@@ -227,10 +234,26 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed && !onAttack)
+        if (!context.performed) return;
+        if (onAttack || Time.time < nextAttackTime) return;
+
+        nextAttackTime = Time.time + attackCooldown;
+
+        // ==========================================
+        // SISTEMA DE AUDIO DO ATACANTE
+        if (audioSource != null)
         {
-            StartCoroutine(RotinaAtaquePorAnimacao());
+            // Escolhe o clipe dependendo se ela está com o PowerUp ou não
+            AudioClip clipeParaTocar = isUpgraded ? somAtaqueForte : somAtaqueNormal;
+
+            if (clipeParaTocar != null)
+            {
+                audioSource.PlayOneShot(clipeParaTocar); // PlayOneShot evita que o som seja cortado se você clicar rápido
+            }
         }
+        // ==========================================
+
+        StartCoroutine(RotinaAtaquePorAnimacao());
     }
 
     private IEnumerator RotinaAtaquePorAnimacao()
@@ -239,12 +262,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Forte", isUpgraded);
         animator.SetBool("Atacando", true);
 
-        // Espera passar 1 frame para o Animator transicionar para o estado correto
         yield return new WaitForEndOfFrame();
 
-        AnimatorStateInfo estadoAtual = animator.GetCurrentAnimatorStateInfo(0);
+        // Mantive os seus 0.25f de duração do hitbox ativos
         float duracaoDaAnimacao = 0.25f;
-        Debug.Log(duracaoDaAnimacao);
         float tempoPassado = 0f;
         System.Collections.Generic.List<Collider2D> inimigosJaAtingidos = new System.Collections.Generic.List<Collider2D>();
 
@@ -255,7 +276,7 @@ public class PlayerMovement : MonoBehaviour
             tempoPassado += Time.deltaTime;
             yield return null;
         }
-        duracaoDaAnimacao = 0f;
+
         onAttack = false;
         animator.SetBool("Atacando", false);
         animator.SetBool("Forte", false);

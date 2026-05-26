@@ -128,11 +128,22 @@ public class Enemy : MonoBehaviour, IDamageable
             Instantiate(deathEffect, transform.position, Quaternion.identity);
         }
 
-        if (TryGetComponent(out Collider2D col)) col.enabled = false;
+        // ======================================================================
+        // CORREÇÃO DOS COLISORES FILHOS (PÉ, SENSORES, ETC.)
+        // Pega todos os colisores do pai e dos filhos e desliga um por um
+        Collider2D[] todosOsColisores = GetComponentsInChildren<Collider2D>();
+        foreach (Collider2D col in todosOsColisores)
+        {
+            col.enabled = false;
+        }
+        // ======================================================================
+
         if (_rb != null) _rb.bodyType = RigidbodyType2D.Kinematic;
 
         StartCoroutine(RotinaPiscarMorte());
+        
     }
+
 
     private IEnumerator RotinaPiscarMorte()
     {
