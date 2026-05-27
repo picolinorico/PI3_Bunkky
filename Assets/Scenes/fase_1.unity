@@ -51131,8 +51131,8 @@ Transform:
   m_GameObject: {fileID: 1377005040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.833, y: -0.713444, z: 0}
-  m_LocalScale: {x: 1.019348, y: 0.10573353, z: 1}
+  m_LocalPosition: {x: 8.833, y: -0.71399, z: 0}
+  m_LocalScale: {x: 1.019348, y: 0.10533464, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 51541086}
@@ -53593,8 +53593,8 @@ Transform:
   m_GameObject: {fileID: 1474605852}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.393, y: -0.60043, z: 0}
-  m_LocalScale: {x: 1.019348, y: 0.023119543, z: 1}
+  m_LocalPosition: {x: 7.393, y: -0.600857, z: 0}
+  m_LocalScale: {x: 1.019348, y: 0.022807868, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1544083001}
@@ -54871,7 +54871,7 @@ Transform:
   m_GameObject: {fileID: 1506397769}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 4.48067, y: -0.5455, z: 0}
+  m_LocalPosition: {x: 4.48067, y: -0.5471, z: 0}
   m_LocalScale: {x: -1.1195631, y: -0.12827185, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56128,8 +56128,8 @@ Transform:
   m_GameObject: {fileID: 1562806690}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.263, y: -0.418958, z: 0}
-  m_LocalScale: {x: 1.019348, y: 0.099030994, z: 1}
+  m_LocalPosition: {x: 9.263, y: -0.418608, z: 0}
+  m_LocalScale: {x: 1.019348, y: 0.09877544, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1047283778}
@@ -77229,7 +77229,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995364014}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -77316,13 +77316,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1995364014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34da8fca1b6dc94dad9d18f3631fc7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d4ae523ec31ab4ba78af4bd3cff3d8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyStatic
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
   maxHealth: 3
+  moveSpeed: 0
+  waypoints: []
   forcaKnockback: {x: 7, y: 5}
   tempoKnockback: 0.2
   deathEffect: {fileID: 0}
+  duracaoPiscarMorte: 1
+  intervaloPiscar: 0.1
 --- !u!1 &1999038477
 GameObject:
   m_ObjectHideFlags: 0
@@ -77934,8 +77938,8 @@ Transform:
   m_GameObject: {fileID: 2003802814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.54, y: -127.13, z: -1.1}
-  m_LocalScale: {x: 1.802171, y: 2.2846463, z: 1.3572325}
+  m_LocalPosition: {x: -32.9, y: -126.9, z: -1.1}
+  m_LocalScale: {x: 1.802171, y: 2.347474, z: 1.3572325}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 107239520}
