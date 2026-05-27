@@ -58474,7 +58474,7 @@ Transform:
   m_GameObject: {fileID: 1499946391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.5, y: 28.699997, z: -23}
+  m_LocalPosition: {x: -45.5, y: 21.6, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63725,7 +63725,7 @@ Transform:
   m_GameObject: {fileID: 1660348674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.388847, y: 28.700104, z: -23}
+  m_LocalPosition: {x: -39.461433, y: 31.418058, z: -23}
   m_LocalScale: {x: 1.4828982, y: 1.4828982, z: 1.4828982}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -86287,7 +86287,7 @@ PrefabInstance:
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: somAtaqueNormal
       value: 
-      objectReference: {fileID: 8300000, guid: 45060c4d3bd59c34b8f73611f5f5c237, type: 3}
+      objectReference: {fileID: 8300000, guid: 6f8da212287681c4fb2df1ac8bcae499, type: 3}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: wallCheckSize.x
       value: 0.42
@@ -86334,7 +86334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.699997
+      value: 21.6
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.z
