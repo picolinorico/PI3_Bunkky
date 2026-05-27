@@ -10,7 +10,7 @@ public class VidaGlitch : MonoBehaviour, IDamageable
     [SerializeField] private GameObject particulaPrefab;
 
     [Header("Feedback de Morte (Pisca-Pisca)")]
-    [SerializeField] private float duracaoPiscarMorte = 1f; // Quanto tempo ele fica piscando
+    [SerializeField] private float duracaoPiscarMorte = 0.2f; // Quanto tempo ele fica piscando
     [SerializeField] private float intervaloPiscar = 0.1f;  // Velocidade do pisca-pisca
 
     private SpriteRenderer _sr;
