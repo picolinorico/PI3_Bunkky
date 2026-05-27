@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -846, y: 1034.4}
+  m_AnchoredPosition: {x: -960, y: 69.62}
   m_SizeDelta: {x: 229.1447, y: 109.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45344097
@@ -319,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -685, y: 945.0685}
+  m_AnchoredPosition: {x: -801, y: -19}
   m_SizeDelta: {x: 233.6891, y: 112.8703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260498025
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -486,9 +486,9 @@ MonoBehaviour:
   paginas:
   - {fileID: 6463705313848639539, guid: 99611a41b751b1c438ac7631c3ac02ba, type: 3}
   - {fileID: 3361000324441736260, guid: 1d6f864f59a7eb4478e6c7d043e5f71c, type: 3}
-  - {fileID: 3914972005912451979, guid: 96231d5828a8ed44bb4f108487d6b328, type: 3}
+  - {fileID: -4545597942693159263, guid: 998afc2b3a09add44a746c5128ee00dc, type: 3}
   - {fileID: 2934684994733668042, guid: 9173d0a30e1e7af42b488bf1929a4e93, type: 3}
-  - {fileID: 7168452919353413670, guid: d2f97ca6a7b415647a3ffa5f9a29ff1f, type: 3}
+  - {fileID: 6906023416226845581, guid: d2f97ca6a7b415647a3ffa5f9a29ff1f, type: 3}
   tempoTransicao: 0.3
   nomeDaFase: fase_1
   painelSkip: {fileID: 1066924304}
@@ -858,8 +858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 235, y: 494.4}
-  m_SizeDelta: {x: -1335.2815, y: -996.9932}
+  m_AnchoredPosition: {x: -0.000061035156, y: -470.38}
+  m_SizeDelta: {x: -1568.8157, y: -957.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204775349
 MonoBehaviour:
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Segure [Espa\xE7o] para pular"
+  m_text: "[Espa\xE7o] Pular"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -890,8 +890,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278235903
-  m_fontColor: {r: 1, g: 0.6971302, b: 0, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -908,8 +908,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.6
-  m_fontSizeBase: 47.6
+  m_fontSize: 65.16
+  m_fontSizeBase: 65.16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

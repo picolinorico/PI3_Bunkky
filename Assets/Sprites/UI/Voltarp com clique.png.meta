@@ -173,72 +173,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Voltarp com clique_0
-      rect:
-        serializedVersion: 2
-        x: 1075
-        y: 915
-        width: 31
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a88a6b39cdaff07c0800000000000000
-      internalID: -4102784910233261942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Voltarp com clique_1
-      rect:
-        serializedVersion: 2
-        x: 1233
-        y: 964
-        width: 33
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c31f745e3618158a0800000000000000
-      internalID: -6318126536175652548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Voltarp com clique_2
-      rect:
-        serializedVersion: 2
-        x: 1305
-        y: 935
-        width: 74
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 54599b46d1e51c0a0800000000000000
-      internalID: -6863100876798978747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Voltarp com clique_3
       rect:
         serializedVersion: 2
@@ -247,7 +181,7 @@ TextureImporter:
         width: 640
         height: 647
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,99 +194,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Voltarp com clique_4
-      rect:
-        serializedVersion: 2
-        x: 1418
-        y: 585
-        width: 163
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b401ae07256562a00800000000000000
-      internalID: 731366901575979083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Voltarp com clique_5
-      rect:
-        serializedVersion: 2
-        x: 1419
-        y: 455
-        width: 142
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebab62816f2b4fb60800000000000000
-      internalID: 7779039226412579518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Voltarp com clique_6
-      rect:
-        serializedVersion: 2
-        x: 1040
-        y: 185
-        width: 24
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c934995ecd4e2f830800000000000000
-      internalID: 4103593847883907996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Voltarp com clique_7
-      rect:
-        serializedVersion: 2
-        x: 1222
-        y: 161
-        width: 49
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 769f0a994c8850630800000000000000
-      internalID: 3892667830904093031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fee0ed2e6c52da04ea1da0e4ae0b2a07
     internalID: 0
     vertices: []
     indices: 

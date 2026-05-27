@@ -173,94 +173,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Passar com clique__0
-      rect:
-        serializedVersion: 2
-        x: 541
-        y: 935
-        width: 74
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed6444e08a542d5a0800000000000000
-      internalID: -6498054724246026530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Passar com clique__1
-      rect:
-        serializedVersion: 2
-        x: 654
-        y: 964
-        width: 33
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9651fce480776060800000000000000
-      internalID: 6946644666455512735
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Passar com clique__2
-      rect:
-        serializedVersion: 2
-        x: 814
-        y: 915
-        width: 31
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c0cb0a934d06a030800000000000000
-      internalID: 3505503943952941257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Passar com clique__3
-      rect:
-        serializedVersion: 2
-        x: 339
-        y: 585
-        width: 163
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 232fb7eae33266700800000000000000
-      internalID: 533152358012285490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Passar com clique__4
       rect:
         serializedVersion: 2
@@ -269,7 +181,7 @@ TextureImporter:
         width: 640
         height: 647
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,77 +194,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Passar com clique__5
-      rect:
-        serializedVersion: 2
-        x: 359
-        y: 455
-        width: 142
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bfa36b1885812dfd0800000000000000
-      internalID: -2318764089729991941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Passar com clique__6
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 161
-        width: 49
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e70cd6c5e26a65770800000000000000
-      internalID: 8599243256559943806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Passar com clique__7
-      rect:
-        serializedVersion: 2
-        x: 856
-        y: 185
-        width: 24
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b34574a73568c48e0800000000000000
-      internalID: -1707842465588358085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dff234958f757ea49aab60d92bbd2462
     internalID: 0
     vertices: []
     indices: 
