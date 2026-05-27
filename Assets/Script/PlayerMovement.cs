@@ -86,12 +86,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // Inputs e contadores rodam no Update comum
+        if (coyoteTimeCounter > 0f && !isGrounded)
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        // Animações
+        animator.SetBool("Andando", horizontalMovement != 0 && isGrounded);
+        animator.SetBool("Pulando", !isGrounded);
+    }
+
+    void FixedUpdate()
+    {
+        // TUDO que mexe com física/colisores DEVE rodar no FixedUpdate
         GroundCheck();
         ProcessGravity();
         ProcessWallSlide();
         ProcessWallJump();
-
-        if (horizontalMovement == 0) animator.SetBool("Andando", false);
 
         if (!isWallJumping && !isKnockback)
         {
@@ -102,32 +114,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundCheck()
     {
-        // Fazemos a checagem do chão
-        bool encostouNoChao = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer);
+        // Checagem real com os colisores da plataforma
+        bool colidiuComChao = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer);
 
-        // O SEGREDO: Só aceita que está no chão se o colisor detectou E se a coelha 
-        // NÃO está subindo feito um foguete (velocidade Y perto de 0 ou negativa)
-        if (encostouNoChao && rb.linearVelocity.y <= 0.1f)
+        // O SEGREDO DO FILTRO: Se ela colidiu, ela ESTÁ no chão.
+        // Ignoramos micro-oscilações de velocidade vertical (rb.linearVelocity.y) menores que 1
+        if (colidiuComChao && rb.linearVelocity.y <= 1f)
         {
-            if (!isGrounded) // Só executa se ela acabou de pousar
-            {
-                animator.SetBool("Pulando", false);
-                isGrounded = true;
-                jumpsLeft = maxJumps;
-                coyoteTimeCounter = coyoteTime;
-            }
+            isGrounded = true;
+            jumpsLeft = maxJumps;
+            coyoteTimeCounter = coyoteTime;
         }
         else
         {
-            // Se ela desgrudou do chão ou a velocidade Y subiu (por causa do pulo do espaço)
             isGrounded = false;
-            coyoteTimeCounter -= Time.deltaTime;
-
-            // Só ativa a animação de queda se ela realmente estiver se movendo no eixo Y
-            if (Mathf.Abs(rb.linearVelocity.y) > 0.1f)
-            {
-                animator.SetBool("Pulando", true);
-            }
         }
     }
 

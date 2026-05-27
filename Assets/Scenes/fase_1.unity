@@ -56055,7 +56055,7 @@ Transform:
   m_GameObject: {fileID: 1499946391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.1, y: 24.4, z: -23}
+  m_LocalPosition: {x: 67.6, y: -10.31, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -61310,7 +61310,7 @@ Transform:
   m_GameObject: {fileID: 1660348674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.674994, y: 22.711977, z: -23}
+  m_LocalPosition: {x: 67.6, y: -10.31, z: -23}
   m_LocalScale: {x: 1.4828982, y: 1.4828982, z: 1.4828982}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84935,8 +84935,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 538382274152517276, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 538382274152517276, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.72
+      value: -1.68
       objectReference: {fileID: 0}
     - target: {fileID: 1115775275415987980, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_Constraints
@@ -84944,7 +84948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115775275415987980, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_Interpolate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1247058260084512274, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_SortingOrder
@@ -85084,11 +85088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: groundCheckSize.x
-      value: 2.29
+      value: 2.89
       objectReference: {fileID: 0}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: groundCheckSize.y
-      value: 1.18
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 7962020128780169604, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: fallSpeedMultiplier
@@ -85100,11 +85104,11 @@ PrefabInstance:
       objectReference: {fileID: 1676662642}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.1
+      value: 67.6
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.4
+      value: -10.31
       objectReference: {fileID: 0}
     - target: {fileID: 8391519517849813771, guid: 728a477e1bc7752439f0fb644dd27500, type: 3}
       propertyPath: m_LocalPosition.z
