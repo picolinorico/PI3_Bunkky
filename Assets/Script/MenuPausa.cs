@@ -9,7 +9,7 @@ public class MenuPausa : MonoBehaviour
 
     [Header("Paineis")]
     public GameObject menuPausaUI;
-    public GameObject painelConfirmar;  // A janelinha de aviso
+    public GameObject painelConfiguracoes; // Painel de Configurações
 
     void Update()
     {
@@ -27,6 +27,18 @@ public class MenuPausa : MonoBehaviour
         jogoPausado = false;
     }
 
+    public void AbrirConfig()
+    {
+        menuPausaUI.SetActive(false);
+        painelConfiguracoes.SetActive(true); // Liga as opções
+    }
+
+    public void FecharConfig()
+    {
+        painelConfiguracoes.SetActive(false); // Desliga as opções
+        menuPausaUI.SetActive(true);
+    }
+
     private void Pausar()
     {
         menuPausaUI.SetActive(true);  // Liga a caixinha do Painel (mostra na tela)
@@ -34,14 +46,7 @@ public class MenuPausa : MonoBehaviour
         jogoPausado = true;
     }
 
-    // Chamada pelo botão "Menu Principal" original
-    public void AbrirAviso() => painelConfirmar.SetActive(true);
-
-    // Chamada pelo botão "Não" do aviso
-    public void FecharAviso() => painelConfirmar.SetActive(false);
-
-    // Chamada pelo botão "Sim" do aviso
-    public void ConfirmarSair()
+    public void Menu()
     {
         Time.timeScale = 1f; // NUNCA esqueça de resetar o tempo antes de mudar de cena
         SceneManager.LoadScene(0); // Carrega o menu principal
