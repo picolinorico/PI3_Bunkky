@@ -102,10 +102,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundCheck()
     {
-        if (Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer))
+        // Fazemos a checagem do chão
+        bool encostouNoChao = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0, groundLayer);
+
+        // O SEGREDO: Só aceita que está no chão se o colisor detectou E se a coelha 
+        // NÃO está subindo feito um foguete (velocidade Y perto de 0 ou negativa)
+        if (encostouNoChao && rb.linearVelocity.y <= 0.1f)
         {
-            // SÓ desliga a animação e reseta os pulos se o personagem NÃO estiver subindo
-            if (rb.linearVelocity.y <= 0.1f)
+            if (!isGrounded) // Só executa se ela acabou de pousar
             {
                 animator.SetBool("Pulando", false);
                 isGrounded = true;
@@ -115,8 +119,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            // Se ela desgrudou do chão ou a velocidade Y subiu (por causa do pulo do espaço)
             isGrounded = false;
             coyoteTimeCounter -= Time.deltaTime;
+
+            // Só ativa a animação de queda se ela realmente estiver se movendo no eixo Y
+            if (Mathf.Abs(rb.linearVelocity.y) > 0.1f)
+            {
+                animator.SetBool("Pulando", true);
+            }
         }
     }
 
