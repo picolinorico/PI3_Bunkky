@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Essencial para trocar de cenas!
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem; // Adicionado para usar o teclado novo!
 
 public class MenuPrincipal : MonoBehaviour
 {
@@ -7,6 +8,24 @@ public class MenuPrincipal : MonoBehaviour
     public GameObject menuInicialUI;   // O grupo com os botões principais
     public GameObject painelCreditos; // O painel dos créditos
     public GameObject painelOpcoes; // O painel das opções
+
+    void Update()
+    {
+        // Verifica se o jogador apertou o ESC
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            // Se o painel de Créditos estiver aberto, fecha ele
+            if (painelCreditos != null && painelCreditos.activeSelf)
+            {
+                FecharCreditos();
+            }
+            // Se o painel de Opções estiver aberto, fecha ele
+            else if (painelOpcoes != null && painelOpcoes.activeSelf)
+            {
+                FecharOpcoes();
+            }
+        }
+    }
 
     // Função para o botão de Jogar
     public void JogarJogo()

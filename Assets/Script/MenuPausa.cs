@@ -16,13 +16,37 @@ public class MenuPausa : MonoBehaviour
         // Atalho rápido: ESC pausa ou despausa
         if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            if (jogoPausado) Retomar(); else Pausar();
+            if (jogoPausado)
+            {
+                // A SOLUÇÃO: Verifica se o painel de configurações está aberto
+                if (painelConfiguracoes != null && painelConfiguracoes.activeSelf)
+                {
+                    // Se estiver aberto, apenas fecha as configs e volta para o pause principal
+                    FecharConfig();
+                }
+                else
+                {
+                    // Se não, despausa o jogo normalmente
+                    Retomar();
+                }
+            }
+            else
+            {
+                Pausar();
+            }
         }
     }
 
     public void Retomar()
     {
         menuPausaUI.SetActive(false); // Desliga a caixinha do Painel (esconde)
+
+        // TRAVA DE SEGURANÇA: Garante que as configurações sejam desligadas ao voltar pro jogo
+        if (painelConfiguracoes != null)
+        {
+            painelConfiguracoes.SetActive(false);
+        }
+
         Time.timeScale = 1f;          // O tempo do jogo volta a correr normal (1x)
         jogoPausado = false;
     }
