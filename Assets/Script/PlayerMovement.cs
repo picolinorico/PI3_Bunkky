@@ -71,8 +71,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sons do Player")]
     [SerializeField] private AudioSource audioSource; // Arraste o AudioSource da Coelha aqui
     [SerializeField] private AudioClip somAtaqueNormal;
-    [SerializeField]
-    private AudioClip somAtaqueForte;
+    [SerializeField] private AudioClip somAtaqueForte;
+    [SerializeField] private AudioClip somPasso;
+
 
     [Header("Checkpoint")]
     private Vector2 pontoDeCheckpoint;
@@ -110,6 +111,32 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
             Flip();
         }
+
+        // ==========================================
+        // CONTROLE DO ÁUDIO CONTÍNUO DE PASSOS
+        // ==========================================
+        if (horizontalMovement != 0 && isGrounded)
+        {
+            // Se o AudioSource não está com o som de passo engatado, coloca ele
+            if (audioSource != null && somPasso != null && audioSource.clip != somPasso)
+            {
+                audioSource.clip = somPasso;
+                audioSource.loop = true; // Força o som a ficar repetindo sozinho
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            // SE ELA PAROU OU PULOU: Só desliga o som se o clipe atual for o de passos
+            // Isso impede que o script corte o som do seu ataque no meio!
+            if (audioSource != null && audioSource.clip == somPasso)
+            {
+                audioSource.clip = null; // Remove o passo para liberar o canal
+                audioSource.loop = false;
+                audioSource.Stop();
+            }
+        }
+        // ==========================================
     }
 
     private void GroundCheck()
